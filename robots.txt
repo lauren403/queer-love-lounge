@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://queerlovelounge.bodybelongingclinic.com.au/sitemap.xml

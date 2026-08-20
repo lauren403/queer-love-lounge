@@ -1,0 +1,49 @@
+# netlify.toml — Queer Love Lounge
+# Static site. The repo root IS the published site: no build step.
+# Netlify [[headers]] rules work here because every page is a real static
+# file. (The ADHD Hub needs its headers set in code instead, because its
+# pages come from an SSR function that bypasses these rules.)
+
+[build]
+  publish = "."
+  command = ""
+
+# ------------------------------------------------------------------
+# Security & privacy headers.
+# CSP is REPORT-ONLY to start. This site loads Google Fonts, MailerLite,
+# and — only after the visitor accepts the cookie banner — GA4 and the
+# Meta pixel. Because the consent-gated scripts do not load on a first
+# visit, the policy has not been observed against real post-consent
+# traffic yet. Watch the console for violations, then rename the header
+# to Content-Security-Policy to enforce it.
+# ------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), browsing-topics=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Cross-Origin-Opener-Policy = "same-origin-allow-popups"
+    Content-Security-Policy-Report-Only = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.mlcdn.com; script-src 'self' 'unsafe-inline' https://static.mailerlite.com https://assets.mlcdn.com https://*.googletagmanager.com https://*.google-analytics.com https://connect.facebook.net; connect-src 'self' https://assets.mlcdn.com https://static.mailerlite.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.facebook.com https://connect.facebook.net; frame-src https://clientportal.zandahealth.com; form-action 'self' https://assets.mlcdn.com; upgrade-insecure-requests"
+
+# Content-hashed images never change — cache them hard.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML must revalidate so edits go live immediately.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Keep the Netlify subdomain from competing with the real domain in search
+# and from being bookmarked or shared by mistake.
+[[redirects]]
+  from = "https://bbc-queer-love-lounge.netlify.app/*"
+  to = "https://queerlovelounge.bodybelongingclinic.com.au/:splat"
+  status = 301
+  force = true
