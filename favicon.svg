@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-label="Queer Love Lounge">
+  <title>Queer Love Lounge</title>
+  <circle cx="600" cy="600" r="600" fill="#463009"/>
+  <g transform="translate(600 600) scale(1.3) translate(-600 -600)">
+    <path transform="translate(0,178)" fill="#F5FFE6" d="M350 230 L850 220 L860 340 L920 325 L950 350 L936 560 L885 560 L875 625 L815 625 L805 550 L395 550 L385 625 L325 625 L312 560 L265 560 L250 350 L285 322 L345 338 Z"/>
+  </g>
+</svg>
