@@ -40,10 +40,30 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Keep the Netlify subdomain from competing with the real domain in search
-# and from being bookmarked or shared by mistake.
+# ------------------------------------------------------------------
+# One canonical home. Every other hostname that resolves to this site
+# is redirected, so nothing competes with the real domain in search and
+# nobody bookmarks or shares the wrong URL.
+# ------------------------------------------------------------------
+
+# Netlify's default subdomain.
 [[redirects]]
   from = "https://bbc-queer-love-lounge.netlify.app/*"
+  to = "https://queerlovelounge.bodybelongingclinic.com.au/:splat"
+  status = 301
+  force = true
+
+# The pre-rename domain. Kept resolving on purpose so old links survive,
+# but it must redirect rather than serve a duplicate copy of the site.
+# ("Queer Love Lab" became "Queer Love Lounge" on 29 July 2026.)
+[[redirects]]
+  from = "https://queerlovelab.bodybelongingclinic.com.au/*"
+  to = "https://queerlovelounge.bodybelongingclinic.com.au/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://queerlovelab.bodybelongingclinic.com.au/*"
   to = "https://queerlovelounge.bodybelongingclinic.com.au/:splat"
   status = 301
   force = true
