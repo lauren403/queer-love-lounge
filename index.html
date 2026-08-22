@@ -313,7 +313,7 @@ footer.foot{background:#1b100b;color:var(--taupe);padding:80px 0 40px;font-size:
     <h1>For couples who love each other — and keep <span class="miss">missing</span> each other.</h1>
     <p class="lede">Queer and LGBTQIA+ couples therapy, right across Australia. No one handed you a map for this — so we skip the explaining and get to the work: finding the miss, and reaching for each other again.</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary js-book" href="#start">Book a first session <span class="arrow">→</span></a>
+      <a class="btn btn-primary js-book js-enquire" href="mailto:lovelounge@bodybelongingclinic.com.au?subject=Queer%20Love%20Lounge%20-%20couples%20first%20session%20enquiry">Enquire about a first session <span class="arrow">→</span></a>
       <a class="herolink js-book" href="#start">or book a free 15-min chat</a>
     </div>
     <p style="margin-top:16px;font-size:15px"><a class='herolink' href='/find-the-miss' style='text-decoration:underline;text-underline-offset:4px'>Not sure where to start? Take the 3-minute quiz →</a></p>
@@ -588,7 +588,7 @@ footer.foot{background:#1b100b;color:var(--taupe);padding:80px 0 40px;font-size:
     <h2 class="script" style="font-size:clamp(54px,8.5vw,108px);color:var(--butter)">Pull up a chair.</h2>
     <p>Whenever you're ready — a free 15-minute chat, or a first session. No pressure, no explaining yourselves first, just a warm place to begin.</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary js-book" href="mailto:lovelounge@bodybelongingclinic.com.au">Book a first session <span class="arrow">→</span></a>
+      <a class="btn btn-primary js-book js-enquire" href="mailto:lovelounge@bodybelongingclinic.com.au?subject=Queer%20Love%20Lounge%20-%20couples%20first%20session%20enquiry">Enquire about a first session <span class="arrow">→</span></a>
       <a class="btn btn-ghost js-book" href="mailto:lovelounge@bodybelongingclinic.com.au">Book a free 15-min chat</a>
     </div>
     <p class="booknote">Booking opens in a secure new tab — about two minutes.</p>
@@ -642,7 +642,7 @@ t.addEventListener('click',()=>l.classList.toggle('open'));
 l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));
 // booking links — set ONE Zanda client-portal URL here and every Book button wires to it
 const BOOK="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking";
-if(BOOK && BOOK.indexOf("__")!==0){document.querySelectorAll('.js-book').forEach(a=>{a.href=BOOK;a.target="_blank";a.rel="noopener";});}
+if(BOOK && BOOK.indexOf("__")!==0){document.querySelectorAll('.js-book:not(.js-enquire)').forEach(a=>{a.href=BOOK;a.target="_blank";a.rel="noopener";});}
 document.querySelectorAll('.js-capture').forEach(function(f){f.addEventListener('submit',function(){var em=f.querySelector('input[type=email]');if(em&&em.value){setTimeout(function(){var s=f.closest('.capture');if(s)s.classList.add('done');},500);}});});
 // reveal on scroll
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
