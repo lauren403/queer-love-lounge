@@ -68,4 +68,4 @@ it will be blocked once that policy is enforced.
 
 ## Contact
 
-`lovelounge@bodybelongingclinic.com.au` (alias into the Body Belonging inbox).
+`lovelounge@queerlovelounge.com.au` (alias into the Body Belonging inbox).
