@@ -49,7 +49,7 @@
 # Netlify's default subdomain.
 [[redirects]]
   from = "https://bbc-queer-love-lounge.netlify.app/*"
-  to = "https://queerlovelounge.bodybelongingclinic.com.au/:splat"
+  to = "https://queerlovelounge.com.au/:splat"
   status = 301
   force = true
 
@@ -58,12 +58,30 @@
 # ("Queer Love Lab" became "Queer Love Lounge" on 29 July 2026.)
 [[redirects]]
   from = "https://queerlovelab.bodybelongingclinic.com.au/*"
-  to = "https://queerlovelounge.bodybelongingclinic.com.au/:splat"
+  to = "https://queerlovelounge.com.au/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "http://queerlovelab.bodybelongingclinic.com.au/*"
-  to = "https://queerlovelounge.bodybelongingclinic.com.au/:splat"
+  to = "https://queerlovelounge.com.au/:splat"
+  status = 301
+  force = true
+
+# The subdomain this site launched on. Kept resolving forever so every
+# link, citation and bookmark already in circulation survives — but it
+# must 301 page-for-page to the real domain rather than serve a
+# duplicate copy. Explicit rules here rather than relying on Netlify's
+# implicit primary-domain behaviour, so the mapping is deterministic.
+# (Moved to queerlovelounge.com.au on 26 August 2026.)
+[[redirects]]
+  from = "https://queerlovelounge.bodybelongingclinic.com.au/*"
+  to = "https://queerlovelounge.com.au/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://queerlovelounge.bodybelongingclinic.com.au/*"
+  to = "https://queerlovelounge.com.au/:splat"
   status = 301
   force = true

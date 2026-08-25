@@ -1,6 +1,6 @@
 # Queer Love Lounge
 
-Live site: **https://queerlovelounge.bodybelongingclinic.com.au**
+Live site: **https://queerlovelounge.com.au**
 Hosted on Netlify (project `bbc-queer-love-lounge`). Part of Body Belonging Clinic.
 
 ## How this deploys
