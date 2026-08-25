@@ -73,7 +73,7 @@
 # must 301 page-for-page to the real domain rather than serve a
 # duplicate copy. Explicit rules here rather than relying on Netlify's
 # implicit primary-domain behaviour, so the mapping is deterministic.
-# (Moved to queerlovelounge.com.au on 26 August 2026.)
+# (Moved to queerlovelounge.com.au on 24 August 2026.)
 [[redirects]]
   from = "https://queerlovelounge.bodybelongingclinic.com.au/*"
   to = "https://queerlovelounge.com.au/:splat"
