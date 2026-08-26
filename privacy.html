@@ -78,6 +78,26 @@ footer.foot{background:#1b100b;color:var(--taupe);padding:64px 0 34px;font-size:
 .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;margin-top:30px;font-size:12.5px;color:rgba(199,180,161,.7);max-width:1100px;margin-left:auto;margin-right:auto;padding:0 26px}
 @media(max-width:640px){.policy .toc ol{columns:1}.foot-top{grid-template-columns:1fr;gap:26px}}
 .skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:#c24a24;color:#fbf5ec;padding:12px 20px;border-radius:0 0 10px 0;font-weight:600}.skip-link:focus{left:0}a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid #e79a7e;outline-offset:3px;border-radius:6px}@media (prefers-reduced-motion: reduce){*{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}}body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.05;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}.brand img{border-radius:50%}</style>
+<style>
+/* === contrast pass · 26 Aug 2026 ==========================================
+   Additive only. Nothing above is edited; delete this block to revert.
+   Class doubling (.eyebrow.eyebrow) wins on specificity regardless of order.
+
+   Measured before:  .eyebrow  #c24a24  3.59:1 on espresso · 4.21:1 on cream
+                     .btn-primary paper on #c24a24  4.51:1
+                     one variant: #2a1c15 on #c24a24  3.37:1
+   After:            dark grounds  #e79a7e  7.79:1
+                     light grounds #a63c1a  5.52:1
+                     buttons       #fbf5ec on #a63c1a  5.90:1
+   ========================================================================= */
+.eyebrow.eyebrow{color:#e79a7e}
+.bg-cream .eyebrow.eyebrow,
+.rcapture .eyebrow.eyebrow,
+.capture.bg-cream .eyebrow.eyebrow{color:#a63c1a}
+.btn-primary.btn-primary{background:#a63c1a;color:#fbf5ec}
+.btn-primary.btn-primary:hover,
+.btn-primary.btn-primary:focus-visible{background:#8f3315}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#top">Skip to content</a>

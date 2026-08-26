@@ -12,7 +12,27 @@ h1 .i{font-style:italic;color:var(--terra2)}
 p{font-size:18px;color:var(--cream);max-width:44ch;margin:0 auto 30px;opacity:.92}
 .btn{display:inline-block;background:var(--terra);color:#fbf5ec;font-weight:600;font-size:15px;padding:15px 26px;border-radius:100px;text-decoration:none;transition:.2s}
 .btn:hover{background:#a63c1a}
-.script{font-family:'Caveat',cursive;color:var(--butter);font-size:26px;margin-top:34px;display:block}</style></head>
+.script{font-family:'Caveat',cursive;color:var(--butter);font-size:26px;margin-top:34px;display:block}</style><style>
+/* === contrast pass · 26 Aug 2026 ==========================================
+   Additive only. Nothing above is edited; delete this block to revert.
+   Class doubling (.eyebrow.eyebrow) wins on specificity regardless of order.
+
+   Measured before:  .eyebrow  #c24a24  3.59:1 on espresso · 4.21:1 on cream
+                     .btn-primary paper on #c24a24  4.51:1
+                     one variant: #2a1c15 on #c24a24  3.37:1
+   After:            dark grounds  #e79a7e  7.79:1
+                     light grounds #a63c1a  5.52:1
+                     buttons       #fbf5ec on #a63c1a  5.90:1
+   ========================================================================= */
+.eyebrow.eyebrow{color:#e79a7e}
+.bg-cream .eyebrow.eyebrow,
+.rcapture .eyebrow.eyebrow,
+.capture.bg-cream .eyebrow.eyebrow{color:#a63c1a}
+.btn-primary.btn-primary{background:#a63c1a;color:#fbf5ec}
+.btn-primary.btn-primary:hover,
+.btn-primary.btn-primary:focus-visible{background:#8f3315}
+</style>
+</head>
 <body><main>
 <img class="mark" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDEyMDAiPjxjaXJjbGUgY3g9IjYwMCIgY3k9IjYwMCIgcj0iNjAwIiBmaWxsPSIjNDYzMDA5Ii8+PHBhdGggdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwxNzgpIiBmaWxsPSIjRjVGRkU2IiBkPSJNMzUwIDIzMCBMODUwIDIyMCBMODYwIDM0MCBMOTIwIDMyNSBMOTUwIDM1MCBMOTM2IDU2MCBMODg1IDU2MCBMODc1IDYyNSBMODE1IDYyNSBMODA1IDU1MCBMMzk1IDU1MCBMMzg1IDYyNSBMMzI1IDYyNSBMMzEyIDU2MCBMMjY1IDU2MCBMMjUwIDM1MCBMMjg1IDMyMiBMMzQ1IDMzOCBaIi8+PC9zdmc+" alt="Queer Love Lounge">
 <span class="eyebrow">Page not found</span>

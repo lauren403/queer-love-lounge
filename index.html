@@ -284,6 +284,26 @@ footer.foot{background:#1b100b;color:var(--taupe);padding:80px 0 40px;font-size:
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Queer Love Lounge", "description": "Queer-led couples therapy online across Australia \u2014 for LGBTQIA+ couples, and couples staying close through change — when one of you is questioning or exploring who you are. Gottman & Perel-grounded, by and for us, everyone welcome.", "url": "https://queerlovelounge.com.au/", "telephone": "+61493117185", "email": "lovelounge@queerlovelounge.com.au", "image": "https://queerlovelounge.com.au/og-image.jpg", "priceRange": "$190\u2013$240", "areaServed": {"@type": "Country", "name": "Australia"}, "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking", "availableLanguage": "en-AU"}, "provider": {"@type": "Person", "name": "Lauren Lynch", "jobTitle": "Accredited Mental Health Social Worker"}, "serviceType": "Queer & LGBTQIA+ couples therapy (telehealth)"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you work with open and polyamorous relationships?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every relationship structure is genuinely welcome here \u2014 monogamous, open, poly, solo-poly, and relationships with more than two people \u2014 and you won't have to explain or justify yours before we can begin."}}, {"@type": "Question", "name": "Do I have to be queer to see you?", "acceptedAnswer": {"@type": "Answer", "text": "Not at all. Queer Love Lounge is queer-led \u2014 built from lived experience, and without the usual assumptions about who you are or how you love. That lens makes it a safe, genuinely useful place for any couple, and it's especially suited to relationships where someone is questioning or exploring their sexuality or gender, couples staying close through a change in who one of you is, and anyone who simply wants a therapist who won't assume. You're welcome exactly as you are."}}, {"@type": "Question", "name": "One of us is exploring their sexuality or gender \u2014 can you help?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 this is some of the most meaningful work I do. When one person is questioning their identity, a relationship can hold real uncertainty and deep love at the same time. I help you stay connected and honest through it, with room for whatever you each discover and no agenda about where it lands."}}, {"@type": "Question", "name": "Does online therapy really work for couples?", "acceptedAnswer": {"@type": "Answer", "text": "For most couples, yes \u2014 and being at home often makes the harder conversations feel a little safer. Structured, evidence-based couples work translates well to video, and it's how Queer Love Lounge is built: online, wherever you are in Australia."}}, {"@type": "Question", "name": "What if only one of us is ready to start?", "acceptedAnswer": {"@type": "Answer", "text": "That's completely normal \u2014 often one person reaches out first. Everyone's welcome exactly as you are, and the free 15-minute chat is a low-stakes way to test the water together."}}, {"@type": "Question", "name": "How do we start, and what does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "Start with a free 15-minute intro call, or book straight into a first session (90 min, $240). Ongoing sessions are 75 min at $190, and once we've talked and found a time, a $50 deposit confirms it and comes off your fee. Everything is online, private fee and GST-free."}}]}</script>
 <meta name="msvalidate.01" content="059B7C4806008C40A13F58CB60965C81" />
+<style>
+/* === contrast pass · 26 Aug 2026 ==========================================
+   Additive only. Nothing above is edited; delete this block to revert.
+   Class doubling (.eyebrow.eyebrow) wins on specificity regardless of order.
+
+   Measured before:  .eyebrow  #c24a24  3.59:1 on espresso · 4.21:1 on cream
+                     .btn-primary paper on #c24a24  4.51:1
+                     one variant: #2a1c15 on #c24a24  3.37:1
+   After:            dark grounds  #e79a7e  7.79:1
+                     light grounds #a63c1a  5.52:1
+                     buttons       #fbf5ec on #a63c1a  5.90:1
+   ========================================================================= */
+.eyebrow.eyebrow{color:#e79a7e}
+.bg-cream .eyebrow.eyebrow,
+.rcapture .eyebrow.eyebrow,
+.capture.bg-cream .eyebrow.eyebrow{color:#a63c1a}
+.btn-primary.btn-primary{background:#a63c1a;color:#fbf5ec}
+.btn-primary.btn-primary:hover,
+.btn-primary.btn-primary:focus-visible{background:#8f3315}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#top">Skip to content</a>
@@ -311,11 +331,11 @@ footer.foot{background:#1b100b;color:var(--taupe);padding:80px 0 40px;font-size:
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-bg"><img src="assets/c1557cbef1948033.webp" alt="Two people holding each other close at dusk"></div>
+  <div class="hero-bg"><picture><source media="(max-width:719px)" srcset="assets/hero-mobile.webp"><img src="assets/c1557cbef1948033.webp" alt="Two people holding each other close at dusk"></picture></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow">LGBTQIA+ Couples Therapy · Online, Australia-wide</span>
+    <span class="eyebrow">Queer &amp; LGBTQIA+ Couples Therapy · Online, Australia-wide</span>
     <h1>For couples who love each other — and keep <span class="miss">missing</span> each other.</h1>
-    <p class="lede">Queer and LGBTQIA+ couples therapy, right across Australia. No one handed you a map for this — so we skip the explaining and get to the work: finding the miss, and reaching for each other again.</p>
+    <p class="lede">It's rarely about the dishes. Therapy for the conversation underneath the argument — queer-led, Gottman-trained. Online, right across Australia.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary js-book js-enquire" href="mailto:lovelounge@queerlovelounge.com.au?subject=Queer%20Love%20Lounge%20-%20couples%20first%20session%20enquiry">Enquire about a first session <span class="arrow">→</span></a>
       <a class="herolink js-book" href="#start">or book a free 15-min chat</a>
@@ -679,6 +699,16 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 .qllc-decline{background:transparent;color:#f6ede0;border-color:rgba(246,237,224,.28)}
 .qllc-decline:hover{border-color:#f6ede0}
 @media(max-width:520px){.qllc-btns{width:100%}.qllc-btn{flex:1}}
+
+/* --- contrast corrections, 26 Aug 2026 -------------------------------
+   .eyebrow is terracotta (#c24a24): 3.59:1 on espresso — fails WCAG AA.
+   Peach is 7.79:1 on espresso. Scoped to the hero only.
+   .btn-primary paper-on-terracotta is 4.51:1; on --terra-hover it is 5.90:1. */
+.hero .eyebrow{color:#e79a7e}
+.hero .btn-primary{background:var(--terra-hover)}
+.hero .btn-primary:hover,.hero .btn-primary:focus-visible{background:#8f3315}
+.hero a:focus-visible{outline:3px solid #ff9163;outline-offset:3px;border-radius:4px}
+.hero-bg picture{display:block;width:100%;height:100%}
 </style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
