@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2a1c15">
+<meta name="description" content="Play the full Lounge Method Deck: 75 cards in seven suits, free. Deal three and choose one, pass on any card, answer out loud or in writing, and a private overlap for what you both said yes to.">
+<link rel="canonical" href="https://queerlovelounge.com.au/lounge-method-deck.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Queer Love Lounge">
+<meta property="og:title" content="The Lounge Method Deck · all 75 cards">
+<meta property="og:description" content="All 75 cards, seven suits, free to play. Pass is a whole answer.">
+<meta property="og:url" content="https://queerlovelounge.com.au/lounge-method-deck.html">
+<meta property="og:image" content="https://queerlovelounge.com.au/og-image.jpg">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<title>The Lounge Method Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --espresso:#2a1c15; --cream:#f4ece2; --terracotta:#c26b4a; --terracotta-deep:#b55e3d; --oat:#d9c9b0;
+  --ink:#f4ece2; --mute:#b9a795; --faint:#8d7c6c;
+  --panel:#372620; --panel2:#402d26; --line:rgba(217,201,176,.22);
+  --s1:#b8442c; --s2:#985b26; --s3:#82661a; --s4:#587149; --s5:#4d6c89; --s6:#7a4a68; --s7:#b03d68;
+  --s1l:#dd8168; --s2l:#d9a161; --s3l:#cdaf4e; --s4l:#9ab488; --s5l:#93b4cd; --s6l:#c090ad; --s7l:#e494b0;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --maxw:1080px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--espresso);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.62;font-weight:350;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:
+  radial-gradient(1200px 700px at 15% -10%,rgba(194,107,74,.20),transparent 60%),
+  radial-gradient(900px 600px at 92% 8%,rgba(122,74,104,.16),transparent 62%),
+  radial-gradient(900px 700px at 50% 108%,rgba(88,113,73,.13),transparent 60%),
+  var(--espresso);}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+a{color:var(--oat)}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visible{outline:2px solid var(--oat);outline-offset:3px;border-radius:3px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- header ---------- */
+header.top{padding:34px 0 0}
+.kicker{font-family:var(--sans);font-size:12.5px;letter-spacing:.20em;text-transform:uppercase;color:var(--oat);text-decoration:none;font-weight:600;display:inline-block}
+.kicker:hover{color:var(--terracotta)}
+h1{text-wrap:balance;font-family:var(--serif);font-weight:400;font-size:clamp(40px,7.4vw,74px);line-height:1.02;letter-spacing:-.018em;margin:26px 0 0}
+h1 em{font-style:italic;color:var(--terracotta)}
+.lede{font-family:var(--serif);font-size:clamp(19px,2.3vw,24px);line-height:1.5;color:var(--oat);max-width:46ch;margin:20px 0 0;font-weight:300}
+.credential{margin:26px 0 0;font-size:13px;letter-spacing:.055em;color:var(--faint);text-transform:uppercase;font-weight:500}
+
+/* ---------- flag rule ---------- */
+.flag{display:flex;height:6px;border-radius:99px;overflow:hidden;margin:34px 0 0;max-width:520px}
+.flag i{flex:1}
+
+/* ---------- moves strip ---------- */
+.moves{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:2px;margin:40px 0 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--line)}
+.move{background:var(--panel);padding:16px 15px}
+.move b{display:block;font-family:var(--serif);font-size:17.5px;font-weight:400;line-height:1.24;margin:0 0 5px}
+.move span{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600}
+
+/* ---------- generic sections ---------- */
+section{margin:64px 0 0}
+h2{text-wrap:balance;font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.6vw,36px);line-height:1.12;letter-spacing:-.012em;margin:0 0 14px}
+h3{font-family:var(--sans);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:600;margin:0 0 12px}
+p{margin:0 0 15px;max-width:66ch}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px 26px 22px}
+
+/* ---------- scope / safety ---------- */
+.scope{border-left:3px solid var(--terracotta)}
+.scope p:last-child{margin-bottom:0}
+.scope strong{color:var(--cream);font-weight:600}
+
+/* ---------- how a round works ---------- */
+.rounds{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:18px 0 0}
+.round{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px}
+.round b{display:block;font-family:var(--serif);font-size:20px;font-weight:400;margin:0 0 7px}
+.round p{font-size:15.2px;color:var(--mute);margin:0}
+.round .tag{display:inline-block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--espresso);background:var(--oat);border-radius:99px;padding:3px 9px;font-weight:700;margin:0 0 10px}
+
+/* ---------- suit chooser ---------- */
+.suitgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:12px;margin:18px 0 0}
+.suitbtn{position:relative;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px 18px;color:var(--ink);font:inherit;cursor:pointer;overflow:hidden;transition:border-color .16s,background .16s}
+.suitbtn::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--a)}
+.suitbtn:hover{background:var(--panel2)}
+.suitbtn[aria-pressed="true"]{border-color:var(--a);background:var(--panel2)}
+.suitbtn .nm{font-family:var(--serif);font-size:19px;line-height:1.2;display:block;margin:0 0 4px}
+.suitbtn .mt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.suitbtn .st{position:absolute;right:14px;top:14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--faint)}
+.suitbtn[aria-pressed="true"] .st{color:var(--a)}
+
+/* ---------- table / deal ---------- */
+.table{margin:22px 0 0}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 20px}
+.btn{font:inherit;font-weight:600;font-size:14.5px;letter-spacing:.02em;border-radius:99px;padding:11px 20px;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--ink);transition:background .16s,border-color .16s,color .16s}
+.btn:hover{background:var(--panel2)}
+.btn.primary{background:var(--terracotta-deep);border-color:var(--terracotta-deep);color:#fff}
+.btn.primary:hover{background:var(--terracotta);border-color:var(--terracotta)}
+.btn.ghost{color:var(--mute)}
+.btn.stop{border-color:rgba(221,129,104,.5);color:var(--s1l)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.seg button{font:inherit;font-size:13.5px;font-weight:600;padding:9px 15px;background:transparent;border:0;color:var(--mute);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--oat);color:var(--espresso)}
+
+/* ---------- the card ---------- */
+.stage{display:grid;gap:16px}
+.hand{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.card{position:relative;background:var(--cream);color:#3b2b21;border-radius:18px;padding:26px 26px 22px 34px;box-shadow:0 22px 50px rgba(0,0,0,.34);overflow:hidden;text-align:left;width:100%;border:0;font:inherit;display:block}
+button.card{cursor:pointer}
+button.card:hover{transform:translateY(-2px)}
+.card .spine{position:absolute;left:0;top:0;bottom:0;width:9px;display:flex;flex-direction:column}
+.card .spine i{flex:1;opacity:.2}
+.card .spine i.on{opacity:1}
+.card .suitline{display:flex;align-items:center;gap:9px;margin:0 0 15px}
+.card .mark{width:22px;height:15px;flex:none}
+.card .suitname{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:var(--a-dark)}
+.card .when{font-family:var(--sans);font-size:13.6px;line-height:1.44;color:#786652;font-weight:500;margin:0 0 12px;max-width:40ch}
+.card .q{text-wrap:balance;font-family:var(--serif);font-size:clamp(22px,3.1vw,29px);line-height:1.24;font-weight:400;color:#2f231b;margin:0 0 16px;letter-spacing:-.01em;max-width:24ch}
+.card .trylab{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#7b654c;margin:0 0 5px}
+.card .try{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.46;color:#4b3a2d;margin:0;max-width:44ch}
+.card .pass{margin:18px 0 0;padding:9px 0 0;border-top:1px solid rgba(120,102,82,.26);font-size:12.4px;color:#786652;letter-spacing:.01em}
+.card .pick{position:absolute;right:18px;top:18px;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:#7b654c}
+
+/* ---------- suit note under card ---------- */
+.suitnote{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--a);border-radius:14px;padding:18px 20px}
+.suitnote h4{margin:0 0 6px;font-family:var(--serif);font-weight:400;font-size:19px;color:var(--a-light)}
+.suitnote p{margin:0;font-size:14.8px;color:var(--mute);max-width:78ch}
+
+/* ---------- card actions ---------- */
+.acts{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.chip{font:inherit;font-size:13.2px;font-weight:600;border-radius:99px;padding:9px 15px;border:1px solid var(--line);background:transparent;color:var(--mute);cursor:pointer}
+.chip:hover{background:var(--panel2);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--oat);color:var(--espresso);border-color:var(--oat)}
+.writebox{width:100%;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit;font-size:15.5px;min-height:110px;resize:vertical}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px;color:var(--oat);letter-spacing:.04em}
+
+/* ---------- kept rows ---------- */
+.keptrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+.keptchip{font:inherit;font-size:13px;border-radius:99px;padding:8px 14px;border:1px solid var(--line);background:var(--panel);color:var(--mute);cursor:pointer;text-align:left}
+.keptchip:hover{color:var(--ink);border-color:var(--oat)}
+.keptchip b{color:var(--ink);font-weight:600}
+
+/* ---------- the overlap ---------- */
+.ovbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 16px}
+.ovitem{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
+.ovitem:last-child{border-bottom:0}
+.ovitem p{margin:0;font-size:16px;max-width:52ch}
+.ovopts{display:inline-flex;gap:6px}
+.ovopts button{font:inherit;font-size:12.5px;font-weight:600;border-radius:99px;padding:7px 13px;border:1px solid var(--line);background:transparent;color:var(--mute);cursor:pointer}
+.ovopts button[aria-pressed="true"]{background:var(--oat);color:var(--espresso);border-color:var(--oat)}
+.ovresult li{margin:0 0 8px}
+.ovresult ul{margin:0;padding-left:20px}
+.count{font-size:13.5px;color:var(--faint)}
+
+/* ---------- footer ---------- */
+.attrib{font-size:14.6px;color:var(--mute);max-width:78ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 0}
+.cta{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;border-radius:99px;padding:13px 24px}
+.cta.solid{background:var(--terracotta-deep);color:#fff}
+.cta.solid:hover{background:var(--terracotta)}
+.cta.line{border:1px solid var(--line);color:var(--ink)}
+.cta.line:hover{border-color:var(--oat)}
+footer.end{margin:70px 0 0;padding:28px 0 60px;border-top:1px solid var(--line);color:var(--faint);font-size:13.6px}
+footer.end p{max-width:78ch}
+.safe{color:var(--oat);font-weight:600}
+
+@media (max-width:640px){
+  .card{padding:22px 20px 20px 28px}
+  .ovitem{grid-template-columns:1fr;gap:8px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="kicker" href="/lounge-method-cards.html">Queer Love Lounge · The Lounge Method Deck</a>
+    <h1>The Lounge <em>Method</em> Deck</h1>
+    <p class="lede">Seventy five cards for the conversation you keep not having. Five moves, the wider field you are already standing in, and the wanting.</p>
+    <div class="flag" aria-hidden="true"></div>
+    <p class="credential">Lauren Lynch, AMHSW · Gottman Method Level 2 · trained with Esther Perel · a queer led practice</p>
+    <div class="moves" id="moves"></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section aria-labelledby="scope-h">
+    <h2 id="scope-h">Before you start</h2>
+    <div class="panel scope">
+      <p><strong>These cards are for ordinary relationship conflict.</strong> They are not a tool for coercive control, intimidation, threats, stalking, sexual pressure or violence. If someone is using them to press you, put them down.</p>
+      <p>A settled nervous system is not proof that someone is right. A strong emotional response is not proof that someone is wrong. Naming a cycle does not make responsibility equal.</p>
+      <p><strong>Pass is a whole answer.</strong> So is “I cannot find it in my body”, and so is “there was not one this week”. Nobody has to earn their way out of a card.</p>
+      <p>No one should be calmed, therapised or culturally pressured into staying in a conversation they do not feel safe in.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="round-h">
+    <h2 id="round-h">How a round works</h2>
+    <p>One card per person per round. Answer in the first person, about yourself. The other person reflects back what they heard before they answer anything of their own. Then swap.</p>
+    <div class="rounds">
+      <div class="round"><span class="tag">Deal</span><b>Let the deck choose</b><p>A card arrives and neither of you picked it. Good for a night when choosing feels loaded.</p></div>
+      <div class="round"><span class="tag">Deal</span><b>Deal me three</b><p>Three cards land face up. You read all three and answer one. Curiosity from them, the choice stays with you.</p></div>
+      <div class="round"><span class="tag">Answer</span><b>Say it, write it, or take it away</b><p>Not everyone thinks out loud. Write the answer instead, or take the card away and bring it back tomorrow.</p></div>
+      <div class="round"><span class="tag">Time</span><b>Two protected minutes</b><p>Optional. Two minutes where the other person does not speak. Useful when one of you is quicker with words.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="suits-h">
+    <h2 id="suits-h">What is in play</h2>
+    <p>Turn off anything you do not want tonight. Nothing is in play unless you put it there. <strong>The wanting starts switched off.</strong></p>
+    <div class="suitgrid" id="suitgrid"></div>
+  </section>
+
+  <section aria-labelledby="deck-h">
+    <h2 id="deck-h">The deck</h2>
+    <div class="controls">
+      <button class="btn primary" id="deal">Deal a card</button>
+      <div class="seg" role="group" aria-label="Deal mode">
+        <button id="mode1" aria-pressed="true">Let the deck choose</button>
+        <button id="mode3" aria-pressed="false">Deal me three</button>
+      </div>
+      <button class="btn ghost" id="timerBtn">Start two minutes</button>
+      <span class="timer" id="timerRead" aria-live="polite"></span>
+      <button class="btn stop" id="enough">Enough for tonight</button>
+    </div>
+    <div class="table stage" id="stage">
+      <p class="count" id="empty">Nothing dealt yet. <span id="poolCount"></span></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="kept-h" id="keptSection" hidden>
+    <h2 id="kept-h">Carried forward</h2>
+    <h3>Kept for the next session</h3>
+    <div class="keptrow" id="keptRow"></div>
+    <h3 style="margin-top:22px">Ask me again</h3>
+    <div class="keptrow" id="againRow"></div>
+  </section>
+
+  <section aria-labelledby="ov-h">
+    <h2 id="ov-h">The overlap</h2>
+    <p>For the wanting, and only if you both want to. You each mark the list privately, one at a time on the same screen. When you are both done it shows <strong>only what you both said yes to</strong>, and how many you both said maybe to. It never shows what one of you wanted on your own.</p>
+    <div class="panel scope" style="margin:0 0 18px">
+      <p style="margin:0"><strong>A maybe is not a yes.</strong> Nothing here is a contract, everything can change on the night, and this is not a document to hold up in an argument. If you want a conversation to go a certain way, this is the wrong tool for it.</p>
+    </div>
+    <div class="ovbar">
+      <div class="seg" role="group" aria-label="Whose turn">
+        <button id="ovA" aria-pressed="true">Person one</button>
+        <button id="ovB" aria-pressed="false">Person two</button>
+      </div>
+      <button class="btn" id="ovReveal">Show the overlap</button>
+      <button class="btn ghost" id="ovClear">Clear both</button>
+      <span class="count" id="ovCount"></span>
+    </div>
+    <div class="panel" id="ovList"></div>
+    <div class="panel ovresult" id="ovResult" hidden style="margin-top:16px"></div>
+  </section>
+
+  <section aria-labelledby="attr-h">
+    <h2 id="attr-h">Where this comes from</h2>
+    <p class="attrib">An original Queer Love Lounge resource. It integrates Lauren Lynch’s training in the Gottman Method and Esther Perel’s relational framework; the attention Orna Guralnik brings to unconscious repetition, difference and the social world inside intimate relationships; Deb Dana’s language for state, protection and settling together; and Aboriginal social and emotional wellbeing principles (Gee, Dudgeon, Schultz, Hart &amp; Kelly, 2014; Gayaa Dhuwi, 2025). The wanting draws on Karen Doherty, psychosexual therapist, on intimacy as far wider than sex, on the mismatch where one partner needs closeness before they want sex and the other needs sex before they feel close, on aiming for good enough rather than extraordinary, and on sensory and neurodivergent experience inside desire; Karen Gurney on sexual currency and on desire sitting between people rather than inside one of them; Rosemary Basson on desire that follows rather than leads; Peggy Kleinplatz on making sex worth wanting; and Barker and Hancock on consent as ongoing rather than settled once.</p>
+    <p class="attrib">Polyvagal language is used here as a compassionate organising map, not a diagnosis or a literal test of how a nerve is working. Nothing on these cards is a measurement of anybody.</p>
+    <p class="attrib">Where those sources assume two people and a closed door, this deck does not. The thinking has been kept and the defaults rebuilt: for relationships beyond one partner, for people who are out in some rooms and not others, for bodies that do not all work the same way, and for couples who do not live in the same house.</p>
+    <p class="attrib"><strong>The seventh stripe.</strong> Gilbert Baker’s original 1978 flag had eight stripes, and hot pink sat at the top of it. Its meaning was sex. The six stripe flag most of us grew up with does not have it. This deck puts that stripe back, and gives it a suit.</p>
+    <div class="ctas">
+      <a class="cta solid" id="mailCta" href="#" target="_blank" rel="noopener">Get the printable deck</a>
+      <a class="cta line" id="bookCta" href="#" target="_blank" rel="noopener">Book a free 15 minute intro call</a>
+      <a class="cta line" href="/lounge-method-cards.html">What this deck is</a>
+    </div>
+  </section>
+
+  <footer class="end">
+    <p>A pause has a return plan. Silence used to punish, frighten or control is not a pause.</p>
+    <p>Country is relationship, not a wellness prop. Aboriginal and Torres Strait Islander people can define cultural connection for themselves. If this is not your cultural practice, stay with your own everyday relationship with place without borrowing ceremony or language that is not yours.</p>
+    <p class="safe">1800RESPECT 1800 737 732 · QLife 1800 184 527 · emergency 000</p>
+    <p>Lauren Lynch (she/her), Accredited Mental Health Social Worker. Telehealth across Australia, with in person sessions in Nedlands, Perth from November 2026.</p>
+  </footer>
+</main>
+
+<script>
+const SUITS = [
+  {
+    id:"notice", n:1, name:"Notice what arrived", stripe:"red", meaning:"life",
+    body:"Before the argument has a topic, something has already landed in the body. Notice the cue, the meaning that arrived with it, and what walked into the room with you that was never about the two of you. If you cannot find it in your body, that is an answer.",
+    cards:[
+      { when:"Three sentences in, and your body is already ahead of you.",
+        q:"Where does it land in my body first, before I have a word for it?",
+        t:"My jaw goes before my mind does. I have been braced a full minute. Slow me down if you see it." },
+      { when:"Something small has landed far harder than it should have.",
+        q:"What did my body just get me ready to do?",
+        t:"It got me ready to defend something before I knew what. Give me a minute and I will tell you which part landed." },
+      { when:"One of you is already certain what the other one meant.",
+        q:"The story I told myself in that moment was…",
+        t:"…that you had already decided, and I was being informed. That might be wrong, and I still need to say it." },
+      { when:"A feeling arrives faster and bigger than the moment seems to warrant.",
+        q:"Is this old, is it happening now, or is it both?",
+        t:"This is old, and it is also happening. I need you to hear both halves of that." },
+      { when:"You have both sat down and the conversation has not begun yet.",
+        q:"What walked in with me tonight that was never about us?",
+        t:"Four hours sleep and a call from my mother. Mine, not yours, and it is in the room." },
+      { when:"A hard week, and you are hunting for something that was not hard.",
+        q:"A glimmer from this week: one second where I felt close to you…",
+        t:"You put my cup down beside me without a word. I have thought about it twice since. Do more of that." },
+      { when:"You have read the same message four times looking for the tone.",
+        q:"The thing I decided that message meant was…",
+        t:"…that you were finished with me. I read it four times to prove it. Tell me what you meant by it and I will believe you." },
+      { when:"Someone asks how you feel and there is nothing there to report.",
+        q:"If I cannot find a feeling, what can I find? A picture, a word, a temperature.",
+        t:"No feeling. Static, and one cold hand. That is all I have and it is real. Sit with that much and I will find more later." },
+      { when:"You have been apart all day and the first ten minutes go wrong.",
+        q:"What was I still carrying in the first ten minutes of seeing you?",
+        t:"The whole day was still on me and none of it was yours. Give me ten minutes and you get me properly." }
+    ]
+  },
+  {
+    id:"name", n:2, name:"Name what took over", stripe:"orange", meaning:"healing",
+    body:"No one is the pattern. The pattern is what happens between you. But naming a cycle does not make responsibility equal. Power, fear, freedom, safety and impact still matter, and if only one of you can start it or stop it, it is not a shared pattern.",
+    cards:[
+      { when:"You have had this fight before and you both know your lines.",
+        q:"Say our loop in two or three verbs. Mine first.",
+        t:"I chase, you go still. Then I chase harder and you go further out. Can we catch it at the first step?" },
+      { when:"The topic keeps changing and the feeling never does.",
+        q:"What do I keep away from by staying in the argument?",
+        t:"As long as we are arguing about the dishes, I do not have to say I am frightened. I am saying it now." },
+      { when:"The two of you are lining up who did what, and when.",
+        q:"When I fear losing you, I protect myself by ___. How does that land on you?",
+        t:"I go reasonable and start organising things. I have never actually asked you how that lands." },
+      { when:"You have just defended yourself and it did not help.",
+        q:"What am I protecting when I do that, and what am I longing for?",
+        t:"My dignity. And underneath it, to be wanted without having to ask twice. So I am asking once." },
+      { when:"One of you keeps getting read the wrong way.",
+        q:"What do I do that might have come to mean “not now” to you?",
+        t:"I pick up my phone while you are still talking. I think it files as: not important. Does it?" },
+      { when:"It is always the same one of you who says it out loud.",
+        q:"Which of us usually names it first, and what does that cost them?",
+        t:"It is always me, and it costs me looking like the one with the problem. Could you go first next time?" },
+      { when:"You keep finding your part, and nothing on the other side changes.",
+        q:"Am I in a pattern with you, or managing around you?",
+        t:"I have changed six things this year. I cannot name one that changed back. I want to look at that." },
+      { when:"The same word keeps ending the conversation.",
+        q:"The word I use when I want it to stop is…",
+        t:"…“fine”. It is not fine, it is a door closing. If you hear it, say you noticed, and let me decide whether I come back in." },
+      { when:"One of you always has the better sentence and the other one goes quiet.",
+        q:"In these, am I the one with the words, or the one who goes quiet?",
+        t:"You win on words every time, so I go quiet and take it elsewhere. That is not agreement. Slow down and let me get there." }
+    ]
+  },
+  {
+    id:"pause", n:3, name:"Pause without disappearing", stripe:"yellow", meaning:"sunlight",
+    body:"Stopping is allowed. Vanishing is not. Say the conversation matters, name how long you need, set a real time to come back. If that time changes, update rather than disappear. The return plan exists so silence is not a weapon. It is not a promise to go back into a conversation you do not feel safe in.",
+    cards:[
+      { when:"Before a conversation you already know will be hard.",
+        q:"What do I need in the first two minutes, before any of the words?",
+        t:"Sit down with me. Two minutes of nothing at all before we start." },
+      { when:"The last three arguments have ended with someone walking out.",
+        q:"What could our line be, the one that means I am still here?",
+        t:"Can “I need the twenty” be ours? It means I am coming back." },
+      { when:"One of you leaves the room and another starts counting.",
+        q:"What turns a pause into leaving, for me?",
+        t:"Not the leaving. The not knowing when. Give me a time and I can wait." },
+      { when:"Ten minutes into a break, and neither of you knows the rules.",
+        q:"Do I want distance, or you nearby and quiet? If we are apart, what does still here look like?",
+        t:"Nearby and quiet. If we are not in the same place, a text at eight is enough." },
+      { when:"One of you finds the waiting harder than the argument.",
+        q:"What is the hardest part of waiting for you to come back?",
+        t:"I have the whole conversation without you, twice, and lose both. Come and find me before I do." },
+      { when:"A closed door means far more to one of you than the other.",
+        q:"What did someone leaving the room mean in the house I grew up in?",
+        t:"In my house it meant three days. I still hear a door that way. Say you are coming back and I will believe you." },
+      { when:"This has stopped being a conversation.",
+        q:"Do I want to come back to this, or does it need to be over for tonight?",
+        t:"I am not continuing tonight. Not to punish you. I will tell you tomorrow whether I can." },
+      { when:"You are on separate screens and one of you wants to hang up.",
+        q:"When there is no room to walk out of, what does a pause look like for me?",
+        t:"Twenty minutes off the call, and one line from you at the end of it. That is enough to keep me here." },
+      { when:"One of you wants it settled tonight and the other cannot get there.",
+        q:"How long do I need before I can think, not just before I can speak?",
+        t:"A whole night. I am not shutting you out, I need longer than this. Ask me tomorrow and you will get a real answer." }
+    ]
+  },
+  {
+    id:"return", n:4, name:"Find a way back to yourself", stripe:"green", meaning:"nature",
+    body:"Use what genuinely helps, not what is supposed to: support beneath you, cool water, movement, rhythm, a familiar texture, quiet company, culture, community, prayer, Country or place. Breath is optional. If you cannot find it in your body, that is an answer too. Country is relationship, not a wellness prop. Aboriginal and Torres Strait Islander people can define cultural connection for themselves. If this is not your cultural practice, stay with your own everyday relationship with place without borrowing ceremony or language that is not yours.",
+    cards:[
+      { when:"Everything you have been told to do is making it worse.",
+        q:"What actually brings me back, not what is supposed to?",
+        t:"Breathing exercises do nothing. Standing on the back step with a cold glass does." },
+      { when:"Reaching outside the relationship has started to feel like disloyalty.",
+        q:"Who steadies me that is not you?",
+        t:"Ringing my sister is not going around you. It is what lets me come back." },
+      { when:"The argument has swallowed the whole day.",
+        q:"Is there a place that knows my story?",
+        t:"Ten minutes at the river and the argument goes back to its actual size. Let me go and I will come back better." },
+      { when:"One of you is hovering, wanting to help, guessing wrong.",
+        q:"Right now: space, quiet company, movement, water, touch with consent, or a time to check in?",
+        t:"Quiet company. Stay in the room. Do not ask me anything yet." },
+      { when:"Something you have wanted for years, and tonight it feels safe to say it.",
+        q:"What helps me that I have never asked for, because wanting it felt like too much?",
+        t:"Say my name. Just my name, with nothing after it." },
+      { when:"You are both still raw and the words are not landing.",
+        q:"What is one small signal from you that tells my body I am safe here?",
+        t:"You lower your voice and sit down. Everything drops a level." },
+      { when:"There is nothing left in the tank and the day is not over.",
+        q:"What is available to me today, rather than on a good day?",
+        t:"Today I have about twenty minutes of talking in me. That is the real number. Let us spend it on whichever thing matters most to you." },
+      { when:"You have come back to the room but not to yourself.",
+        q:"What one ordinary thing steadies me, even a little?",
+        t:"Warm hands and something to look at out of a window. Four minutes. Give me that and I can start properly with you." },
+      { when:"The fight is over and you are the one who cannot stop replaying it.",
+        q:"What do I say to myself afterwards that I would never say to you?",
+        t:"I run it back all night and call myself a lot of names. I am telling you because I would rather you knew than guessed." }
+    ]
+  },
+  {
+    id:"reach", n:5, name:"Reach again", stripe:"indigo", meaning:"serenity",
+    body:"Bring one truth without making it the only truth. Name what you protected, listen for difference, own the impact even where you did not intend it, and ask for one thing clearly. A reach is an ask, an offer, a commitment or a disclosure. It is not a verdict.",
+    cards:[
+      { when:"The heat has gone out of it and something true is still waiting.",
+        q:"One truth, and not the only truth.",
+        t:"I was frightened. That is the whole of it. Can we start there instead?" },
+      { when:"You meant well and it landed badly.",
+        q:"I can hear the impact was ___. My intention was ___. Both matter.",
+        t:"It landed as not caring. I meant to give you room. That does not undo it. What do you need from me now?" },
+      { when:"You have apologised and it has not landed.",
+        q:"What am I still not seeing?",
+        t:"Tell me the part I keep skipping past. I will sit still for it." },
+      { when:"The argument is over and neither of you knows how to come back in.",
+        q:"What repair actually works on me, even while I am still cross?",
+        t:"Make me tea and say my name. That is the whole list. Use it." },
+      { when:"You have asked for everything, so nothing has been heard.",
+        q:"What is the one thing I am asking for? And what would make it possible for you?",
+        t:"Sunday mornings back. What would you need on the Saturday for that?" },
+      { when:"Things are fine, and quietly thinner than they were.",
+        q:"What used to make me feel chosen, and can I ask for it back?",
+        t:"You used to ring on the way home for no reason. I have missed it. Could we have that again?" },
+      { when:"You are running the logistics well and the wanting has gone quiet.",
+        q:"Being wanted is not the same as being needed. What does wanted feel like?",
+        t:"Needed is who handles the admin. Wanted is you looking up when I walk in. I would like more of the second." },
+      { when:"One of you is not sure they want this, and another can feel it.",
+        q:"What is true right now, without deciding the whole future tonight?",
+        t:"I do not know what I want yet. I will not pretend to know, and I am not saying it to punish you." },
+      { when:"You have both been careful for weeks and nothing has been said.",
+        q:"What is one thing I noticed this month and never said out loud?",
+        t:"You took the call from my mother so I did not have to. I noticed then and said nothing. I am saying it now." }
+    ]
+  },
+  {
+    id:"field", n:6, name:"The wider field", stripe:"violet", meaning:"spirit",
+    body:"Not a step. The room you are already in. Body, family and kin, community, culture and identity, Country and place, spirit and meaning. Two people are never only two people, and some of what is in the room was put there long before either of you.",
+    cards:[
+      { when:"You keep breaking a rule neither of you remembers agreeing to.",
+        q:"What is the deal we made that we never actually said out loud?",
+        t:"I became the one who notices, you became the one who decides. Neither of us agreed to that. Can we redo it on purpose?" },
+      { when:"You are measuring yourselves against a template that was never yours.",
+        q:"What did we have to invent, because nobody handed us the map?",
+        t:"We made up what an anniversary means for us. There was no version to copy. I am proud of that." },
+      { when:"There is a third voice in an argument that has two people in it.",
+        q:"Who else is in this room? Family, kin, community, history.",
+        t:"The people who raised me are in every conversation we have about money. Help me hear when it is them and not you." },
+      { when:"Your body has a rule the relationship has never been told.",
+        q:"What does my body need from this relationship that we never talk about?",
+        t:"I cannot do hard conversations after nine. That is my body, not avoidance. Ask me at breakfast and you get all of me." },
+      { when:"One of you came home tense and it was never about anyone here.",
+        q:"What do I carry from being watched or judged that follows me home?",
+        t:"I do the check before I take your hand on that street. I come home tired, and it is not you I am tired of." },
+      { when:"Something is working and neither of you has words that fit it.",
+        q:"What is something about how we love that we have never seen modelled?",
+        t:"Three of us making it ordinary. Nobody showed us that being boring and fine. I want us to say so out loud." },
+      { when:"A quiet night, near the end of something, or the start of it.",
+        q:"What map do we want to hand to a younger version of ourselves?",
+        t:"That you can want your freedom and someone to come home to. I want them to hear it from us." },
+      { when:"A decision about money has three families inside it.",
+        q:"What am I obliged to, outside this relationship, that you have never been told about?",
+        t:"Money goes home every month, and that commitment is not one I can drop. I should have said it years ago. Could we look at the real numbers together and plan around it?" },
+      { when:"You are out in some rooms and not in others.",
+        q:"Where am I still choosing my words, and what does that cost me?",
+        t:"I am out everywhere except work, and I go quiet there all day. None of that is yours. I need you to know it is happening." }
+    ]
+  },
+  {
+    id:"wanting", n:7, name:"The wanting", stripe:"hot pink", meaning:"sex",
+    body:"Wanting is not a fixed amount that one of you has and another lacks. It shows up between you, and it answers to context: rest, privacy, resentment, safety, how you have been spoken to all week. For many people it arrives after something good has started rather than before it, across genders. How often is a poor measure of anything, and aiming for extraordinary can make it harder to reach for at all. Different arousal patterns and different sensory needs are not automatically incompatibility. Often they are two languages. This is built on curiosity, not compliance. Nothing here is a negotiation: a no needs no reason, does not have to be earned back, and nobody has to explain a body in order to keep a partner. Every card in this suit can be passed, and a pass needs no reason. Nobody deals this suit at anybody. If what comes up is not a communication problem, it is worth saying out loud to someone outside the two of you.",
+    cards:[
+      { when:"Everything between you is logistics, and the last flirt was months ago.",
+        q:"What did we used to do that was not sex and was not nothing?",
+        t:"You used to look at me from the doorway, not on the way to anything. I would like that back." },
+      { when:"One of you is keeping a count and the other one can feel it.",
+        q:"If we never counted again, what would I actually be asking for?",
+        t:"Not more often. Better. One hour that neither of us is getting through. Can we aim at that instead?" },
+      { when:"One of you needs to feel close before sex and the other gets close through it.",
+        q:"Does closeness come before wanting for me, after it, or somewhere else?",
+        t:"I need to feel met first. You arrive the other way around. Neither of us is doing it wrong. Could we make room for both, with no ending decided?" },
+      { when:"You are arguing about how often, and it was never really about how often.",
+        q:"What is sex actually for me: comfort, reassurance, excitement, being chosen, escape?",
+        t:"Mostly reassurance. So a no lands much bigger in me than it is, and that part is mine to carry. I would rather tell you that than let it leak into how I ask." },
+      { when:"You have been waiting to feel like it, and it has not arrived.",
+        q:"What am I like when the wanting turns up after we have started, rather than before?",
+        t:"I almost never feel like it in advance. With a slow start and nowhere we have to get to, sometimes I arrive and sometimes I do not. Let stopping be as easy as starting and I am willing to begin." },
+      { when:"The sex you are having is not the sex either of you would choose.",
+        q:"What would make it worth wanting, and not just worth agreeing to?",
+        t:"Unhurried, and you saying what you like out loud. That is most of it. Could we try the unhurried one this week?" },
+      { when:"You are both chasing something extraordinary and getting nothing at all.",
+        q:"What would good enough look like for us this month?",
+        t:"Good enough might just be unhurried, with nobody else around and nowhere to be after. I would rather aim at that with you than at something neither of us can reach. What would good enough be for you?" },
+      { when:"Touch arrives and your body reads it as too much before it reads anything else.",
+        q:"What does my body have to get past before touch is pleasure and not noise?",
+        t:"The overhead light, and noise I cannot switch off. It is the room, not you. Change the room with me and let us see." },
+      { when:"Neither of you has started anything in months and you are both waiting.",
+        q:"What does it cost me to be the one who asks?",
+        t:"A no sits in me for a week, so I stopped asking. That part is mine to work on. Knowing you would not mind being asked is what would get me there." },
+      { when:"One of you says what they would prefer and the other one hears a verdict.",
+        q:"When I ask for something different, what am I afraid it lands as?",
+        t:"I am afraid it lands as you failing at something. It is not that. Let me say the next one badly, and stay in the room while I do." },
+      { when:"Touch has come to mean that something is expected next.",
+        q:"Could we have time where nothing has to happen beyond being here?",
+        t:"An hour with nothing on the table, not even a good outcome. Even the awkward parts would tell us something. Try it with me once." },
+      { when:"One of you wants it in the diary and the other one hears a demand.",
+        q:"If we set time aside, what are we actually agreeing to turn up for?",
+        t:"The time, not the outcome. No phones, nobody else around, nothing required. Would you put it in the diary with me?" },
+      { when:"The body is present and the attention has gone somewhere else.",
+        q:"Where do I go, and what would bring me back?",
+        t:"I drift, and sometimes it is the sameness and sometimes it is something older. Change one thing and say my name. If I am still gone, let us stop." },
+      { when:"One of you has been managing the other one all week.",
+        q:"Who has been carrying the remembering lately, and what has that done to how I reach for you?",
+        t:"I have been holding the reminders and the checking all week, and I cannot cross from that into wanting. That is the load, not you. Can we work out who carries what?" },
+      { when:"You have both been guessing for years and getting it slightly wrong.",
+        q:"What is one thing I like that I have never said out loud?",
+        t:"I have never told you because it felt like a lot to ask. It is not a lot. Ask me twice and I will get it out." },
+      { when:"Something about sex feels loaded and neither of you put it there.",
+        q:"What did I learn about bodies and pleasure long before I met you?",
+        t:"In my house it was never mentioned, so saying what I want still feels like too much. Some of that is old and some of it is now. Be patient while I learn to say it, and take my no as real while I do." },
+      { when:"One of you is getting there alone and together it has gone quiet.",
+        q:"What do I get on my own that I would like to have with you as well?",
+        t:"Quiet, and nothing to work out. That is not a complaint about you. I would like to bring some of that quiet into what we do together." },
+      { when:"A no has arrived and the room has gone cold.",
+        q:"Is stopping allowed here without a reason and without a mood?",
+        t:"I want to be able to say no and still be warm with you after. Tell me what you need from me when I do, and I will tell you what I need from you." },
+      { when:"Wanting has started to feel like a debt one of you owes.",
+        q:"Was my last yes one I meant, or one that kept the peace?",
+        t:"Some of them kept the peace, and it has been costing me quietly. I am telling you because I would rather you had a real yes from me. I need my no to be as easy to say as my yes." },
+      { when:"One of you has landed somewhere the other one keeps trying to solve.",
+        q:"What if this is not a problem to fix but a fact to plan around?",
+        t:"Sex is not where I am at the moment, and it may not change. That is not a punishment and it is not a puzzle. I still want the rest of it with you, so can we talk about the rest?" },
+      { when:"A body has changed and the old script does not fit it.",
+        q:"What does my body want now, rather than what it used to want?",
+        t:"It is different and it is not less. I do not want to keep performing the old version. Let me show you this one." }
+    ]
+  }
+];
+
+const OVERLAP = [
+  "Kissing with nothing expected after it",
+  "Being told out loud what you like",
+  "Saying out loud what I like",
+  "Being asked beforehand rather than in the moment",
+  "A set time together with no expectation it goes anywhere",
+  "Starting before I feel like it, to see whether I get there",
+  "Stopping partway with no explanation needed",
+  "Naming one thing I do not want, in advance",
+  "A word that means stop, agreed before",
+  "Being flirted with during the week",
+  "Being held for a long time and nothing else",
+  "Showing rather than telling",
+  "Hands only",
+  "Undressed with the light on",
+  "Lower light, or none",
+  "A slow start with no talking",
+  "Knowing roughly when, rather than being surprised",
+  "Small touches during the day that lead nowhere",
+  "Time set aside where nothing has to happen",
+  "Being the one who starts it",
+  "Being the one who is asked",
+  "Sex that does not include an orgasm",
+  "Somewhere that is not the bed",
+  "Talking about it the next day",
+  "Reading or watching something together"
+];
+
+</script>
+<script>
+(function(){
+  "use strict";
+  var ACC = {1:["var(--s1)","var(--s1l)"],2:["var(--s2)","var(--s2l)"],3:["var(--s3)","var(--s3l)"],
+             4:["var(--s4)","var(--s4l)"],5:["var(--s5)","var(--s5l)"],6:["var(--s6)","var(--s6l)"],7:["var(--s7)","var(--s7l)"]};
+  var $ = function(id){return document.getElementById(id);};
+
+  /* flag rule: seven stripes in suit order */
+  var flag = document.querySelector(".flag");
+  SUITS.forEach(function(s){ var i=document.createElement("i"); i.style.background=ACC[s.n][1]; flag.appendChild(i); });
+
+  /* moves strip */
+  var mv = $("moves");
+  SUITS.forEach(function(s){
+    var d=document.createElement("div"); d.className="move";
+    d.innerHTML='<b style="color:'+ACC[s.n][1]+'">'+s.name+"</b><span>"+s.meaning+"</span>";
+    mv.appendChild(d);
+  });
+
+  /* ---- suit chooser ---- */
+  var active = {};
+  SUITS.forEach(function(s){ active[s.id] = (s.id!=="wanting"); });
+  var sg = $("suitgrid");
+  SUITS.forEach(function(s){
+    var b=document.createElement("button");
+    b.className="suitbtn"; b.type="button";
+    b.style.setProperty("--a",ACC[s.n][1]);
+    b.setAttribute("aria-pressed", String(active[s.id]));
+    b.innerHTML='<span class="st">'+(active[s.id]?"In play":"Off")+'</span><span class="nm">'+s.name+'</span><span class="mt">'+s.stripe+" · "+s.meaning+" · "+s.cards.length+" cards</span>";
+    b.addEventListener("click",function(){
+      active[s.id]=!active[s.id];
+      b.setAttribute("aria-pressed",String(active[s.id]));
+      b.querySelector(".st").textContent = active[s.id]?"In play":"Off";
+      poolNote();
+    });
+    sg.appendChild(b);
+  });
+
+  /* ---- pool ---- */
+  function pool(){
+    var out=[];
+    SUITS.forEach(function(s){
+      if(!active[s.id]) return;
+      s.cards.forEach(function(c,i){ out.push({s:s,c:c,key:s.id+":"+i}); });
+    });
+    return out;
+  }
+  var seen = {};
+  function poolNote(){
+    var p=pool(), left=p.filter(function(x){return !seen[x.key];}).length;
+    $("poolCount").textContent = p.length ? (left+" of "+p.length+" still to come.") : "No suits are in play. Turn one on above.";
+  }
+
+  /* ---- card rendering ---- */
+  function markSVG(colour){
+    return '<svg class="mark" viewBox="0 0 44 30" aria-hidden="true"><path fill="'+colour+'" d="M4 12c0-4 2-6 5-6h26c3 0 5 2 5 6v3h1c1.6 0 2.6 1.3 2.6 3.2V26h-5v-3H5.4v3h-5v-7.8C.4 16.3 1.4 15 3 15h1zM9 15h26v-2.6c0-1.6-.8-2.4-2.3-2.4H11.3C9.8 10 9 10.8 9 12.4z"/></svg>';
+  }
+  function spine(n){
+    var h='<span class="spine" aria-hidden="true">';
+    SUITS.forEach(function(s){ h+='<i style="background:'+ACC[s.n][0]+'" class="'+(s.n===n?"on":"")+'"></i>'; });
+    return h+"</span>";
+  }
+  function cardHTML(item, pickLabel){
+    var s=item.s, c=item.c;
+    return spine(s.n)
+      + '<span class="suitline">'+markSVG(ACC[s.n][0])+'<span class="suitname" style="color:'+ACC[s.n][0]+'">'+s.name+"</span></span>"
+      + (pickLabel?'<span class="pick">'+pickLabel+"</span>":"")
+      + '<p class="when">'+c.when+"</p>"
+      + '<p class="q">'+c.q+"</p>"
+      + '<p class="trylab">Try</p><p class="try">'+c.t+"</p>"
+      + '<p class="pass">Pass is a whole answer. So is not tonight.</p>";
+  }
+
+  /* ---- state ---- */
+  var mode = 1, current = null;
+  var kept = [], again = [];
+
+  function findByKey(k){
+    var p = k.split(":"), s = SUITS.filter(function(x){return x.id===p[0];})[0];
+    return s ? {s:s,c:s.cards[+p[1]],key:k} : null;
+  }
+
+  function renderKept(){
+    var any = kept.length || again.length;
+    $("keptSection").hidden = !any;
+    ["keptRow","againRow"].forEach(function(id){ $(id).innerHTML=""; });
+    function fill(list,el,verb){
+      if(!list.length){ el.innerHTML='<span class="count">Nothing yet.</span>'; return; }
+      list.forEach(function(k){
+        var it=findByKey(k); if(!it) return;
+        var b=document.createElement("button"); b.className="keptchip"; b.type="button";
+        b.innerHTML="<b>"+it.s.name+"</b> · "+it.c.q;
+        b.addEventListener("click",function(){ show([it]); window.scrollTo({top:$("stage").offsetTop-40,behavior:"smooth"}); });
+        el.appendChild(b);
+      });
+    }
+    fill(kept,$("keptRow"));
+    fill(again,$("againRow"));
+  }
+
+  function actionsFor(item){
+    var wrap=document.createElement("div"); wrap.className="acts";
+    function chip(label,on,fn){
+      var b=document.createElement("button"); b.className="chip"; b.type="button";
+      b.textContent=label; b.setAttribute("aria-pressed",String(!!on));
+      b.addEventListener("click",function(){ fn(b); });
+      wrap.appendChild(b); return b;
+    }
+    chip("Pass",false,function(){ deal(); });
+    var writing=false, box=null;
+    chip("Write it instead",false,function(b){
+      writing=!writing; b.setAttribute("aria-pressed",String(writing));
+      if(writing){
+        box=document.createElement("textarea"); box.className="writebox";
+        box.setAttribute("aria-label","Write your answer"); box.placeholder="Write it here. Nothing is sent anywhere. It stays on this device until you close the page.";
+        wrap.parentNode.appendChild(box); box.focus();
+      } else if(box){ box.remove(); box=null; }
+    });
+    chip("Keep for the next session", kept.indexOf(item.key)>-1, function(b){
+      var i=kept.indexOf(item.key);
+      if(i>-1) kept.splice(i,1); else kept.push(item.key);
+      b.setAttribute("aria-pressed",String(kept.indexOf(item.key)>-1)); renderKept();
+    });
+    chip("Ask me again", again.indexOf(item.key)>-1, function(b){
+      var i=again.indexOf(item.key);
+      if(i>-1) again.splice(i,1); else again.push(item.key);
+      b.setAttribute("aria-pressed",String(again.indexOf(item.key)>-1)); renderKept();
+    });
+    return wrap;
+  }
+
+  function show(items){
+    var st=$("stage"); st.innerHTML="";
+    var hand=document.createElement("div"); hand.className="hand";
+    items.forEach(function(item,idx){
+      var el;
+      if(items.length>1){
+        el=document.createElement("button"); el.type="button"; el.className="card";
+        el.innerHTML=cardHTML(item,"Choose this one");
+        el.addEventListener("click",function(){ show([item]); });
+      } else {
+        el=document.createElement("div"); el.className="card";
+        el.innerHTML=cardHTML(item,null);
+      }
+      hand.appendChild(el);
+    });
+    st.appendChild(hand);
+    if(items.length===1){
+      current=items[0];
+      seen[current.key]=true;
+      var note=document.createElement("div"); note.className="suitnote";
+      note.style.setProperty("--a",ACC[current.s.n][1]);
+      note.style.setProperty("--a-light",ACC[current.s.n][1]);
+      note.innerHTML="<h4>"+current.s.name+"</h4><p>"+current.s.body+"</p>";
+      st.appendChild(actionsFor(current));
+      st.appendChild(note);
+    } else {
+      var hint=document.createElement("p"); hint.className="count";
+      hint.textContent="Read all three. Answer one. The other two go back in the deck.";
+      st.appendChild(hint);
+    }
+    poolNote();
+  }
+
+  function deal(){
+    var p=pool();
+    if(!p.length){ $("stage").innerHTML='<p class="count">No suits are in play. Turn one on above.</p>'; return; }
+    var fresh=p.filter(function(x){return !seen[x.key];});
+    if(fresh.length < (mode===3?3:1)){ seen={}; fresh=p; }
+    var picks=[], copy=fresh.slice();
+    for(var i=0;i<mode && copy.length;i++){ picks.push(copy.splice(Math.floor(Math.random()*copy.length),1)[0]); }
+    show(picks);
+  }
+
+  $("deal").addEventListener("click",deal);
+  $("mode1").addEventListener("click",function(){ mode=1; $("mode1").setAttribute("aria-pressed","true"); $("mode3").setAttribute("aria-pressed","false"); $("deal").textContent="Deal a card"; });
+  $("mode3").addEventListener("click",function(){ mode=3; $("mode3").setAttribute("aria-pressed","true"); $("mode1").setAttribute("aria-pressed","false"); $("deal").textContent="Deal three"; });
+
+  /* ---- two protected minutes ---- */
+  var tId=null, tLeft=0;
+  function tick(){
+    tLeft--;
+    var m=Math.floor(tLeft/60), s=tLeft%60;
+    $("timerRead").textContent = m+":"+(s<10?"0":"")+s;
+    if(tLeft<=0){ clearInterval(tId); tId=null; $("timerRead").textContent="Time. Your turn to reflect back what you heard."; $("timerBtn").textContent="Start two minutes"; }
+  }
+  $("timerBtn").addEventListener("click",function(){
+    if(tId){ clearInterval(tId); tId=null; $("timerRead").textContent=""; this.textContent="Start two minutes"; return; }
+    tLeft=120; $("timerRead").textContent="2:00"; this.textContent="Stop the clock"; tId=setInterval(tick,1000);
+  });
+
+  /* ---- enough for tonight ---- */
+  $("enough").addEventListener("click",function(){
+    if(tId){ clearInterval(tId); tId=null; }
+    $("timerRead").textContent="";
+    $("stage").innerHTML='<div class="panel scope"><p><strong>That is enough for tonight.</strong> Nothing here has to be finished in one go, and stopping is not the same as giving up.</p><p>If something is still open, say when you will come back to it rather than leaving it hanging. If you kept any cards, they are below, and they are good ones to bring to a session.</p><p style="margin:0">Deal again whenever you want to.</p></div>';
+    window.scrollTo({top:$("stage").offsetTop-140,behavior:"smooth"});
+  });
+
+  /* ---- the overlap ---- */
+  var who="A", ans={A:{},B:{}};
+  function renderOv(){
+    var el=$("ovList"); el.innerHTML="";
+    OVERLAP.forEach(function(text,i){
+      var row=document.createElement("div"); row.className="ovitem";
+      var p=document.createElement("p"); p.textContent=text; row.appendChild(p);
+      var opts=document.createElement("div"); opts.className="ovopts";
+      ["Yes","Maybe","No"].forEach(function(v){
+        var b=document.createElement("button"); b.type="button"; b.textContent=v;
+        b.setAttribute("aria-label",v+": "+text);
+        b.setAttribute("aria-pressed",String(ans[who][i]===v));
+        b.addEventListener("click",function(){
+          ans[who][i]= (ans[who][i]===v? null : v);
+          renderOv();
+        });
+        opts.appendChild(b);
+      });
+      row.appendChild(opts); el.appendChild(row);
+    });
+    var done=Object.keys(ans[who]).filter(function(k){return ans[who][k];}).length;
+    $("ovCount").textContent = (who==="A"?"Person one":"Person two")+": "+done+" of "+OVERLAP.length+" marked. Hand the screen over when you are done.";
+  }
+  $("ovA").addEventListener("click",function(){ who="A"; $("ovA").setAttribute("aria-pressed","true"); $("ovB").setAttribute("aria-pressed","false"); $("ovResult").hidden=true; renderOv(); });
+  $("ovB").addEventListener("click",function(){ who="B"; $("ovB").setAttribute("aria-pressed","true"); $("ovA").setAttribute("aria-pressed","false"); $("ovResult").hidden=true; renderOv(); });
+  $("ovClear").addEventListener("click",function(){ ans={A:{},B:{}}; $("ovResult").hidden=true; renderOv(); });
+  $("ovReveal").addEventListener("click",function(){
+    var yes=[], maybes=0;
+    OVERLAP.forEach(function(t,i){
+      if(ans.A[i]==="Yes" && ans.B[i]==="Yes") yes.push(t);
+      if((ans.A[i]==="Maybe"||ans.A[i]==="Yes") && (ans.B[i]==="Maybe"||ans.B[i]==="Yes") && !(ans.A[i]==="Yes"&&ans.B[i]==="Yes")) maybes++;
+    });
+    var h="";
+    if(!yes.length && !maybes){
+      h="<p style='margin:0'>Nothing overlaps yet, or one of you has not marked the list. An empty overlap is information too, and it is not a verdict on either of you. It usually means the conditions are not right rather than the wanting is gone.</p>";
+    } else {
+      h="<h3>Both of you said yes</h3>";
+      h+= yes.length ? "<ul>"+yes.map(function(t){return "<li>"+t+"</li>";}).join("")+"</ul>" : "<p>Nothing yet.</p>";
+      h+="<p style='margin-top:14px'>"+maybes+" more where you both said yes or maybe. Those are conversations, not plans.</p>";
+      h+="<p style='margin:0'>What one of you marked alone stays private. Start with the shortest thing on this list, not the biggest.</p>";
+    }
+    $("ovResult").innerHTML=h; $("ovResult").hidden=false;
+  });
+  renderOv();
+
+  /* ---- links ---- */
+  $("bookCta").href = "https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking";
+  $("mailCta").href = "https://preview.mailerlite.io/forms/2525880/194843107891611174/share";
+
+  poolNote(); renderKept(); deal();
+})();
+</script>
+
+</body>
+</html>
