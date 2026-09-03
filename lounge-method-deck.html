@@ -230,9 +230,8 @@ footer.end p{max-width:78ch}
       <span class="timer" id="timerRead" aria-live="polite"></span>
       <button class="btn stop" id="enough">Enough for tonight</button>
     </div>
-    <div class="table stage" id="stage">
-      <p class="count" id="empty">Nothing dealt yet. <span id="poolCount"></span></p>
-    </div>
+    <p class="count" id="poolCount" aria-live="polite"></p>
+    <div class="table stage" id="stage"></div>
   </section>
 
   <section aria-labelledby="kept-h" id="keptSection" hidden>
@@ -632,8 +631,9 @@ const OVERLAP = [
   }
   var seen = {};
   function poolNote(){
+    var el=$("poolCount"); if(!el) return;
     var p=pool(), left=p.filter(function(x){return !seen[x.key];}).length;
-    $("poolCount").textContent = p.length ? (left+" of "+p.length+" still to come.") : "No suits are in play. Turn one on above.";
+    el.textContent = p.length ? (left+" of "+p.length+" still to come.") : "No suits are in play. Turn one on above.";
   }
 
   /* ---- card rendering ---- */
@@ -653,7 +653,7 @@ const OVERLAP = [
       + '<p class="when">'+c.when+"</p>"
       + '<p class="q">'+c.q+"</p>"
       + '<p class="trylab">Try</p><p class="try">'+c.t+"</p>"
-      + '<p class="pass">Pass is a whole answer. So is not tonight.</p>";
+      + '<p class="pass">Pass is a whole answer. So is not tonight.</p>';
   }
 
   /* ---- state ---- */
