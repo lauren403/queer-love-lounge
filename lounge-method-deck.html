@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#2a1c15">
-<meta name="description" content="Play the full Lounge Method Deck: 75 cards in seven suits, free. Deal three and choose one, pass on any card, answer out loud or in writing, and a private overlap for what you both said yes to.">
+<meta name="description" content="A working library of 75 cards in seven suits, free. Read a whole suit, take the one that fits, or let it choose for you. Pass is a whole answer.">
 <link rel="canonical" href="https://queerlovelounge.com.au/lounge-method-deck.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Queer Love Lounge">
-<meta property="og:title" content="The Lounge Method Deck · all 75 cards">
-<meta property="og:description" content="All 75 cards, seven suits, free to play. Pass is a whole answer.">
+<meta property="og:title" content="The Lounge Method Deck · the full library">
+<meta property="og:description" content="Seventy five cards in seven suits, free and open. Pass is a whole answer.">
 <meta property="og:url" content="https://queerlovelounge.com.au/lounge-method-deck.html">
 <meta property="og:image" content="https://queerlovelounge.com.au/og-image.jpg">
 <meta property="og:locale" content="en_AU">
@@ -139,6 +139,25 @@ button.card:hover{transform:translateY(-2px)}
 .writebox{width:100%;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px;font:inherit;font-size:15.5px;min-height:110px;resize:vertical}
 .timer{font-variant-numeric:tabular-nums;font-weight:700;font-size:15px;color:var(--oat);letter-spacing:.04em}
 
+/* ---------- the library ---------- */
+.lib{border:1px solid var(--line);border-radius:14px;margin:0 0 10px;overflow:hidden;background:var(--panel)}
+.lib>summary{list-style:none;cursor:pointer;padding:16px 18px 14px 20px;position:relative;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.lib>summary::-webkit-details-marker{display:none}
+.lib>summary::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--a)}
+.lib>summary:hover{background:var(--panel2)}
+.lib .lnm{font-family:var(--serif);font-size:20px;line-height:1.2;color:var(--a)}
+.lib .lmt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.lib .lct{margin-left:auto;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:700}
+.lib[open] .lct::after{content:" · close"}
+.lib:not([open]) .lct::after{content:" · open"}
+.libnote{font-size:14.6px;color:var(--mute);margin:0;padding:0 20px 16px;max-width:82ch;border-bottom:1px solid var(--line)}
+.libcard{padding:16px 20px;border-bottom:1px solid var(--line)}
+.libcard:last-child{border-bottom:0}
+.libcard .lw{font-size:13px;line-height:1.44;color:var(--faint);font-weight:500;margin:0 0 6px}
+.libcard .lq{font-family:var(--serif);font-size:20px;line-height:1.26;color:var(--cream);margin:0 0 8px;max-width:56ch}
+.libcard .lt{font-family:var(--serif);font-style:italic;font-size:15.6px;line-height:1.45;color:var(--mute);margin:0;max-width:66ch}
+.libcard .lt::before{content:"Try  ";font-style:normal;font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--faint)}
+
 /* ---------- kept rows ---------- */
 .keptrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
 .keptchip{font:inherit;font-size:13px;border-radius:99px;padding:8px 14px;border:1px solid var(--line);background:var(--panel);color:var(--mute);cursor:pointer;text-align:left}
@@ -182,7 +201,7 @@ footer.end p{max-width:78ch}
   <div class="wrap">
     <a class="kicker" href="/lounge-method-cards.html">Queer Love Lounge · The Lounge Method Deck</a>
     <h1>The Lounge <em>Method</em> Deck</h1>
-    <p class="lede">Seventy five cards for the conversation you keep not having. Five moves, the wider field you are already standing in, and the wanting.</p>
+    <p class="lede">A working library of seventy five cards. Read a whole suit, take the one that fits the week you are having, or let it choose for you.</p>
     <div class="flag" aria-hidden="true"></div>
     <p class="credential">Lauren Lynch, AMHSW · Gottman Method Level 2 · trained with Esther Perel · a queer led practice</p>
     <div class="moves" id="moves"></div>
@@ -202,26 +221,32 @@ footer.end p{max-width:78ch}
   </section>
 
   <section aria-labelledby="round-h">
-    <h2 id="round-h">How a round works</h2>
-    <p>One card per person per round. Answer in the first person, about yourself. The other person reflects back what they heard before they answer anything of their own. Then swap.</p>
+    <h2 id="round-h">How to use it</h2>
+    <p>Nobody plays through seventy five cards. Go to the suit that matches what is happening, read it, and take the one that fits. One card per person is usually enough for a night.</p>
     <div class="rounds">
-      <div class="round"><span class="tag">Deal</span><b>Let the deck choose</b><p>A card arrives and neither of you picked it. Good for a night when choosing feels loaded.</p></div>
-      <div class="round"><span class="tag">Deal</span><b>Deal me three</b><p>Three cards land face up. You read all three and answer one. Curiosity from them, the choice stays with you.</p></div>
+      <div class="round"><span class="tag">Read</span><b>Open a suit</b><p>Every card in that suit, all at once. Scan the moments in grey and stop at the one that is yours.</p></div>
       <div class="round"><span class="tag">Answer</span><b>Say it, write it, or take it away</b><p>Not everyone thinks out loud. Write the answer instead, or take the card away and bring it back tomorrow.</p></div>
+      <div class="round"><span class="tag">Or</span><b>Let it choose</b><p>Deal one blind, or have them pick three and you answer one. Good for a night when choosing feels loaded.</p></div>
       <div class="round"><span class="tag">Time</span><b>Two protected minutes</b><p>Optional. Two minutes where the other person does not speak. Useful when one of you is quicker with words.</p></div>
     </div>
   </section>
 
+  <section aria-labelledby="lib-h">
+    <h2 id="lib-h">The library</h2>
+    <p>Seven suits, seventy five cards. Open one and read the lot. <strong>The wanting is here too</strong>, and nothing in it has to be opened.</p>
+    <div id="library"></div>
+  </section>
+
   <section aria-labelledby="suits-h">
-    <h2 id="suits-h">What is in play</h2>
+    <h2 id="suits-h">Or let it choose</h2>
     <p>Turn off anything you do not want tonight. Nothing is in play unless you put it there. <strong>The wanting starts switched off.</strong></p>
     <div class="suitgrid" id="suitgrid"></div>
   </section>
 
   <section aria-labelledby="deck-h">
-    <h2 id="deck-h">The deck</h2>
+    <h2 id="deck-h">On the table</h2>
     <div class="controls">
-      <button class="btn primary" id="deal">Deal a card</button>
+      <button class="btn primary" id="deal">Deal me one</button>
       <div class="seg" role="group" aria-label="Deal mode">
         <button id="mode1" aria-pressed="true">Let the deck choose</button>
         <button id="mode3" aria-pressed="false">Deal me three</button>
@@ -244,7 +269,7 @@ footer.end p{max-width:78ch}
 
   <section aria-labelledby="ov-h">
     <h2 id="ov-h">The overlap</h2>
-    <p>For the wanting, and only if you both want to. You each mark the list privately, one at a time on the same screen. When you are both done it shows <strong>only what you both said yes to</strong>, and how many you both said maybe to. It never shows what one of you wanted on your own.</p>
+    <p>A session tool, for the wanting, and only if you both want to. You each mark the list privately, one at a time on the same screen. When you are both done it shows <strong>only what you both said yes to</strong>, and how many you both said maybe to. It never shows what one of you wanted on your own.</p>
     <div class="panel scope" style="margin:0 0 18px">
       <p style="margin:0"><strong>A maybe is not a yes.</strong> Nothing here is a contract, everything can change on the night, and this is not a document to hold up in an argument. If you want a conversation to go a certain way, this is the wrong tool for it.</p>
     </div>
@@ -618,6 +643,22 @@ const OVERLAP = [
       poolNote();
     });
     sg.appendChild(b);
+  });
+
+  /* ---- the library ---- */
+  var lib=$("library");
+  SUITS.forEach(function(sd){
+    var d=document.createElement("details"); d.className="lib"; d.style.setProperty("--a",ACC[sd.n][1]);
+    var sum=document.createElement("summary");
+    sum.innerHTML='<span class="lnm">'+sd.name+'</span><span class="lmt">'+sd.stripe+" · "+sd.meaning+'</span><span class="lct">'+sd.cards.length+" cards</span>";
+    d.appendChild(sum);
+    var note=document.createElement("p"); note.className="libnote"; note.textContent=sd.body; d.appendChild(note);
+    sd.cards.forEach(function(c){
+      var w=document.createElement("div"); w.className="libcard";
+      w.innerHTML='<p class="lw">'+c.when+'</p><p class="lq">'+c.q+'</p><p class="lt">'+c.t+'</p>';
+      d.appendChild(w);
+    });
+    lib.appendChild(d);
   });
 
   /* ---- pool ---- */
