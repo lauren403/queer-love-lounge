@@ -227,7 +227,7 @@ footer.end p{max-width:78ch}
       <div class="round"><span class="tag">Read</span><b>Open a suit</b><p>Every card in that suit, all at once. Scan the moments in grey and stop at the one that is yours.</p></div>
       <div class="round"><span class="tag">Answer</span><b>Say it, write it, or take it away</b><p>Not everyone thinks out loud. Write the answer instead, or take the card away and bring it back tomorrow.</p></div>
       <div class="round"><span class="tag">Or</span><b>Let it choose</b><p>Deal one blind, or have them pick three and you answer one. Good for a night when choosing feels loaded.</p></div>
-      <div class="round"><span class="tag">Time</span><b>Two protected minutes</b><p>Optional. Two minutes where the other person does not speak. Useful when one of you is quicker with words.</p></div>
+      <div class="round"><span class="tag">Time</span><b>Two protected minutes</b><p>Optional. Two minutes where nobody else speaks. Useful when somebody is quicker with words.</p></div>
     </div>
   </section>
 
@@ -269,7 +269,7 @@ footer.end p{max-width:78ch}
 
   <section aria-labelledby="ov-h">
     <h2 id="ov-h">The overlap</h2>
-    <p>A session tool, for the wanting, and only if you both want to. You each mark the list privately, one at a time on the same screen. When you are both done it shows <strong>only what you both said yes to</strong>, and how many you both said maybe to. It never shows what one of you wanted on your own.</p>
+    <p>A session tool, for the wanting. Two people at a time, and only if you both want to. You each mark the list privately, one at a time on the same screen. When you are both done it shows <strong>only what you both said yes to</strong>, and how many you both said maybe to. It never shows what one person wanted on their own.</p>
     <div class="panel scope" style="margin:0 0 18px">
       <p style="margin:0"><strong>A maybe is not a yes.</strong> Nothing here is a contract, everything can change on the night, and this is not a document to hold up in an argument. If you want a conversation to go a certain way, this is the wrong tool for it.</p>
     </div>
@@ -311,7 +311,7 @@ footer.end p{max-width:78ch}
 const SUITS = [
   {
     id:"notice", n:1, name:"Notice what arrived", stripe:"red", meaning:"life",
-    body:"Before the argument has a topic, something has already landed in the body. Notice the cue, the meaning that arrived with it, and what walked into the room with you that was never about the two of you. If you cannot find it in your body, that is an answer.",
+    body:"Before the argument has a topic, something has already landed in the body. Notice the cue, the meaning that arrived with it, and what walked into the room with you that was never about any of you. If you cannot find it in your body, that is an answer.",
     cards:[
       { when:"Three sentences in, and your body is already ahead of you.",
         q:"Where does it land in my body first, before I have a word for it?",
@@ -319,13 +319,13 @@ const SUITS = [
       { when:"Something small has landed far harder than it should have.",
         q:"What did my body just get me ready to do?",
         t:"It got me ready to defend something before I knew what. Give me a minute and I will tell you which part landed." },
-      { when:"One of you is already certain what the other one meant.",
+      { when:"Someone has already decided what that meant.",
         q:"The story I told myself in that moment was…",
         t:"…that you had already decided, and I was being informed. That might be wrong, and I still need to say it." },
       { when:"A feeling arrives faster and bigger than the moment seems to warrant.",
         q:"Is this old, is it happening now, or is it both?",
         t:"This is old, and it is also happening. I need you to hear both halves of that." },
-      { when:"You have both sat down and the conversation has not begun yet.",
+      { when:"Everyone has sat down and the conversation has not begun yet.",
         q:"What walked in with me tonight that was never about us?",
         t:"Four hours sleep and a call from my mother. Mine, not yours, and it is in the room." },
       { when:"A hard week, and you are hunting for something that was not hard.",
@@ -344,33 +344,33 @@ const SUITS = [
   },
   {
     id:"name", n:2, name:"Name what took over", stripe:"orange", meaning:"healing",
-    body:"No one is the pattern. The pattern is what happens between you. But naming a cycle does not make responsibility equal. Power, fear, freedom, safety and impact still matter, and if only one of you can start it or stop it, it is not a shared pattern.",
+    body:"No one is the pattern. The pattern is what happens between you. But naming a cycle does not make responsibility equal. Power, fear, freedom, safety and impact still matter, and if only one person can start it or stop it, it is not a shared pattern.",
     cards:[
-      { when:"You have had this fight before and you both know your lines.",
+      { when:"You have had this fight before and everybody knows their lines.",
         q:"Say our loop in two or three verbs. Mine first.",
         t:"I chase, you go still. Then I chase harder and you go further out. Can we catch it at the first step?" },
       { when:"The topic keeps changing and the feeling never does.",
         q:"The thing I do not have to say while we keep arguing is…",
         t:"As long as we are arguing about the dishes, I do not have to say I am frightened. I am saying it now." },
-      { when:"The two of you are lining up who did what, and when.",
+      { when:"The evening has turned into a list of who did what, and when.",
         q:"When I fear losing you, I protect myself by ___. How does that land on you?",
         t:"I go reasonable and start organising things. I have never actually asked you how that lands." },
       { when:"You have just defended yourself and it did not help.",
         q:"What am I protecting when I do that, and what am I longing for?",
         t:"My dignity. And underneath it, to be wanted without having to ask twice. So I am asking once." },
-      { when:"One of you keeps getting read the wrong way.",
+      { when:"The same thing you say keeps getting heard as something else.",
         q:"What do I do that might have come to mean “not now” to you?",
         t:"I pick up my phone while you are still talking. I think it files as: not important. Does it?" },
-      { when:"It is always the same one of you who says it out loud.",
+      { when:"It is always the same person who says it out loud.",
         q:"Which of us usually names it first, and what does that cost them?",
         t:"It is always me, and it costs me looking like the one with the problem. Could you go first next time?" },
-      { when:"You keep finding your part, and nothing on the other side changes.",
+      { when:"You keep finding your part, and nothing anywhere else changes.",
         q:"Am I in a pattern with you, or managing around you?",
         t:"I have changed six things this year. I cannot name one that changed back. I want to look at that." },
       { when:"The same word keeps ending the conversation.",
         q:"The word I use when I want it to stop is…",
         t:"…“fine”. It is not fine, it is a door closing. If you hear it, say you noticed and let me decide." },
-      { when:"One of you always has the better sentence and the other one goes quiet.",
+      { when:"Somebody always has the better sentence, and somebody else goes quiet.",
         q:"In these, am I the one with the words, or the one who goes quiet?",
         t:"You win on words every time, so I go quiet and take it elsewhere. That is not agreement. Slow down and let me get there." }
     ]
@@ -388,22 +388,22 @@ const SUITS = [
       { when:"The door has shut and somebody has started counting the minutes.",
         q:"What turns a pause into leaving, for me?",
         t:"Not the leaving. The not knowing when. Give me a time and I can wait." },
-      { when:"Ten minutes into a break, and neither of you knows the rules.",
-        q:"Do I want distance, or you nearby and quiet? If we are apart, what does still here look like?",
+      { when:"Ten minutes into a break, and nobody knows the rules.",
+        q:"Do I want distance, or quiet company? If we are apart, what says I am still here?",
         t:"Nearby and quiet. If we are not in the same place, a text at eight is enough." },
-      { when:"One of you finds the waiting harder than the argument.",
+      { when:"The waiting is turning out to be harder than the argument.",
         q:"What is the hardest part of waiting for you to come back?",
         t:"I have the whole conversation without you, twice, and lose both. Come and find me before I do." },
-      { when:"A closed door means far more to one of you than the other.",
+      { when:"A closed door lands far harder on one person here than another.",
         q:"In the house I grew up in, a closed door meant…",
         t:"In my house it meant three days. I still hear a door that way. Say you are coming back and I will believe you." },
-      { when:"This has stopped being a conversation.",
+      { when:"Somewhere in the last ten minutes this stopped being a conversation.",
         q:"Do I want to come back to this, or does it need to be over for tonight?",
         t:"I am not continuing tonight. Not to punish you. I will tell you tomorrow whether I can." },
-      { when:"You are on separate screens and one of you wants to hang up.",
+      { when:"You are on separate screens and somebody wants to hang up.",
         q:"When there is no room to walk out of, what does a pause look like for me?",
         t:"Twenty minutes off the call, and one line from you at the end of it. That is enough to keep me here." },
-      { when:"One of you wants it settled tonight and the other cannot get there.",
+      { when:"Somebody wants it settled tonight and somebody else cannot get there.",
         q:"How long do I need before I can think, not just before I can speak?",
         t:"A whole night. I am not shutting you out, I need longer than this. Ask me tomorrow and you will get a real answer." }
     ]
@@ -421,13 +421,13 @@ const SUITS = [
       { when:"The argument has swallowed the whole day.",
         q:"Is there a place that knows my story?",
         t:"Ten minutes at the river and the argument goes back to its actual size. Let me go and I will come back better." },
-      { when:"One of you is hovering, wanting to help, guessing wrong.",
+      { when:"Somebody is hovering, wanting to help, and guessing wrong.",
         q:"Right now: space, quiet company, movement, water, touch with consent, or a time to check in?",
         t:"Quiet company. Stay in the room. Do not ask me anything yet." },
       { when:"Something you have wanted for years, and tonight it feels safe to say it.",
         q:"What helps me that I have never asked for, because wanting it felt like too much?",
         t:"Say my name. Just my name, with nothing after it." },
-      { when:"You are both still raw and the words are not landing.",
+      { when:"Everyone is still raw and the words are not landing.",
         q:"What is one small signal from you that tells my body I am safe here?",
         t:"You lower your voice and sit down. Everything drops a level." },
       { when:"There is nothing left in the tank and the day is not over.",
@@ -454,7 +454,7 @@ const SUITS = [
       { when:"You have apologised and it has not landed.",
         q:"What am I still not seeing?",
         t:"Tell me the part I keep skipping past. I will sit still for it." },
-      { when:"The argument is over and neither of you knows how to come back in.",
+      { when:"The argument is over and nobody knows how to come back in.",
         q:"The thing that works on me while I am still cross…",
         t:"Make me tea and say my name. That is the whole list. Use it." },
       { when:"You have asked for everything, so nothing has been heard.",
@@ -469,31 +469,31 @@ const SUITS = [
       { when:"The doubt about whether this continues is in the room, unsaid.",
         q:"What is true right now, without deciding the whole future tonight?",
         t:"I do not know what I want yet. I will not pretend to know, and I am not saying it to punish you." },
-      { when:"You have both been careful for weeks and nothing has been said.",
+      { when:"Weeks of being careful, and nothing has actually been said.",
         q:"What is one thing I noticed this month and never said out loud?",
         t:"You took the call from my mother so I did not have to. I noticed then and said nothing. I am saying it now." }
     ]
   },
   {
     id:"field", n:6, name:"The wider field", stripe:"violet", meaning:"spirit",
-    body:"Not a step. The room you are already in. Body, family and kin, community, culture and identity, Country and place, spirit and meaning. Two people are never only two people, and some of what is in the room was put there long before either of you.",
+    body:"Not a step. The room you are already in. Body, family and kin, community, culture and identity, Country and place, spirit and meaning. Nobody is ever only themselves, and some of what is in the room was put there long before any of you.",
     cards:[
-      { when:"You keep breaking a rule neither of you remembers agreeing to.",
+      { when:"You keep breaking a rule nobody remembers agreeing to.",
         q:"What is the deal we made that we never actually said out loud?",
         t:"I became the one who notices, you became the one who decides. Neither of us agreed to that. Can we redo it on purpose?" },
       { when:"You are measuring yourselves against a template that was never yours.",
         q:"What did we have to invent, because nobody handed us the map?",
         t:"We made up what an anniversary means for us. There was no version to copy. I am proud of that." },
-      { when:"There is a third voice in an argument that has two people in it.",
+      { when:"There is a voice in this argument belonging to somebody not here.",
         q:"Who else is in this room? Family, kin, community, history.",
         t:"The people who raised me are in every conversation we have about money. Help me hear when it is them and not you." },
       { when:"Your body has a rule the relationship has never been told.",
         q:"What does my body need from this relationship that we never talk about?",
         t:"I cannot do hard conversations after nine. That is my body, not avoidance. Ask me at breakfast and you get all of me." },
-      { when:"One of you came home tense and it was never about anyone here.",
+      { when:"Somebody came home tense and it was never about anyone here.",
         q:"What I carry home from being watched all day is…",
         t:"I do the check before I take your hand on that street. I come home tired, and it is not you I am tired of." },
-      { when:"Something is working and neither of you has words that fit it.",
+      { when:"Something is working and nobody has words that fit it.",
         q:"What is something about how we love that we have never seen modelled?",
         t:"Three of us making it ordinary. Nobody showed us that being boring and fine. I want us to say so out loud." },
       { when:"A quiet night, near the end of something, or the start of it.",
@@ -509,15 +509,15 @@ const SUITS = [
   },
   {
     id:"wanting", n:7, name:"The wanting", stripe:"hot pink", meaning:"sex",
-    body:"Wanting is not a fixed amount that one of you has and another lacks. It shows up between you, and it answers to context: rest, privacy, resentment, safety, how you have been spoken to all week. For many people it arrives after something good has started rather than before it, across genders. How often is a poor measure of anything, and aiming for extraordinary can make it harder to reach for at all. Different arousal patterns and different sensory needs are not automatically incompatibility. Often they are two languages. This is built on curiosity, not compliance. Nothing here is a negotiation: a no needs no reason, does not have to be earned back, and nobody has to explain a body in order to keep a partner. Every card in this suit can be passed, and a pass needs no reason. Nobody deals this suit at anybody. If what comes up is not a communication problem, it is worth saying out loud to someone outside the two of you.",
+    body:"Wanting is not a fixed amount that one person has and another lacks. It shows up between you, and it answers to context: rest, privacy, resentment, safety, how you have been spoken to all week. For many people it arrives after something good has started rather than before it, across genders. How often is a poor measure of anything, and aiming for extraordinary can make it harder to reach for at all. Different arousal patterns and different sensory needs are not automatically incompatibility. Often they are two languages. This is built on curiosity, not compliance. Nothing here is a negotiation: a no needs no reason, does not have to be earned back, and nobody has to explain a body in order to keep a partner. Every card in this suit can be passed, and a pass needs no reason. Nobody deals this suit at anybody. If what comes up is not a communication problem, it is worth saying out loud to someone outside the relationship.",
     cards:[
       { when:"Everything between you is logistics, and the last flirt was months ago.",
         q:"The thing we used to do that was not sex and was not nothing…",
         t:"You used to look at me from the doorway, not on the way to anything. I would like that back." },
-      { when:"One of you is keeping a count and the other one can feel it.",
+      { when:"There is a number in the room and nobody has said it.",
         q:"If we never counted again, what would I actually be asking for?",
         t:"Not more often. Better. One hour that neither of us is getting through. Can we aim at that instead?" },
-      { when:"One of you needs to feel close before sex and the other gets close through it.",
+      { when:"Closeness comes before sex for somebody here, and through it for somebody else.",
         q:"Does closeness come before wanting for me, after it, or somewhere else?",
         t:"I need to feel met first and you arrive the other way around. Neither of us is wrong. Could we make room for both?" },
       { when:"You are arguing about how often, and it was never really about how often.",
@@ -529,46 +529,46 @@ const SUITS = [
       { when:"The sex you are having is not the sex either of you would choose.",
         q:"What would make it worth wanting, and not just worth agreeing to?",
         t:"Unhurried, and you saying what you like out loud. That is most of it. Could we try the unhurried one this week?" },
-      { when:"You are both chasing something extraordinary and getting nothing at all.",
+      { when:"Everyone is chasing something extraordinary and getting nothing at all.",
         q:"What would good enough look like for us this month?",
         t:"Good enough might be unhurried, nobody around, nowhere to be after. I would rather aim there than somewhere we cannot reach. What is yours?" },
-      { when:"Touch arrives and your body reads it as too much before it reads anything else.",
+      { when:"Touch arrives and the body reads it as too much first.",
         q:"What does my body have to get past before touch is pleasure and not noise?",
         t:"The overhead light, and noise I cannot switch off. It is the room, not you. Change the room with me and let us see." },
-      { when:"Neither of you has started anything in months and you are both waiting.",
+      { when:"Nobody has started anything in months and everybody is waiting.",
         q:"What does it cost me to be the one who asks?",
         t:"A no sits in me for a week, so I stopped asking. That part is mine. Tell me you would not mind being asked." },
-      { when:"One of you says what they would prefer and the other one hears a verdict.",
+      { when:"A preference gets said out loud and lands as a verdict.",
         q:"When I ask for something different, what am I afraid it lands as?",
         t:"I am afraid it lands as you failing. It is not that. Let me say the next one badly and stay while I do." },
       { when:"Touch has come to mean that something is expected next.",
         q:"Could we have time where nothing has to happen beyond being here?",
         t:"An hour with nothing on the table, not even a good outcome. Even the awkward parts would tell us something. Try it with me once." },
-      { when:"One of you wants it in the diary and the other one hears a demand.",
+      { when:"In the diary sounds like planning to somebody and a demand to somebody else.",
         q:"If we set time aside, what are we actually agreeing to turn up for?",
         t:"The time, not the outcome. No phones, nobody else around, nothing required. Would you put it in the diary with me?" },
       { when:"The body is present and the attention has gone somewhere else.",
         q:"Where do I go, and what would bring me back?",
         t:"I drift. Sometimes it is the sameness and sometimes something older. Change one thing and say my name. If I am still gone, we stop." },
-      { when:"One of you has been managing the other one all week.",
-        q:"Who has been carrying the remembering lately, and what has that done to how I reach for you?",
+      { when:"Somebody has been managing everybody else all week.",
+        q:"Who has been carrying the remembering, and what has that done to how I reach?",
         t:"I have held the reminders and the checking all week. I cannot cross from that into wanting. That is the load. Who carries what?" },
-      { when:"You have both been guessing for years and getting it slightly wrong.",
+      { when:"Years of guessing, and getting it slightly wrong every time.",
         q:"What is one thing I like that I have never said out loud?",
         t:"I never told you because it felt like a lot to ask. It is not. Ask me twice and I will get it out." },
-      { when:"Something about sex feels loaded and neither of you put it there.",
+      { when:"Something about sex feels loaded and nobody here put it there.",
         q:"What did I learn about bodies and pleasure long before I met you?",
         t:"Nobody in my house ever said any of this out loud. Be slow with me, and take my no as real." },
-      { when:"One of you is getting there alone and together it has gone quiet.",
+      { when:"It is happening alone, and together it has gone quiet.",
         q:"What do I get on my own that I would like to have with you as well?",
         t:"Quiet, and nothing to work out. That is not a complaint about you. I would like to bring some of it into what we do." },
       { when:"A no has arrived and the room has gone cold.",
         q:"Is stopping allowed here without a reason and without a mood?",
         t:"I want to say no and still be warm with you after. Tell me what you need when I do, and I will say mine." },
-      { when:"Wanting has started to feel like a debt one of you owes.",
+      { when:"Wanting has started to feel like a debt somebody owes.",
         q:"Was my last yes one I meant, or one that kept the peace?",
         t:"Some of them kept the peace. I would rather you had a real yes. Make my no as easy as my yes." },
-      { when:"One of you has landed somewhere the other one keeps trying to solve.",
+      { when:"Somebody has landed somewhere that keeps getting treated as a problem.",
         q:"What if this is not a problem to fix but a fact to plan around?",
         t:"Sex is not where I am, and it may not change. It is not a punishment. Can we talk about the rest?" },
       { when:"A body has changed and the old script does not fit it.",
@@ -857,12 +857,12 @@ const OVERLAP = [
     });
     var h="";
     if(!yes.length && !maybes){
-      h="<p style='margin:0'>Nothing overlaps yet, or one of you has not marked the list. An empty overlap is information too, and it is not a verdict on either of you. It usually means the conditions are not right rather than the wanting is gone.</p>";
+      h="<p style='margin:0'>Nothing overlaps yet, or somebody has not marked the list. An empty overlap is information too, and it is not a verdict on either of you. It usually means the conditions are not right rather than the wanting is gone.</p>";
     } else {
       h="<h3>Both of you said yes</h3>";
       h+= yes.length ? "<ul>"+yes.map(function(t){return "<li>"+t+"</li>";}).join("")+"</ul>" : "<p>Nothing yet.</p>";
       h+="<p style='margin-top:14px'>"+maybes+" more where you both said yes or maybe. Those are conversations, not plans.</p>";
-      h+="<p style='margin:0'>What one of you marked alone stays private. Start with the shortest thing on this list, not the biggest.</p>";
+      h+="<p style='margin:0'>What one person marked alone stays private. Start with the shortest thing on this list, not the biggest.</p>";
     }
     $("ovResult").innerHTML=h; $("ovResult").hidden=false;
   });
