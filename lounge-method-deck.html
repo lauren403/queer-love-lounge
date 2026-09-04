@@ -526,7 +526,7 @@ const SUITS = [
       { when:"You have been waiting to feel like it, and it has not arrived.",
         q:"What am I like when the wanting turns up after we have started, rather than before?",
         t:"I almost never feel like it beforehand. Give me a slow start, let stopping be as easy as starting, and I am willing to begin." },
-      { when:"The sex you are having is not the sex either of you would choose.",
+      { when:"The sex you are having is not the sex anybody would choose.",
         q:"What would make it worth wanting, and not just worth agreeing to?",
         t:"Unhurried, and you saying what you like out loud. That is most of it. Could we try the unhurried one this week?" },
       { when:"Everyone is chasing something extraordinary and getting nothing at all.",
@@ -857,7 +857,7 @@ const OVERLAP = [
     });
     var h="";
     if(!yes.length && !maybes){
-      h="<p style='margin:0'>Nothing overlaps yet, or somebody has not marked the list. An empty overlap is information too, and it is not a verdict on either of you. It usually means the conditions are not right rather than the wanting is gone.</p>";
+      h="<p style='margin:0'>Nothing overlaps yet, or somebody has not marked the list. An empty overlap is information too, and it is not a verdict on anybody. It usually means the conditions are not right rather than the wanting is gone.</p>";
     } else {
       h="<h3>Both of you said yes</h3>";
       h+= yes.length ? "<ul>"+yes.map(function(t){return "<li>"+t+"</li>";}).join("")+"</ul>" : "<p>Nothing yet.</p>";
