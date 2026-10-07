@@ -107,6 +107,18 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:60;opa
 .rctas{display:flex;flex-wrap:wrap;gap:13px;align-items:center}
 .qretake{background:none;border:none;color:var(--taupe);font-size:14px;cursor:pointer;font-family:inherit;font-weight:600;text-decoration:underline;text-underline-offset:4px}
 .qretake:hover{color:var(--terra)}
+.q-result .rsec{display:block;margin:22px 0 4px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#e79a7e}
+.q-result .rsec + .rbody{margin-top:0}
+.q-result .rsplit{font-style:italic;opacity:.9;margin-top:14px}
+.rsafe{font-size:14.5px;line-height:1.55;color:var(--cream);border-left:3px solid #e79a7e;padding:4px 0 4px 14px;margin:18px 0 0}
+.rsafe a,.scope a{color:#e79a7e}
+.scope{font-size:13.5px;line-height:1.55;color:var(--taupe);max-width:56ch;margin:22px 0 0}
+.rshare{margin:26px 0 6px}
+.rshare .btn{margin-top:10px}
+.sharebtn{background:transparent;color:var(--cream);border:1.5px solid rgba(246,237,224,.45)}
+.sharebtn:hover{border-color:var(--cream)}
+.shareok{margin-left:12px;font-size:14px;color:var(--taupe)}
+.bookhint{flex-basis:100%;font-size:13px;color:var(--taupe);margin:4px 0 0}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Queer Love Lounge — Find the Miss couples quiz","description":"A free 3-minute quiz for couples: find the miss — the loop you keep landing in — and one small repair to try tonight. Queer-led, online across Australia.","url":"https://queerlovelounge.com.au/find-the-miss.html","telephone":"+61493117185","email":"lovelounge@queerlovelounge.com.au","areaServed":{"@type":"Country","name":"Australia"},"parentOrganization":{"@type":"Organization","name":"Body Belonging Clinic"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Queer Love Lounge","item":"https://queerlovelounge.com.au/"},{"@type":"ListItem","position":2,"name":"Find the Miss quiz","item":"https://queerlovelounge.com.au/find-the-miss.html"}]}</script>
 <style>
@@ -150,11 +162,13 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:60;opa
 
       <!-- INTRO -->
       <div class="qscreen q-intro" id="screen-intro">
-        <span class="eyebrow">A 3-minute couples quiz · free · no judgement</span>
+        <span class="eyebrow">A 3 minute relationship quiz · free · no judgement</span>
         <h1>Find <span class="script">the&nbsp;miss.</span></h1>
-        <p class="lede">Most couples don't have a hundred problems — they have one loop they keep landing in. <em>The miss</em> is the moment one of you reaches and the other doesn't quite land. Answer nine quick questions and we'll name the one you keep hitting — plus a small repair to try tonight.</p>
-        <p class="meta">9 questions · about <b>3 minutes</b> · no email needed to see your result</p>
+        <p class="lede">Every relationship has a rhythm, and most of yours is already working. <em>The miss</em> is the moment someone reaches and it doesn’t quite land. Eight quick questions show what’s working between you, where it can slip, and one thing to try saying.</p>
+        <p class="lede">Answer for yourself, then send it to your partner, or partners. Where your answers differ is often exactly where the miss lives.</p>
+        <p class="meta">8 questions · about <b>3 minutes</b> · no email needed to see your result</p>
         <button class="btn btn-primary" id="startBtn" type="button">Start the quiz →</button>
+        <p class="scope">This quiz is for the everyday ups and downs of a relationship. If anyone in your relationship feels afraid, controlled or unsafe, please skip it and talk to 1800RESPECT on <a href="tel:1800737732">1800 737 732</a>, any time.</p>
       </div>
 
       <!-- QUESTIONS -->
@@ -169,19 +183,32 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:60;opa
       <!-- RESULT -->
       <div class="qscreen q-result" id="screen-result" hidden>
         <span class="eyebrow">Your result</span>
-        <p class="rlabel">The miss you keep landing in looks like…</p>
+        <p class="rlabel">Your rhythm right now</p>
         <h2 class="rname" id="rname"></h2>
+        <span class="rsec">What’s working</span>
         <p class="rbody" id="rbody"></p>
+        <span class="rsec">Where it can slip</span>
+        <p class="rbody" id="rslip"></p>
+        <span class="rsec">What might be underneath</span>
+        <p class="rbody" id="runder"></p>
+        <p class="rbody rsplit" id="rsplit" hidden></p>
         <div class="repair">
-          <span class="rey">Try this tonight</span>
+          <span class="rey">Try saying</span>
           <p id="rrepair"></p>
         </div>
-        <p class="rdisc">This isn't a diagnosis — it's a mirror. The fuller picture is the thing we'd find together, at a pace that feels safe. Everyone's welcome here, however you love.</p>
+        <p class="rsafe" id="rsafe" hidden>Heat is different from fear. If anyone feels afraid during arguments, that isn’t a rhythm a quiz can help with. 1800RESPECT can, on <a href="tel:1800737732">1800 737 732</a>.</p>
+        <div class="rshare">
+          <span class="rsec">Now send it to your partner, or partners</span>
+          <p class="rbody">Take it separately, then compare. Landing in different places isn’t a problem. It’s usually the most useful part.</p>
+          <button class="btn sharebtn" id="shareBtn" type="button">Share the quiz</button>
+          <span class="shareok" id="shareOk" hidden>Link copied.</span>
+        </div>
+        <p class="rdisc">This isn’t a diagnosis. It’s a small mirror. The fuller picture is something we’d find together, at a pace that feels right. Everyone’s welcome here, however you love.</p>
 
         <div class="rcapture">
-          <span class="eyebrow">Keep your result</span>
-          <h3>Email me my result &amp; the free guide.</h3>
-          <p class="sub">We'll send your result plus our one-page guide to <em>the miss</em> — with a two-minute repair you can start tonight. No pressure, unsubscribe anytime.</p>
+          <span class="eyebrow">Want more like this?</span>
+          <h3>Get ten free cards.</h3>
+          <p class="sub">Ten Lounge Method cards for the things worth saying out loud, ready to print. No pressure, and you can unsubscribe anytime. Tip: screenshot your result so you can come back to it.</p>
           <div id="mlb2t-194843107891611174" class="ml-subscribe-form ml-subscribe-form-194843107891611174">
             <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2525880/forms/194843107891611174/subscribe" data-code="sL4Cuh" method="post">
               <div class="row-form">
@@ -191,13 +218,14 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:60;opa
                 <button type="submit" class="btn btn-primary">Send it to me →</button>
               </div>
             </form>
-            <p class="ok row-success">Check your inbox — confirm your email, and your result &amp; guide are on their way.</p>
+            <p class="ok row-success">Check your inbox. Confirm your email and the cards are on their way.</p>
           </div>
-          <p class="micro">You'll confirm by email first (double opt-in). We'll never share your details, and you can unsubscribe in one click.</p>
+          <p class="micro">You’ll confirm by email first. We’ll never share your details, and you can unsubscribe in one click.</p>
         </div>
 
         <div class="rctas">
-          <a class="btn btn-primary js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a free 15-min chat →</a>
+          <a class="btn btn-primary js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a free 15 minute chat →</a>
+          <p class="bookhint">Opens our booking page. Choose Free 15 minute intro call.</p>
           <button class="qretake" id="retakeBtn" type="button">retake the quiz</button>
         </div>
       </div>
@@ -225,7 +253,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:60;opa
       </div>
     </div>
     <div class="ack"><strong>Acknowledgement of Country.</strong> Queer Love Lounge is based in Boorloo (Perth) on Whadjuk Noongar Country, and works with people across many Countries via telehealth. We pay respect to Elders past and present. Sovereignty was never ceded. Always was, always will be Aboriginal land.
-      <div class="crisis">If you need support right now, you're not alone. <b>QLife</b> 1800 184 527 · <b>Lifeline</b> 13 11 14 · in an emergency, call <b>000</b>.</div>
+      <div class="crisis">If you need support right now, you're not alone. <b>1800RESPECT</b> 1800 737 732 · <b>QLife</b> 1800 184 527 · <b>Lifeline</b> 13 11 14 · in an emergency, call <b>000</b>.</div>
     </div>
     <div class="foot-bottom"><span>© 2026 Queer Love Lounge · Body Belonging Clinic</span><span>Design by Club Coco</span></div>
   </div>
@@ -237,60 +265,82 @@ const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.class
 /* ===== Find the Miss — quiz engine ===== */
 (function(){
   var ARCH={
-    reach:{name:"The Reach-and-Retreat",body:"One of you moves toward, the other needs a beat — and the more one reaches, the more the other steps back. It's one of the most common loops there is, and it isn't a flaw in either of you: it's two nervous systems trying to feel safe in opposite ways. The miss is in the timing, not the love.",repair:"Name the loop, not the person. Next time it starts, one of you says out loud: “I think we're doing the reach-and-retreat thing again.” Making it the pattern — not you versus me — is the first move that breaks it."},
-    score:{name:"The Score That Never Settles",body:"Small hurts have been quietly banking, and fairness has become the ground you fight on. Underneath the ledger is usually a simpler ache: I want to feel like I matter to you. The miss is that the appreciation stopped landing — so the tally took its place.",repair:"Tonight, trade one specific “thank you for…” each — something real from today. Sixty seconds. It won't clear the ledger, but it interrupts the count, and that's where repair starts."},
-    drift:{name:"The Quiet Drift",body:"Nothing's exploding — that's what makes this one sneaky. You've slid from lovers toward roommates: competent, kind, and a little flat. The miss here isn't a fight; it's the reaching that quietly stopped. The good news — drift is reversible, and faster than you'd think.",repair:"Tonight, ask one real question — “how are you, actually?” — and give six unbroken minutes of attention. No phones, no fixing. Curiosity is the opposite of drift."},
-    flare:{name:"The Flare",body:"Hard conversations tip into heat before they ever reach the point, and someone gets flooded — that racing, can't-think-straight feeling — so it becomes a rupture instead of a repair. This isn't about too much anger; it's a nervous system going offline. The miss is that you're trying to solve it while one of you is underwater.",repair:"Agree a pause word now, while things are calm. When either of you says it, you take twenty minutes — actually apart — then come back. A flooded brain can't repair; a settled one can."},
-    silence:{name:"The Careful Silence",body:"You keep the peace by not quite saying the true thing — and it works, until you notice how much smaller the closeness has become. Walking on eggshells is exhausting, and it slowly starves a relationship of the honesty it runs on. The miss is the true thing, left unsaid.",repair:"Tonight, say one small true thing, gently — and let it land without rushing to fix it. “I've been missing you” counts. Honesty in small doses rebuilds the safety that silence took."}
+    reach:{name:"Reach and wait",
+      body:"Somebody here keeps turning towards the relationship, and somebody here knows how to take a breath before they answer. Both are strengths.",
+      slip:"Timing. Someone reaches while someone else needs a minute, and a loving ask lands as pressure. The more one person reaches, the further away someone else can go.",
+      under:"Often two questions at once. Do I still matter to you? And will closeness cost me my freedom?",
+      say:"“I want to talk about this, and I can see you need a minute. Can we come back to it at eight?”",
+      safe:false},
+    score:{name:"Keeping it fair",
+      body:"You pull your weight for each other, and fairness matters here. That kind of reliability is the floor a relationship stands on.",
+      slip:"Noticing. When the everyday things go unthanked for long enough, care starts to feel like a tally.",
+      under:"Am I carrying this relationship alone?",
+      say:"“Thank you for sorting the car today. Is there anything you’re carrying that I haven’t seen?”",
+      safe:false},
+    drift:{name:"Calm and steady",
+      body:"You’re kind, easy company and good at the everyday. Plenty of relationships would love what you’ve built.",
+      slip:"Autopilot. Comfortable can quietly turn flat, and the reaching gets left for later.",
+      under:"Will there be room for me if I’m fully myself, and not just the person who keeps things running?",
+      say:"“I’ve missed you lately. Can we have an evening that’s just ours, with nothing to sort out?”",
+      safe:false},
+    flare:{name:"Big feelings, fast",
+      body:"Nobody here hides what matters to them. You care, and you say so.",
+      slip:"Heat. When feelings run high it’s hard to hear each other, and the point gets lost on the way.",
+      under:"Can you see the impact, even when you didn’t mean it?",
+      say:"“I care about this, and I cannot do it well right now. I need thirty minutes. I will come back at seven. If that time needs to change, I will tell you rather than disappear.”",
+      safe:true},
+    silence:{name:"Keeping the peace",
+      body:"You look after each other’s feelings, and there’s real tenderness in how carefully you treat each other.",
+      slip:"The true thing. Keeping the peace can mean the important things stay unsaid, and closeness gets smaller without anyone meaning it to.",
+      under:"Will difference mean disconnection?",
+      say:"“There’s something small I’ve been meaning to say. I’ve been missing you. What’s something you’ve been wanting to say to me?”",
+      safe:false}
   };
-  var TIE=["reach","flare","score","silence","drift"];
+  var TIE=["reach","score","silence","flare","drift"];
   var Q=[
-    {q:"When something feels off between you, what tends to happen first?",o:[
-      {t:"One of us reaches out; the other needs space — and round it goes.",k:"reach"},
-      {t:"It heats up fast, before we get anywhere.",k:"flare"},
-      {t:"We stay polite, but a quiet wall goes up.",k:"silence"},
-      {t:"Not much, really — we just keep going.",k:"drift"}]},
-    {q:"The argument you keep circling back to is really about…",o:[
-      {t:"Fairness — who does more, who gave up what.",k:"score"},
-      {t:"Closeness — one wants more, one wants room.",k:"reach"},
-      {t:"Heat — it escalates before we ever solve it.",k:"flare"},
-      {t:"Feeling unseen — the real me isn't landing.",k:"silence"}]},
-    {q:"After a hard moment, how do you usually come back together?",o:[
-      {t:"One of us chases the repair; the other needs to retreat first.",k:"reach"},
-      {t:"We move on, but I'm quietly keeping count.",k:"score"},
-      {t:"We don't, really — we just let it go cold.",k:"drift"},
-      {t:"Someone apologises fast, mostly to stop the storm.",k:"flare"}]},
-    {q:"Where has closeness or desire gone lately?",o:[
-      {t:"We've drifted into more roommates than lovers.",k:"drift"},
-      {t:"It's there, but we keep missing each other's timing.",k:"reach"},
-      {t:"Buried under resentment, if I'm honest.",k:"score"},
-      {t:"It gets lost every time things flare.",k:"flare"}]},
-    {q:"When you try to say something vulnerable, what happens?",o:[
-      {t:"I don't, mostly — easier to keep the peace.",k:"silence"},
-      {t:"I reach, it doesn't quite land — so I stop reaching.",k:"reach"},
-      {t:"I end up bringing receipts from last time.",k:"score"},
-      {t:"It comes out sharper than I meant it to.",k:"flare"}]},
-    {q:"Which sentence sounds most like your relationship right now?",o:[
-      {t:"“Why am I always the one who has to reach?”",k:"reach"},
-      {t:"“I do so much, and it goes unnoticed.”",k:"score"},
-      {t:"“We're fine… just a bit flat.”",k:"drift"},
-      {t:"“We can't talk about the big stuff without it blowing up.”",k:"flare"}]},
-    {q:"What are you most quietly afraid this loop will cost you?",o:[
-      {t:"That one of us gives up reaching for good.",k:"reach"},
-      {t:"That we keep it so calm we slowly disappear.",k:"silence"},
-      {t:"That we become strangers who share a kitchen.",k:"drift"},
-      {t:"That one more blow-up breaks something we can't fix.",k:"flare"}]},
-    {q:"When you picture things better, it looks like…",o:[
-      {t:"Reaching for each other — and actually connecting.",k:"reach"},
-      {t:"Feeling appreciated, not scorekept.",k:"score"},
-      {t:"Wanting each other again, not just coexisting.",k:"drift"},
-      {t:"Saying the true thing and staying close.",k:"silence"}]},
-    {q:"Last one — the feeling you're left with most often is…",o:[
-      {t:"Lonely, like I'm reaching into space.",k:"reach"},
-      {t:"Unappreciated.",k:"score"},
-      {t:"Numb, a little flat.",k:"drift"},
-      {t:"On edge.",k:"flare"},
-      {t:"Careful.",k:"silence"}]}
+    {q:"When something feels a bit off between us, I usually…",o:[
+      {t:"Reach out straight away and want to talk it through.",k:"reach"},
+      {t:"Feel it fast and strong, and it can get heated.",k:"flare"},
+      {t:"Go quiet and give it some space.",k:"silence"},
+      {t:"Get on with things and wait for it to pass.",k:"drift"}]},
+    {q:"What are we already good at together?",o:[
+      {t:"Showing up for each other on hard days.",k:"reach"},
+      {t:"Sharing the load.",k:"score"},
+      {t:"Being calm and kind with each other.",k:"drift"},
+      {t:"Saying what matters, even when it’s hard.",k:"flare"},
+      {t:"Looking after each other’s feelings.",k:"silence"}]},
+    {q:"The conversation we keep coming back to is about…",o:[
+      {t:"How much time and closeness we each want.",k:"reach"},
+      {t:"Who’s carrying what.",k:"score"},
+      {t:"Something we care about a lot.",k:"flare"},
+      {t:"Something that hasn’t quite been said.",k:"silence"},
+      {t:"Making room for us among everything else.",k:"drift"}]},
+    {q:"After a rough moment, we usually find our way back by…",o:[
+      {t:"Someone reaching to repair quickly, while someone else needs time first.",k:"reach"},
+      {t:"Talking it through once things have cooled down.",k:"flare"},
+      {t:"A small kindness, like a cup of tea or a thank you.",k:"score"},
+      {t:"Letting it settle by itself.",k:"drift"}]},
+    {q:"When I want to say something tender, I tend to…",o:[
+      {t:"Say it, and sometimes the timing is off.",k:"reach"},
+      {t:"Wait for the right moment, which doesn’t always come.",k:"silence"},
+      {t:"Say it with a lot of feeling.",k:"flare"},
+      {t:"Show it by doing things rather than saying it.",k:"score"}]},
+    {q:"Lately, closeness and desire between us, whatever they look like for us, feel…",o:[
+      {t:"There, though we’re often on different clocks.",k:"reach"},
+      {t:"Comfortable and easy, maybe a little on autopilot.",k:"drift"},
+      {t:"Close when we’re getting on, further away when we’re not.",k:"flare"},
+      {t:"Squeezed by everything we’re juggling.",k:"score"},
+      {t:"Gentle, though I don’t always say what I’d like.",k:"silence"}]},
+    {q:"Which sounds most like us right now?",o:[
+      {t:"“We reach for each other, sometimes at the wrong moment.”",k:"reach"},
+      {t:"“We’re good. We’d like a bit more spark.”",k:"drift"},
+      {t:"“We look after each other, and keep some things to ourselves.”",k:"silence"},
+      {t:"“We work hard for each other and want it to feel noticed.”",k:"score"}]},
+    {q:"What would I love more of?",o:[
+      {t:"Feeling appreciated for the everyday things.",k:"score"},
+      {t:"Play, fun and flirting.",k:"drift"},
+      {t:"Saying the real thing and staying close.",k:"silence"},
+      {t:"Disagreeing without it getting big.",k:"flare"}]}
   ];
 
   var idx=0, answers=[];
@@ -333,7 +383,14 @@ const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.class
     var a=ARCH[best];
     document.getElementById('rname').textContent=a.name;
     document.getElementById('rbody').textContent=a.body;
-    document.getElementById('rrepair').textContent=a.repair;
+    document.getElementById('rslip').textContent=a.slip;
+    document.getElementById('runder').textContent=a.under;
+    document.getElementById('rrepair').textContent=a.say;
+    var second=null;
+    TIE.forEach(function(k){ if(k!==best && score[k]===bestVal && !second){ second=k; } });
+    var sp=document.getElementById('rsplit');
+    if(second){ sp.textContent='Your answers were split evenly with “'+ARCH[second].name+'”. Retake it and go with your first instinct, or read both.'; sp.hidden=false; } else { sp.hidden=true; }
+    document.getElementById('rsafe').hidden=!(a.safe || score.flare>=3);
     elFill.style.width='100%';
     show(elR);
     window.scrollTo({top:0,behavior:'smooth'});
@@ -342,6 +399,14 @@ const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.class
   }
   document.getElementById('startBtn').addEventListener('click',function(){ idx=0; show(elQ); render(); window.scrollTo({top:0,behavior:'smooth'}); try{if(window.gtag)gtag('event','quiz_start');}catch(_){}} );
   elBack.addEventListener('click',function(){ if(idx>0){idx--; render();} });
+  document.getElementById('shareBtn').addEventListener('click',function(){
+    var url='https://queerlovelounge.com.au/find-the-miss';
+    var ok=document.getElementById('shareOk');
+    if(navigator.share){ navigator.share({title:'Find the miss',text:'Take this on your own, then we can compare.',url:url}).catch(function(){}); }
+    else if(navigator.clipboard){ navigator.clipboard.writeText(url).then(function(){ ok.hidden=false; }); }
+    else { ok.textContent=url; ok.hidden=false; }
+    try{if(window.gtag)gtag('event','quiz_share');}catch(_){}
+  });
   document.getElementById('retakeBtn').addEventListener('click',function(){ idx=0; answers=[]; show(elIntro); window.scrollTo({top:0,behavior:'smooth'}); });
 })();
 </script>

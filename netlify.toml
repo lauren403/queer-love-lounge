@@ -85,3 +85,21 @@
   to = "https://queerlovelounge.com.au/:splat"
   status = 301
   force = true
+
+# ------------------------------------------------------------------
+# The 75 card library is retired from the public site while the deck
+# is rebuilt (decided 7 October 2026). The ten card page replaces it.
+# The file stays in the repo for session use; these rules stop it
+# being served, and send every old link to the ten.
+# ------------------------------------------------------------------
+[[redirects]]
+  from = "/lounge-method-deck.html"
+  to = "/lounge-method-cards"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lounge-method-deck"
+  to = "/lounge-method-cards"
+  status = 301
+  force = true

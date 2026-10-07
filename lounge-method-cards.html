@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#2a1c15">
-<meta name="description" content="Most decks ask you to be interesting. This one assumes you are already tired. 75 cards for the conversation you keep not having. An original Queer Love Lounge resource by Lauren Lynch, AMHSW.">
+<meta name="description" content="Ten free cards for the things worth saying out loud. Each one names a moment you will recognise, asks you one question, and gives you the words. An original Queer Love Lounge resource by Lauren Lynch, AMHSW.">
 <link rel="canonical" href="https://queerlovelounge.com.au/lounge-method-cards.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Queer Love Lounge">
-<meta property="og:title" content="Most decks ask you to be interesting. This one assumes you are already tired.">
+<meta property="og:title" content="Ten cards for the things worth saying out loud">
 <meta property="og:description" content="Every card names the moment, asks one question, and then gives you the words. Knowing what you feel is not the hard bit. Getting it across the room is.">
 <meta property="og:url" content="https://queerlovelounge.com.au/lounge-method-cards.html">
 <meta property="og:image" content="https://queerlovelounge.com.au/og-image.jpg">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
-<title>The Lounge Method Deck</title>
+<title>The Lounge Method Cards | Queer Love Lounge</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -101,7 +101,9 @@ section{padding:74px 0 0}
 .chaphead .rule{flex:1;height:2px;background:var(--a);opacity:.5;min-width:30px;border-radius:2px}
 
 /* ============ the cards ============ */
-.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:22px}
+.deck{display:grid;grid-template-columns:1fr;gap:22px}
+@media(min-width:600px){.deck{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.deck{grid-template-columns:repeat(3,1fr)}.deck .slot:last-child:nth-child(3n+1){grid-column:2}}
 .slot{perspective:1400px}
 .flip{position:relative;width:100%;aspect-ratio:5/7;background:none;border:0;padding:0;font:inherit;cursor:pointer;transform-style:preserve-3d;transition:transform .62s cubic-bezier(.2,.7,.2,1)}
 .slot:nth-child(3n+1) .flip{transform:rotate(-1.4deg)}
@@ -174,6 +176,16 @@ footer p{max-width:82ch}
   .flip{transition:none}
   *{animation:none!important}
 }
+.eight .lit{background:transparent}
+.bookhint{font-size:13.5px;color:var(--mute);margin:10px 0 0}
+.cardcap{width:100%;max-width:520px}
+.cardcap .row-form{display:flex;gap:10px;flex-wrap:wrap}
+.cardcap input[type=email]{flex:1;min-width:220px;padding:14px 18px;border-radius:100px;border:1px solid var(--line);background:var(--espresso);color:var(--ink);font-size:15px;font-family:inherit}
+.cardcap input[type=email]::placeholder{color:var(--faint)}
+.cardcap input[type=email]:focus{outline:none;border-color:var(--terracotta)}
+.cardcap button{border:none;cursor:pointer;font-family:inherit}
+.cardcap .ok{display:none;color:var(--s1l);font-family:var(--serif);font-style:italic;font-size:19px;margin-top:8px}
+.cardcap .micro{font-size:12.5px;color:var(--faint);margin-top:10px}
 </style>
 
 </head>
@@ -181,14 +193,14 @@ footer p{max-width:82ch}
 <header class="hero">
   <div class="wrap">
     <a class="kicker" href="/">Queer Love Lounge</a>
-    <p class="deckname">The Lounge Method Deck · seventy five cards in seven suits</p>
+    <p class="deckname">The Lounge Method · ten free cards</p>
     <div class="herogrid">
       <div>
-        <h1>Most decks ask you to be interesting. This one assumes you are <em>already tired</em>.</h1>
-        <p class="lede">Every card names the moment you would reach for it, asks you one question, and then shows you what an answer could sound like said out loud. That last part is the bit nobody prints.</p>
+        <h1>Ten cards for the things worth saying <em>out loud</em>.</h1>
+        <p class="lede">Every card names the moment you would reach for it, asks you one question about yourself, and then shows you what an answer could sound like said out loud. That last part is the bit nobody prints.</p>
         <p class="heroturn">Knowing what you feel is not the hard bit. Getting it across the room is.</p>
       </div>
-      <div class="eight" id="eight"></div>
+      <div class="eight" id="eight" aria-label="What the ten cards cover"></div>
     </div>
     <p class="motto">Pull up a chair · Find the miss · Reach again</p>
     <div class="flagrule" aria-hidden="true"></div>
@@ -199,10 +211,10 @@ footer p{max-width:82ch}
   <section class="intro" id="deck">
     <div class="wrap">
       <div class="introgrid">
-        <p class="pull">Seventy five cards, and nothing has to be finished in one go.</p>
+        <p class="pull">Ten cards, and nothing has to be finished in one go.</p>
         <div>
-          <p class="body">Seven suits. Six of them are the five moves and the room you are already in. The seventh is the one nobody puts on a card.</p>
-          <p class="body"><strong>Pass is on every card, not buried in the rules.</strong> Keep the ones that landed, put the rest back, and come again in six months.</p>
+          <p class="body">Each one comes from the Lounge Method: noticing what arrived, naming what took over, pausing without disappearing, and reaching again. Some are for the hard moments. Some are for the good ones you’d like more of.</p>
+          <p class="body"><strong>Pass is on every card, not buried in the rules.</strong> Keep the ones that land, put the rest back, and come again another week.</p>
         </div>
       </div>
       <div class="scope">
@@ -214,74 +226,61 @@ footer p{max-width:82ch}
 
   <section id="eightcards">
     <div class="wrap">
-      <p class="eyebrow">Eight of the seventy five</p>
+      <p class="eyebrow">The ten</p>
       <h2>Read the question. Then turn it over.</h2>
       <p class="turnhint">Every card has a second side. That is where the words go.</p>
       <div class="deck" id="cards"></div>
     </div>
   </section>
 
-  <section class="wanting">
-    <div class="wrap">
-      <div class="wantgrid">
-        <div>
-          <p class="eyebrow">The seventh suit</p>
-          <h2>The wanting</h2>
-        </div>
-        <div>
-          <p class="body">Twenty one cards on desire, refusal, sensory need, mismatch and repair. Written for bodies that do not all work the same way, and for people who were never handed a script.</p>
-          <p class="body"><strong>It starts switched off.</strong> You turn it on when you want it, not the other way round. A no needs no reason, does not have to be earned back, and nobody deals this suit at anybody.</p>
-          <p class="body">The first pride flag had eight stripes. Hot pink sat at the top, and its word was sex. The six stripe flag most of us grew up under does not have it. So this deck put it back, and gave it a suit.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="more">
     <div class="wrap">
-      <p class="eyebrow">The other sixty seven</p>
-      <h2>Not a game. A working library.</h2>
-      <p class="body">Nobody plays through seventy five cards. The full set is open online so you can go and find the one that fits the week you are actually having, read a whole suit at once, and take what is useful. It is free, there is no wall, and nothing is behind an email.</p>
+      <p class="eyebrow">How to use them</p>
+      <h2>No rules to learn. A few that help.</h2>
       <div class="features">
-        <div class="feat"><b>Pass, printed on the card</b><p>Not buried in the rules where nobody looks. On every single card, where the person who needs it can see it.</p></div>
-        <div class="feat"><b>Read a whole suit</b><p>Browse every card in a suit at once and pick the one that fits, instead of turning them over and hoping.</p></div>
+        <div class="feat"><b>Start with the one that fits</b><p>Read all ten and pick the moment you recognise. There is no order and nothing to win.</p></div>
+        <div class="feat"><b>Answer for yourself first</b><p>Every question is about you, not about them. That is on purpose. It keeps the card a reach, not a verdict.</p></div>
         <div class="feat"><b>Say it, write it, or take it away</b><p>Not everyone thinks out loud. Write the answer instead, or take the card and bring it back tomorrow.</p></div>
         <div class="feat"><b>Bring it to a session</b><p>Keep the ones that landed. They are the fastest way into a first conversation with me, and they save you the summarising.</p></div>
-        <div class="feat"><b>The overlap</b><p>Two people at a time. You each mark a private list, and it shows only what you both said yes to. What one person wanted alone stays theirs.</p></div>
-        <div class="feat"><b>Ask me again</b><p>The deck remembers. A card that was too big tonight can come back in six months and find a different answer.</p></div>
-        <div class="feat"><b>Or let it choose</b><p>Deal one blind, or have them pick three and you answer one. Their curiosity, your choice. Plus a two minute clock and a stop button that is always there.</p></div>
-        <div class="feat"><b>Nothing is in play unless you put it there</b><p>You choose the suits before you start. No one has to remove a card in front of anybody.</p></div>
-      </div>
-      <div class="ctarow">
-        <a class="btn line" href="/lounge-method-deck.html">Open the full library</a>
       </div>
       <div class="tally">
-        <div><b>75</b><span>Cards</span></div>
-        <div><b>7</b><span>Suits</span></div>
+        <div><b>10</b><span>Cards</span></div>
         <div><b>0</b><span>Winners</span></div>
+        <div><b>0</b><span>Wrong answers</span></div>
       </div>
     </div>
   </section>
 
   <section class="cta">
     <div class="wrap">
-      <p class="eyebrow">The full deck</p>
+      <p class="eyebrow">The printable</p>
       <h2>Take them off the screen.</h2>
-      <p class="body">The library stays free and open. The one thing that comes by email is the printable set: seventy five cards nine to a page, plus blanks for the ones only you need. Print it, cut it, put it on the table between you.</p>
+      <p class="body">All ten cards are free to read here. If you’d like them on paper, the printable set comes by email, with blank cards for the ones only you need. Print it, cut it, keep it somewhere you’ll see it.</p>
       <div class="ctarow">
-        <a class="btn solid" id="mailCta" href="#" target="_blank" rel="noopener">Get the printable deck</a>
-        <a class="btn line" href="/lounge-method-deck.html">Open the full library</a>
+        <div id="mlb2-194843107891611174" class="ml-subscribe-form ml-subscribe-form-194843107891611174 cardcap">
+          <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2525880/forms/194843107891611174/subscribe" data-code="sL4Cuh" method="post">
+            <div class="row-form">
+              <input type="email" name="fields[email]" placeholder="Your email" required aria-label="Your email address" autocomplete="email">
+              <input type="hidden" name="ml-submit" value="1">
+              <input type="hidden" name="anticsrf" value="true">
+              <button type="submit" class="btn solid">Send me the printable</button>
+            </div>
+          </form>
+          <p class="ok row-success">Check your inbox. Confirm your email and the cards are on their way.</p>
+          <p class="micro">You’ll confirm by email first. We’ll never share your details, and you can unsubscribe in one click.</p>
+        </div>
       </div>
       <div class="ask">
         <p class="body">If a card keeps coming back, that is worth an hour. The free intro call is 15 minutes, it is for all of you, and there is no obligation to go further. It is also where we check that this is the right room for what is happening, which matters more than any card.</p>
         <a class="btn line" id="bookCta" href="#" target="_blank" rel="noopener">Book a free 15 minute intro call</a>
+        <p class="bookhint">The booking page opens in a new tab. Choose <strong>Free 15 minute intro call</strong>.</p>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
-      <p>Seventy five cards, built in my practice, for the couples I actually sit with. Most of what gets written about love assumes two people, a closed door, and a script everybody was handed. None of that held up in the room. So the deck was built the other way round: for relationships with more than two people in them, for people who are out in some rooms and not others, for bodies that do not all work the same way, and for couples who do not live in the same house.</p>
+      <p>These cards were built in my practice, for the people I actually sit with. Most of what gets written about love assumes two people, a closed door, and a script everybody was handed. None of that held up in the room. So these were written the other way round: for relationships with more than two people in them, for people who are out in some rooms and not others, for bodies that do not all work the same way, and for couples who do not live in the same house.</p>
       <p>A pause has a return plan. Silence used to punish, frighten or control is not a pause. Country is relationship, not a wellness prop. If this is not your cultural practice, stay with your own everyday relationship with place without borrowing ceremony or language that is not yours.</p>
       <p class="safe">1800RESPECT 1800 737 732 · QLife 1800 184 527 · emergency 000</p>
       <p>Lauren Lynch (she/her), AMHSW · Gottman Method Level 2 · trained with Esther Perel · a queer led practice. Telehealth across Australia, with in person sessions in Nedlands, Perth from November 2026.</p>
@@ -293,38 +292,46 @@ footer p{max-width:82ch}
 const SUITNAMES = {1:"Notice what arrived",2:"Name what took over",3:"Pause without disappearing",
   4:"Find a way back to yourself",5:"Reach again",6:"The wider field",7:"The wanting"};
 
-const EIGHT = [
-  { n:1, when:"You have read the same message four times looking for the tone.",
-    q:"The thing I decided that message meant was…",
-    t:"…that you were finished with me. I read it four times to prove it. Tell me what you meant and I will believe you." },
+const TEN = [
+  { n:1, when:"A message from them lands wrong and you have read it three times.",
+    q:"What did I decide that message meant, before I asked?",
+    t:"I read your text as you being annoyed with me. I might have that wrong. What did you mean?" },
 
-  { n:2, when:"The topic keeps changing and the feeling never does.",
-    q:"The thing I do not have to say while we keep arguing is…",
-    t:"As long as we are arguing about the dishes, I do not have to say I am frightened. I am saying it now." },
+  { n:2, when:"You can feel yourself wanting to win this one.",
+    q:"What would I have to let go of to be close right now, instead of right?",
+    t:"I have been trying to win this, and I would rather be close. What is it like for you?" },
 
-  { n:3, when:"A closed door lands far harder on one person here than another.",
-    q:"In the house I grew up in, a closed door meant…",
-    t:"In my house it meant three days. I still hear a door that way. Say you are coming back and I will believe you." },
+  { n:3, when:"A conversation is getting too heated to be useful.",
+    q:"What do I need right now, and when can I come back?",
+    t:"I care about this, and I cannot do it well right now. I will come back at seven, and we will pick it up then." },
 
-  { n:4, when:"Everything you have been told to do is making it worse.",
-    q:"The thing that actually brings me back is not…",
-    t:"Breathing exercises do nothing. Standing on the back step with a cold glass does." },
+  { n:5, when:"You have said something that matters and it has slid past.",
+    q:"What do I most need you to hear in what I just said?",
+    t:"The part that matters most is that I felt left out. Can I say that bit again, slowly?" },
 
-  { n:5, when:"The argument is over and nobody knows how to come back in.",
-    q:"The thing that works on me while I am still cross…",
-    t:"Make me tea and say my name. That is the whole list. Use it." },
+  { n:5, when:"You said something sharp, and you know it landed.",
+    q:"What was my part in that, and what would I like to do differently?",
+    t:"That came out sharper than I meant, and it was not fair to you. I am sorry. Can I try that again?" },
 
-  { n:6, when:"Somebody came home tense and it was never about anyone here.",
-    q:"What I carry home from being watched all day is…",
-    t:"I do the check before I take your hand on that street. I come home tired, and it is not you I am tired of." },
+  { n:5, when:"Things are good and you want more of this feeling.",
+    q:"When did we last laugh until we could not stop, and what were we doing?",
+    t:"I miss us being silly together. Can we do something ridiculous this weekend? You get to choose what." },
 
-  { n:7, when:"Everything between you is logistics, and the last flirt was months ago.",
-    q:"The thing we used to do that was not sex and was not nothing…",
-    t:"You used to look at me from the doorway, not on the way to anything. I would like that back." },
+  { n:7, when:"Life has been busy and you have been missing each other.",
+    q:"When did I last feel really wanted by you, and what was happening?",
+    t:"When you flirted with me out of nowhere last month, I loved it, and I would like more of that. What makes you feel wanted?" },
 
-  { n:7, when:"Wanting has started to feel like a debt somebody owes.",
-    q:"Was my last yes one I meant, or one that kept the peace?",
-    t:"Some of them kept the peace. I would rather you had a real yes. Make my no as easy as my yes." }
+  { n:7, when:"Someone has asked for something and your honest answer is no.",
+    q:"What is my honest answer, and how do I want to say it?",
+    t:"Not tonight. That is my answer, and it is okay. If I want company later, I will come and find you." },
+
+  { n:6, when:"A family event is coming up and not everyone there gets you.",
+    q:"What do I need from you to arrive feeling like myself?",
+    t:"Family days take a lot out of me. Could we pick a signal for when I need a break, and leave by nine?" },
+
+  { n:6, when:"Something in the news about people like you has been sitting with you.",
+    q:"What do I carry home from the world that I have not told you about?",
+    t:"That story in the news has been sitting with me all week. It is not about us. Can I tell you about it?" }
 ];
 
 </script>
@@ -338,26 +345,24 @@ const EIGHT = [
   var fr=document.querySelector(".flagrule");
   for(var n=1;n<=7;n++){ var i=document.createElement("i"); i.style.background=A[n][1]; fr.appendChild(i); }
 
-  /* ---- the eight stripe flag, hot pink lit ---- */
-  var EIGHTSTRIPES=[["Hot pink","sex","var(--s7l)",1],["Red","life","var(--s1l)",0],["Orange","healing","var(--s2l)",0],
-    ["Yellow","sunlight","var(--s3l)",0],["Green","nature","var(--s4l)",0],["Turquoise","magic and art","#5fb3ac",0],
-    ["Indigo","serenity","var(--s5l)",0],["Violet","spirit","var(--s6l)",0]];
+  /* ---- what the ten cover ---- */
   var e=$("eight");
-  EIGHTSTRIPES.forEach(function(r){
-    var d=document.createElement("div"); d.className=r[3]?"lit":"dim";
-    d.innerHTML='<s style="background:'+r[2]+'"></s><span style="color:'+r[2]+'">'+r[0]+'</span>'
-      +'<span style="color:var(--faint);margin-left:auto">'+r[1]+'</span>';
+  [1,2,3,5,7,6].forEach(function(n){
+    var count=TEN.filter(function(c){return c.n===n;}).length;
+    var d=document.createElement("div"); d.className="lit";
+    d.innerHTML='<s style="background:'+A[n][1]+'"></s><span style="color:'+A[n][1]+'">'+SUITNAMES[n]+'</span>'
+      +'<span style="color:var(--faint);margin-left:auto">'+count+(count===1?' card':' cards')+'</span>';
     e.appendChild(d);
   });
 
-  /* ---- the eight cards ---- */
+  /* ---- the ten cards ---- */
   function spine(n){
     var h='<span class="spine" aria-hidden="true">';
     for(var k=1;k<=7;k++){ h+='<b style="background:'+A[k][0]+'" class="'+(k===n?"on":"")+'"></b>'; }
     return h+"</span>";
   }
   var grid=$("cards");
-  EIGHT.forEach(function(card){
+  TEN.forEach(function(card){
     var name=SUITNAMES[card.n];
     var slot=document.createElement("div"); slot.className="slot";
     var b=document.createElement("button"); b.className="flip"; b.type="button";
@@ -382,9 +387,10 @@ const EIGHT = [
   });
 
   $("bookCta").href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking";
-  $("mailCta").href="https://preview.mailerlite.io/forms/2525880/194843107891611174/share";
 })();
 </script>
 
+<script>function ml_webform_success_194843107891611174(){try{var s=document.querySelector('.ml-subscribe-form-194843107891611174 .row-success');var f=document.querySelector('.ml-subscribe-form-194843107891611174 .row-form');if(s)s.style.display='block';if(f)f.style.display='none';}catch(e){}}</script>
+<script src="https://static.mailerlite.com/js/w/webforms.min.js" type="text/javascript"></script>
 </body>
 </html>
