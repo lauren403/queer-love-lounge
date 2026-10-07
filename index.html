@@ -84,7 +84,9 @@ section{padding-block:clamp(56px,8vw,104px)}
 .nav-links a{text-decoration:none;color:var(--ink-2)}
 .nav-links a:hover{color:var(--ink)}
 @media (max-width:860px){.nav-links{display:none}}
-.nav .btn{padding:.75rem 1.05rem;font-size:.92rem}
+.nav .btn{padding:.75rem 1.05rem;font-size:.92rem;white-space:nowrap}
+.nav .btn .long{display:inline}.nav .btn .short{display:none}
+@media (max-width:560px){.brand small{display:none}.brand{font-size:1.1rem}.nav .btn .long{display:none}.nav .btn .short{display:inline}.nav .btn{padding:.65rem .9rem;font-size:.88rem}}
 
 /* hero */
 .hero{padding-block:clamp(48px,7vw,96px) clamp(32px,5vw,64px)}
@@ -93,15 +95,18 @@ section{padding-block:clamp(56px,8vw,104px)}
 .hero h1 em{font-style:italic;color:var(--terra)}
 .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem 1rem;align-items:center;margin-top:1.8rem}
 .hero-note{font-size:.9rem;color:var(--mute);margin-top:.9rem}
+.hero-portrait{position:relative;max-width:100%;border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:var(--bg-2)}
+.hero-portrait img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:860px){.hero-portrait{max-width:420px;margin:.5rem auto 0}}
 .chair-wrap{position:relative;aspect-ratio:1/1;max-width:100%;display:grid;place-items:center}
 .chair-wrap .blob{position:absolute;inset:6%;background:var(--salmon);border-radius:58% 42% 55% 45%/48% 55% 45% 52%;opacity:.9}
 .chair-wrap svg{position:relative;width:72%;height:auto}
 .hand{font-family:var(--ff-hand);font-size:1.6rem;color:var(--terra);transform:rotate(-4deg);display:inline-block}
-.hero-hand{position:absolute;right:4%;bottom:8%;background:var(--card);border:1px solid var(--line);padding:.35rem .9rem;border-radius:999px;transform:rotate(-5deg);box-shadow:0 8px 24px rgba(42,28,21,.08)}
+.hero-hand{position:absolute;right:5%;bottom:5%;background:var(--card);border:1px solid var(--line);padding:.35rem .9rem;border-radius:999px;transform:rotate(-5deg);box-shadow:0 8px 24px rgba(42,28,21,.08)}
 
 /* proof strip */
 .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:1.1rem}
-.strip .wrap{display:flex;flex-wrap:wrap;gap:.6rem 2.2rem;justify-content:center;font-size:.9rem;color:var(--ink-2);font-weight:500}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;justify-content:center;max-width:900px;font-size:.9rem;color:var(--ink-2);font-weight:500}
 .strip span b{color:var(--ink);font-weight:600}
 
 /* the miss */
@@ -126,7 +131,8 @@ section{padding-block:clamp(56px,8vw,104px)}
 .method-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
 @media (max-width:860px){.method-grid{grid-template-columns:1fr}}
 .three{display:grid;gap:1rem;margin-top:1.6rem}
-.three div{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:baseline}
+.three > div{display:grid;grid-template-columns:2.4rem 1fr;gap:0 1rem;align-items:baseline}
+.three > div > div{display:block;min-width:0}
 .three .n{font-family:var(--ff-hand);font-size:1.5rem;color:var(--terra)}
 .three b{font-family:var(--ff-display);font-weight:500;font-size:1.25rem}
 .three p{color:var(--ink-2);margin-top:.15rem}
@@ -150,7 +156,7 @@ section{padding-block:clamp(56px,8vw,104px)}
 .chip.on{background:var(--salmon);border-color:var(--salmon);color:#2a1c15}
 
 /* lauren */
-.lauren{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,5vw,72px);align-items:center}
+.lauren{display:grid;grid-template-columns:1fr;max-width:46em;gap:1rem}
 @media (max-width:860px){.lauren{grid-template-columns:1fr}}
 .portrait{aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(160deg,var(--salmon) 0%,var(--bg-2) 100%);border:1px solid var(--line);display:grid;place-items:center;position:relative;overflow:hidden;max-width:100%}
 .portrait .ph{text-align:center;color:var(--ink-2);padding:1.5rem;font-size:.92rem}
@@ -233,7 +239,7 @@ footer{border-top:1px solid var(--line);padding-block:3rem 2rem;font-size:.92rem
     <nav class="nav-links" aria-label="Sections">
       <a href="#miss">The miss</a><a href="#how">How it works</a><a href="#method">The Lounge Method</a><a href="#lauren">Lauren</a><a href="#fees">Fees</a><a href="#faq">Questions</a>
     </nav>
-    <a class="btn btn-primary book js-book" href="#">Book a free 15 minute call</a>
+    <a class="btn btn-primary book js-book" href="#"><span class="long">Book a free 15 minute call</span><span class="short">Book a call</span></a>
   </div>
 </header>
 
@@ -249,17 +255,10 @@ footer{border-top:1px solid var(--line);padding-block:3rem 2rem;font-size:.92rem
         <a class="btn btn-primary btn-lg book js-book" href="#">Book a free 15 minute call</a>
         <a class="btn btn-ghost btn-lg book js-book" href="#">Ready? Book your first session</a>
       </div>
-      <p class="hero-note">Not sure yet? Start with the free call. Already decided? Book straight into a first session. Either way you'll create a quick login first, about two minutes, and nobody has to explain themselves. <a class="textlink" href="#cards">Or take ten free cards home.</a></p>
+      <p class="hero-note">Not sure yet? Start with the free call. Either way you'll create a quick login, about two minutes. <a class="textlink" href="#cards">Or take ten free cards home.</a></p>
     </div>
-    <div class="chair-wrap" aria-hidden="true">
-      <div class="blob"></div>
-      <svg viewBox="0 0 240 240" fill="none">
-        <path d="M44 100a24 24 0 0 1 24-24h104a24 24 0 0 1 24 24v12a18 18 0 0 1 16 18v48a10 10 0 0 1-10 10h-6v16h-18v-16H62v16H44v-16h-6a10 10 0 0 1-10-10v-48a18 18 0 0 1 16-18v-12Z" fill="#c24a24"/>
-        <rect x="58" y="134" width="124" height="34" rx="10" fill="#fbf5ec"/>
-        <rect x="58" y="110" width="124" height="18" rx="9" fill="#a63c1a"/>
-        <path d="M30 126h22v52H30zM188 126h22v52h-22z" fill="#a63c1a"/>
-        <circle cx="120" cy="60" r="7" fill="#fbf5ec"/><circle cx="96" cy="52" r="4" fill="#fbf5ec"/><circle cx="144" cy="52" r="4" fill="#fbf5ec"/>
-      </svg>
+    <div class="hero-portrait">
+      <img src="assets/19be60c5eb275ff9.webp" alt="Lauren Lynch, founder of Queer Love Lounge, in a terracotta armchair" width="700" height="875" fetchpriority="high">
       <span class="hero-hand hand">pull up a chair</span>
     </div>
   </div>
@@ -343,7 +342,7 @@ footer{border-top:1px solid var(--line);padding-block:3rem 2rem;font-size:.92rem
     <h2>You won't spend the first three sessions explaining your relationship.</h2>
     <p class="lede" style="margin-top:1rem">Not the structure. Not the pronouns. Not why your family is the people you chose. We start with what's actually happening between you. That's the whole point of a room built by and for us.</p>
     <div class="chips" aria-label="Who this is for">
-      <span class="chip on">Monogamous</span><span class="chip">Open</span><span class="chip on">Poly</span><span class="chip">More than two</span><span class="chip on">Trans &amp; nonbinary partners</span><span class="chip">Questioning</span><span class="chip on">One of you is changing</span><span class="chip">Together for years</span><span class="chip">On your first hard conversation</span><span class="chip on">Married</span><span class="chip">Building something all your own</span>
+      <span class="chip">Monogamous</span><span class="chip">Open</span><span class="chip">Poly</span><span class="chip">More than two</span><span class="chip">Trans &amp; nonbinary partners</span><span class="chip">Questioning</span><span class="chip">One of you is changing</span><span class="chip">Together for years</span><span class="chip">On your first hard conversation</span><span class="chip">Married</span><span class="chip">Building something all your own</span>
     </div>
     <p class="measure" style="margin-top:1.6rem;color:var(--ink-2)">You don't have to be queer to come here. The lens makes it useful for any couple, and especially for relationships where one person's sexuality or gender is shifting and you both want to stay close through it.</p>
   </div>
@@ -351,8 +350,7 @@ footer{border-top:1px solid var(--line);padding-block:3rem 2rem;font-size:.92rem
 
 <section id="lauren">
   <div class="wrap lauren">
-    <div class="portrait"><img src="assets/19be60c5eb275ff9.webp" alt="Lauren Lynch, founder of Queer Love Lounge, in a terracotta armchair" width="700" height="875" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-    <div>
+        <div>
       <p class="eyebrow">Meet your therapist</p>
       <h2>Hi, I'm Lauren. I'm a couples therapist, and I'm queer.</h2>
       <p class="lede" style="margin-top:1.1rem">I know what it's like to walk into a room and spend the first while explaining your own life before anyone can help you with it. So I built one where you don't have to.</p>
@@ -386,11 +384,11 @@ footer{border-top:1px solid var(--line);padding-block:3rem 2rem;font-size:.92rem
     <p class="eyebrow">In their words</p>
     <h2>Couples who found their way back.</h2>
     <div class="quotes">
-      <figure class="quote"><span class="mark">“</span><p>A queer affirming therapist who genuinely understood us made all the difference. She celebrated every step forward with genuine queer joy.</p><cite>C &amp; C</cite></figure>
-      <figure class="quote"><span class="mark">“</span><p>"Connection over correction." Those words completely shifted the way we approached our relationship.</p><cite>A &amp; D</cite></figure>
-      <figure class="quote"><span class="mark">“</span><p>We love love, and Lauren has helped us understand how to nurture ours.</p><cite>L &amp; H</cite></figure>
+      <figure class="quote"><span class="mark">“</span><p>…a queer affirming therapist who genuinely understood us made all the difference… celebrated every step forward with genuine queer joy… She truly is a relationship wizard.</p><cite>C &amp; C</cite></figure>
+      <figure class="quote"><span class="mark">“</span><p>"Connection over correction." Those words completely shifted the way we approached our relationship… you will not regret working with Lauren.</p><cite>A &amp; D</cite></figure>
+      <figure class="quote"><span class="mark">“</span><p>We love love, and Lauren has helped us understand how to nurture ours… in our eyes, a true relationship guru.</p><cite>L &amp; H</cite></figure>
     </div>
-    <p class="fineprint">Shared with permission, initials only. Everyone's therapy is different, and these are their experiences, not a promise of yours.</p>
+    <p class="fineprint">Shared with permission and abridged, initials only. Everyone's therapy is different, and these are their experiences, not a promise of yours.</p>
   </div>
 </section>
 
