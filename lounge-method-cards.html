@@ -266,8 +266,8 @@ footer p{max-width:82ch}
               <button type="submit" class="btn solid">Send me the printable</button>
             </div>
           </form>
-          <p class="ok row-success">Check your inbox. Confirm your email and the cards are on their way.</p>
-          <p class="micro">You’ll confirm by email first. We’ll never share your details, and you can unsubscribe in one click.</p>
+          <p class="ok row-success">Done. The cards are on their way to your inbox now. If they’re not there in a few minutes, check your promotions or spam folder.</p>
+          <p class="micro">We’ll never share your details, and you can unsubscribe in one click.</p>
         </div>
       </div>
       <div class="ask">
@@ -351,7 +351,7 @@ const TEN = [
     var count=TEN.filter(function(c){return c.n===n;}).length;
     var d=document.createElement("div"); d.className="lit";
     d.innerHTML='<s style="background:'+A[n][1]+'"></s><span style="color:'+A[n][1]+'">'+SUITNAMES[n]+'</span>'
-      +'<span style="color:var(--faint);margin-left:auto">'+count+(count===1?' card':' cards')+'</span>';
+      +'<span style="color:var(--faint);margin-left:auto;white-space:nowrap;padding-left:8px">'+count+(count===1?' card':' cards')+'</span>';
     e.appendChild(d);
   });
 
