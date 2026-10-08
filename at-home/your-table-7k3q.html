@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>The Lounge at Home</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Host+Grotesk:wght@400;500;600;700&family=Caveat:wght@600&display=swap">
+<style>
+/* Layout: one reading column, a six-week rail, each week a sequence of read, card, try, write, together. Tokens are Queer Love Lounge's own site tokens. */
+:root{
+  --bg:#fbf5ec; --bg-2:#f6ede0; --card:#fffaf3; --ink:#2a1c15; --ink-2:#5a4538; --mute:#6f5d50; --line:#e6d8c8;
+  --salmon:#e79a7e; --salmon-ink:#2a1c15; --terra:#c24a24; --terra-2:#a63c1a; --on-terra:#fffaf3; --olive:#7f8a6a; --focus:#a63c1a;
+  --ff-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --ff-body:"Host Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --ff-hand:"Caveat","Segoe Print","Bradley Hand",cursive;
+  --r:14px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1e1411; --bg-2:#271a16; --card:#2d201b; --ink:#f6ede0; --ink-2:#d9c7b6; --mute:#a38f7d; --line:#45332b;
+  --salmon:#e79a7e; --salmon-ink:#2a1c15; --terra:#e8734a; --terra-2:#f28a63; --on-terra:#1e1411; --olive:#9aa586; --focus:#f28a63; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1e1411; --bg-2:#271a16; --card:#2d201b; --ink:#f6ede0; --ink-2:#d9c7b6; --mute:#a38f7d; --line:#45332b;
+  --salmon:#e79a7e; --salmon-ink:#2a1c15; --terra:#e8734a; --terra-2:#f28a63; --on-terra:#1e1411; --olive:#9aa586; --focus:#f28a63; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--ff-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+.wrap{max-width:720px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
+h1,h2,h3{font-family:var(--ff-display);font-weight:400;line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(2.5rem,8vw,4.2rem)}
+h2{font-size:clamp(1.75rem,5vw,2.4rem)}
+h3{font-size:1.35rem}
+p{margin:0}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.lede{font-size:1.15rem;color:var(--ink-2);max-width:56ch}
+.stack{display:flex;flex-direction:column;gap:14px}
+.draft{background:var(--bg-2);border-bottom:1px solid var(--line);font-size:.85rem;color:var(--ink-2);padding-block:10px;padding-inline:20px;text-align:center}
+.draft b{color:var(--terra-2)}
+
+/* Opening */
+header.top{padding-block:44px 28px;display:flex;flex-direction:column;gap:18px}
+.chair{width:64px;height:64px;color:var(--terra)}
+.names{display:flex;flex-wrap:wrap;gap:10px;align-items:end}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1 1 150px}
+.field label{font-size:.8rem;font-weight:600;color:var(--mute)}
+input[type=text],textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
+textarea{min-height:96px;resize:vertical;line-height:1.5}
+input::placeholder,textarea::placeholder{color:var(--mute);opacity:1}
+button{font:inherit;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 20px;font-weight:600;font-size:.95rem;border:1.5px solid var(--terra);background:var(--terra);color:var(--on-terra);text-decoration:none;min-height:44px}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.small{padding:7px 14px;min-height:36px;font-size:.85rem}
+.linkish{background:none;border:0;padding:0;color:var(--ink-2);text-decoration:underline;font-size:.9rem;min-height:36px}
+
+.note{background:var(--bg-2);border-radius:var(--r);padding:18px 20px;display:flex;flex-direction:column;gap:10px;font-size:.95rem;color:var(--ink-2)}
+.note h3{font-size:1.15rem;color:var(--ink)}
+.lines{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.lines span{display:block;font-variant-numeric:tabular-nums;color:var(--ink)}
+.lines small{display:block;color:var(--mute);font-size:.8rem}
+
+/* Week rail */
+.rail{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin-block:28px 8px}
+@media (max-width:560px){.rail{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.rail button{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 8px;text-align:left;color:var(--ink);display:flex;flex-direction:column;gap:2px;min-width:0}
+.rail .wk{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);display:flex;justify-content:space-between;gap:4px}
+.rail .mv{font-family:var(--ff-display);font-size:.98rem;line-height:1.2}
+.rail button[aria-current="true"]{border-color:var(--terra);box-shadow:inset 0 0 0 1px var(--terra)}
+.rail .tick{color:var(--olive)}
+
+/* Week */
+section.week{display:flex;flex-direction:column;gap:30px;padding-top:22px}
+.reading{display:flex;flex-direction:column;gap:14px;font-size:1.06rem;max-width:62ch}
+.reading p:first-child{font-size:1.15rem}
+.pull{font-family:var(--ff-display);font-style:italic;font-size:1.35rem;line-height:1.35;color:var(--ink);border-left:3px solid var(--salmon);padding-left:16px}
+.block{display:flex;flex-direction:column;gap:12px}
+.block>.eyebrow{display:flex;gap:10px;align-items:center}
+.block>.eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* Card: when on the front, prompt and try on the back */
+.card-stage{perspective:1200px}
+.lcard{position:relative;width:100%;max-width:420px;aspect-ratio:5/6;border:0;padding:0;background:none;color:inherit;text-align:left}
+.lcard .inner{position:absolute;inset:0;transition:transform .6s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.lcard.flipped .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:14px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:auto}
+.face.front{background:var(--salmon);color:var(--salmon-ink);justify-content:space-between}
+.face.back{background:var(--card);border:1px solid var(--line);transform:rotateY(180deg)}
+.face .lbl{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.face .big{font-family:var(--ff-display);font-size:clamp(1.45rem,5vw,1.85rem);line-height:1.2}
+.face .hand{font-family:var(--ff-hand);font-size:1.35rem}
+.face .q{font-family:var(--ff-display);font-size:1.3rem;line-height:1.25}
+.face .t{font-size:.98rem;color:var(--ink-2)}
+.face .t b{color:var(--ink);font-weight:600}
+.cardnote{font-size:.85rem;color:var(--mute)}
+
+.try{display:flex;flex-direction:column;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+.checks{display:flex;flex-wrap:wrap;gap:8px 18px}
+.checks label{display:flex;gap:8px;align-items:center;font-size:.95rem;min-height:36px}
+input[type=checkbox]{width:20px;height:20px;accent-color:var(--terra)}
+
+.who{display:flex;flex-wrap:wrap;gap:6px}
+.who button{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:7px 16px;font-weight:600;font-size:.9rem;min-height:40px}
+.who button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.stem{display:flex;flex-direction:column;gap:6px}
+.stem label{font-family:var(--ff-display);font-size:1.15rem;line-height:1.3}
+.stem .share{display:flex;gap:8px;align-items:center;font-family:var(--ff-body);font-size:.85rem;line-height:1.4;color:var(--mute)}
+.hint{font-size:.88rem;color:var(--mute)}
+
+.weekfoot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:20px}
+
+/* Bring this page */
+#bring{margin-top:48px;display:flex;flex-direction:column;gap:16px}
+.page{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.page h3{font-size:1.2rem}
+.page .wkline{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.page .ans{white-space:pre-wrap;overflow-wrap:anywhere}
+.page .stemq{color:var(--ink-2);font-style:italic}
+.empty{color:var(--mute);font-size:.95rem}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.status{font-size:.88rem;color:var(--olive);min-height:1.2em}
+#copyFallback{width:100%;min-height:160px;font-size:.85rem}
+
+.confirm{background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+
+footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;font-size:.85rem;color:var(--mute);display:flex;flex-direction:column;gap:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <svg class="chair" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 30c0-9 4-16 18-16s18 7 18 16"/><path d="M10 32h44c2 0 3 1.5 3 3.5V42H7v-6.5C7 33.5 8 32 10 32z"/><path d="M12 42v10M52 42v10M16 46h32"/></svg>
+    <p class="eyebrow">Queer Love Lounge · six weeks</p>
+    <h1>The Lounge at Home</h1>
+    <p class="lede">Six weeks, one move a week, for the two of you, or the three or more of you. Read together, try one small thing, write on your own, then talk.</p>
+
+    <div class="stack">
+      <div class="names" id="names"></div>
+      <div class="row"><button class="linkish" id="addPerson" type="button">Add another person</button></div>
+    </div>
+
+    <div class="note">
+      <h3>Before you start</h3>
+      <p>This is for relationships where everyone feels safe to disagree. If someone in yours is afraid of another person in it, or is not free to make their own choices, this is not the place to start. If anyone is in danger right now, call 000. You can talk to someone today:</p>
+      <div class="lines">
+        <span>1800 737 732<small>1800RESPECT · family and sexual violence, any time</small></span>
+        <span>1800 184 527<small>QLife · LGBTIQ+ peer support, 3pm to 9pm</small></span>
+        <span>13 92 76<small>13YARN · support for Aboriginal and Torres Strait Islander people, any time</small></span>
+      </div>
+      <p>This programme is not therapy, and it does not replace it. It works well before sessions, between them, or while you decide whether you want them.</p>
+    </div>
+
+    <div class="note">
+      <h3>Where your words go</h3>
+      <p>Nowhere. Everything you write stays in this browser, on this device. Nothing is sent to Lauren or anyone else. The page uses no cookies and no analytics; only its fonts load from Google. Anyone who uses this browser on this device can open it, so if you share a device, clear it when you are done.</p>
+    </div>
+  </header>
+
+  <nav class="rail" id="rail" aria-label="The six weeks"></nav>
+  <main id="week"></main>
+
+  <section id="bring" aria-labelledby="bringTitle">
+    <p class="eyebrow">At the end</p>
+    <h2 id="bringTitle">Bring this page</h2>
+    <p class="lede">The answers each of you ticked “put this on our page” appear here, with everything you wrote together. Copy it into an email to yourselves, or bring it to a session.</p>
+    <div class="page" id="pageOut"></div>
+    <div class="row">
+      <button class="btn" id="copyPage" type="button">Copy our page</button>
+      <a class="btn ghost" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a free 15 minute call</a>
+    </div>
+    <p class="status" id="copyStatus" role="status"></p>
+    <textarea id="copyFallback" hidden readonly aria-label="Your page as text, ready to copy"></textarea>
+  </section>
+
+  <footer>
+    <div class="row">
+      <button class="linkish" id="clearAsk" type="button">Clear everything on this device</button>
+    </div>
+    <div class="confirm" id="clearConfirm" hidden>
+      <p>This removes every name and answer from this browser. It cannot be undone.</p>
+      <div class="row"><button class="btn small" id="clearYes" type="button">Clear it all</button><button class="btn small ghost" id="clearNo" type="button">Keep it</button></div>
+    </div>
+    <p>Lauren Lynch (she/her) · AMHSW · Gottman Method Level 2 · trained with Esther Perel · a queer led practice</p>
+    <p>Queer Love Lounge · Body Belonging Clinic</p>
+  </footer>
+</div>
+
+<script>
+const WEEKS = [
+ { n:1, move:"Pull up a chair", title:"Start by sitting down together, on purpose.",
+   reading:[
+    "Most couples come to this work tired. Something keeps happening between you, and each of you has explained it to yourself many times. This week is not about fixing it. It is about sitting on the same side of the table and looking at it together.",
+    "Every relationship has a miss. It is the moment one of you reaches and it does not quite land. A text read the wrong way. A question that sounds like a complaint. A quiet that was meant as rest and arrived as distance.",
+    "PULL:One asks harder. One disappears further.",
+    "Nobody here is the problem. The loop is. So this week, you name your miss. Not who started it. What it looks like when it happens."
+   ],
+   card:{ when:"You sit down together and nobody knows where to start.", q:"What do I hope we will understand about each other after this conversation?", t:"I do not want to win this. I want us to understand it. Can we start with the last time?", fresh:true },
+   tryText:"Once this week, take twenty minutes with your phones in another room. Sit side by side rather than across from each other. Talk through one recent miss from start to finish, the way you would describe a film you both watched.",
+   stems:["The last time we missed each other, I was trying to…","What I most want you to know about how that felt is…"],
+   together:"When the miss happens, what does each of us usually do next?" },
+
+ { n:2, move:"Notice what arrived", title:"Before the reaction, something arrived.",
+   reading:[
+    "Every reaction starts a beat earlier than you think. A tightening in the chest. A drop in the stomach. A story that writes itself in half a second: they do not care, I am too much, here we go again.",
+    "Noticing is not stopping it. It is catching the moment it arrives, so it is not running the room before either of you knows it is there.",
+    "PULL:Knowing what you feel is not the hard bit. Getting it across the room is.",
+    "So this week is about slowing the first second down, and getting curious about what turns up in it."
+   ],
+   card:{ when:"A message from them lands wrong and you have read it three times.", q:"What did I decide that message meant, before I asked?", t:"I read your text as you being annoyed with me. I might have that wrong. What did you mean?", fresh:false },
+   tryText:"Each day, catch one moment where something arrived in your body before you spoke. Do nothing with it. Just say to yourself: there it is.",
+   stems:["The first thing I usually feel in my body when we start to miss each other is…","The story I tell myself in that moment is…"],
+   together:"What is one early sign in each of us that we are happy for each other to notice?" },
+
+ { n:3, move:"Name what took over", title:"Something takes the wheel. Give it a name.",
+   reading:[
+    "When the miss gets going, it can feel like someone else is talking. The one who needs to be right. The one who goes very quiet. The one who keeps score, or explains, or leaves the room before leaving the room.",
+    "These are protective moves. They turned up for good reasons, often a long time ago, and they have worked hard for you.",
+    "PULL:Protective moves often conceal the very longing they are trying to secure.",
+    "So naming what took over is not blame. It is how you get the wheel back."
+   ],
+   card:{ when:"You can feel yourself wanting to win this one.", q:"What would I have to let go of to be close right now, instead of right?", t:"I have been trying to win this, and I would rather be close. What is it like for you?", fresh:false },
+   tryText:"Give your protective move a name with a little humour in it. When it turns up this week, say the name out loud, “the lawyer is here”, and ask for a minute.",
+   stems:["When the miss starts, the part of me that takes over is…","What it is trying to protect is…"],
+   together:"When one of us names what took over, what would help us hear it as an offer?" },
+
+ { n:4, move:"Pause without disappearing", title:"A pause is not a door closing.",
+   reading:[
+    "Some of the hardest moments in a relationship happen in the minute after it should have stopped. You are both flooded. Nothing useful can be said. And stopping can feel like being left to one person and like being rescued to another.",
+    "PULL:Space is not the opposite of connection. It is not a waiting room and it is not a verdict.",
+    "So a good pause has three parts. I am stopping. This is why. This is when I will come back. The third part is what keeps a pause from becoming a disappearance.",
+    "Give it at least half an hour. Do not force calm; let the wider world remind your body that this argument is not the whole world."
+   ],
+   card:{ when:"A conversation is getting too heated to be useful.", q:"What do I need right now, and when can I come back?", t:"I care about this, and I cannot do it well right now. I will come back at seven, and we will pick it up then.", fresh:false },
+   tryText:"Agree on your pause words before you need them, and write them in the together box below. Then use them once this week, even for something small, and come back when you said you would.",
+   stems:["When I need to stop, what I want you to know is…","What helps me trust that you will come back is…"],
+   together:"Our pause words are… and we come back within…" },
+
+ { n:5, move:"Find a way back to yourself", title:"You cannot reach from a place you have left.",
+   reading:[
+    "After a miss, most people either rush straight back to the other person or stay away too long. Both skip a step. Before you can reach well, you need to be back in your own body and your own voice.",
+    "This looks different for everyone. A walk. A shower. Music loud in the car. Writing it down. A friend who gets you. For a lot of queer people it is also the places and people that let you be fully yourself, which the rest of the week does not always offer.",
+    "So this week is about knowing your own way back, and telling each other what it is, so there is room for it."
+   ],
+   card:{ when:"The argument is over but your body has not caught up yet.", q:"What usually brings me back to myself, and how long does it take?", t:"I am still a bit rattled. I am going to walk round the block, and then I would love a cup of tea with you.", fresh:true },
+   tryText:"Once this week, after something small, find your way back on purpose. Notice how long it takes. Then tell each other what helped.",
+   stems:["The things that bring me back to myself are…","While I find my way back, what I would like from you is…"],
+   together:"How will we know each of us is back and ready to talk?" },
+
+ { n:6, move:"Reach again", title:"The reach is the whole point.",
+   reading:[
+    "Everything so far has been about the space between the miss and the moment you turn towards each other again. This week is that moment.",
+    "A good reach is small and specific. It names what happened in a sentence, owns your part, and hands something over: an ask, an offer, a time, a truth. It does not need to be perfect. It needs to arrive.",
+    "PULL:The love may still be here. What has gone missing, for this moment, is access to each other.",
+    "So reach often, and reach for the good things as well as the hard ones. If you only ever reach after a fight, reaching starts to mean trouble."
+   ],
+   card:{ when:"You said something sharp, and you know it landed.", q:"What was my part in that, and what would I like to do differently?", t:"That came out sharper than I meant, and it was not fair to you. I am sorry. Can I try that again?", fresh:false },
+   tryText:"Make three reaches this week: one after a miss, and two for no reason at all. Keep each to a sentence or two, and end it by handing something over.",
+   stems:["A reach from you that would really land for me sounds like…","Something I would love more of between us is…"],
+   together:"What have these six weeks shown us about our miss, and what do we want to keep doing?" }
+];
+
+const KEY = "lounge-at-home-v1";
+const BOOK = "https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking";
+let S = { names:["",""], current:1, a:{}, share:{}, tried:{}, together:{}, done:{}, who:0 };
+try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(S, JSON.parse(raw)); } catch(e) {}
+if (!Array.isArray(S.names) || S.names.length < 2) S.names = ["",""];
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e) {} }
+function joinNames(){ const l=S.names.map((_,i)=>nm(i)); try { return new Intl.ListFormat("en-AU",{type:"conjunction"}).format(l); } catch(e){ return l.join(" and "); } }
+function nm(i){ const v = (S.names[i]||"").trim(); return v || ["First person","Second person","Third person","Fourth person"][i]; }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+/* Names */
+function renderNames(){
+  const box = document.getElementById("names");
+  box.innerHTML = S.names.map((v,i)=>`<div class="field"><label for="name${i}">${i===0?"Your name":"Their name"}</label><input type="text" id="name${i}" maxlength="40" autocomplete="off" placeholder="${i===0?"Your first name":"Their first name"}" value="${esc(v)}">${i>=2?`<button type="button" class="linkish" data-rm="${i}">Remove</button>`:""}</div>`).join("");
+  box.querySelectorAll("[data-rm]").forEach(b=>b.addEventListener("click", ()=>{ S.names.splice(+b.dataset.rm,1); S.who=0; save(); renderAll(); }));
+  S.names.forEach((_,i)=>{ document.getElementById("name"+i).addEventListener("input", e=>{ S.names[i]=e.target.value; save(); renderRail(); renderWeek(); renderPage(); }); });
+  document.getElementById("addPerson").hidden = S.names.length >= 4;
+}
+document.getElementById("addPerson").addEventListener("click", ()=>{ if (S.names.length<4){ S.names.push(""); save(); renderNames(); renderWeek(); renderPage(); document.getElementById("name"+(S.names.length-1)).focus(); } });
+
+/* Rail */
+function renderRail(){
+  document.getElementById("rail").innerHTML = WEEKS.map(w=>`<button type="button" data-w="${w.n}" aria-current="${S.current===w.n}"><span class="wk">Week ${w.n}${S.done["w"+w.n]?'<span class="tick" aria-label="done">✓</span>':""}</span><span class="mv">${w.move}</span></button>`).join("");
+  document.querySelectorAll("#rail button").forEach(b=>b.addEventListener("click", ()=>{ go(+b.dataset.w); document.getElementById("week").scrollIntoView({behavior:"smooth", block:"start"}); }));
+}
+function go(n){ S.current = n; save(); renderRail(); renderWeek(); try { history.replaceState(null, "", "#week-"+n); } catch(e) {} }
+
+/* Week */
+function renderWeek(){
+  const w = WEEKS[S.current-1], id = "w"+w.n;
+  const reading = w.reading.map(p => p.startsWith("PULL:") ? `<p class="pull">${p.slice(5)}</p>` : `<p>${p}</p>`).join("");
+  const checks = S.names.map((_,i)=>`<label><input type="checkbox" id="try-${id}-${i}" ${S.tried[id+"p"+i]?"checked":""}> ${esc(nm(i))} tried it</label>`).join("");
+  document.getElementById("week").innerHTML = `
+  <section class="week" aria-labelledby="wt">
+    <div class="stack">
+      <p class="eyebrow">Week ${w.n} of 6 · ${w.move}</p>
+      <h2 id="wt">${w.title}</h2>
+    </div>
+    <div class="reading">${reading}</div>
+
+    <div class="block">
+      <p class="eyebrow">This week’s card</p>
+      <div class="card-stage">
+        <button class="lcard" id="lcard" type="button" aria-pressed="false" >
+          <span class="inner">
+            <span class="face front"><span class="lbl">When</span><span class="big">${w.card.when}</span><span class="hand">tap to turn it over</span></span>
+            <span class="face back"><span class="lbl">Ask yourself</span><span class="q">${w.card.q}</span><span class="t"><b>Try:</b> “${w.card.t}”</span></span>
+          </span>
+        </button>
+      </div>
+      <p class="cardnote">${w.card.fresh ? "New card, drafted for this week." : "From the ten free cards."}</p>
+    </div>
+
+    <div class="block">
+      <p class="eyebrow">Try this week</p>
+      <div class="try"><p>${w.tryText}</p><div class="checks">${checks}</div></div>
+    </div>
+
+    <div class="block">
+      <p class="eyebrow">Each of you, on your own</p>
+      <p class="hint">Write yours before you read theirs. Finish the sentence; there is no wrong way to finish it.</p>
+      <div class="who" id="who" role="group" aria-label="Whose answers"></div>
+      <div class="stack" id="stems"></div>
+    </div>
+
+    <div class="block">
+      <p class="eyebrow">Together</p>
+      <div class="stem"><label for="tog-${id}">${w.together}</label><textarea id="tog-${id}" placeholder="Write this one together.">${esc(S.together[id]||"")}</textarea></div>
+    </div>
+
+    <div class="weekfoot">
+      <label class="row" style="gap:8px"><input type="checkbox" id="done-${id}" ${S.done[id]?"checked":""}> We have finished week ${w.n}</label>
+      ${w.n<6 ? `<button class="btn small" id="next" type="button">Week ${w.n+1}: ${WEEKS[w.n].move}</button>` : `<a class="btn small" href="#bring">Bring this page</a>`}
+    </div>
+  </section>`;
+
+  const card = document.getElementById("lcard");
+  card.addEventListener("click", ()=>{ const on = card.classList.toggle("flipped"); card.setAttribute("aria-pressed", on?"true":"false"); });
+  S.names.forEach((_,i)=>document.getElementById(`try-${id}-${i}`).addEventListener("change", e=>{ S.tried[id+"p"+i]=e.target.checked; save(); }));
+  document.getElementById("tog-"+id).addEventListener("input", e=>{ S.together[id]=e.target.value; save(); renderPage(); });
+  document.getElementById("done-"+id).addEventListener("change", e=>{ S.done[id]=e.target.checked; save(); renderRail(); });
+  const nx = document.getElementById("next"); if (nx) nx.addEventListener("click", ()=>{ go(w.n+1); document.getElementById("week").scrollIntoView({behavior:"smooth"}); });
+  if (S.who >= S.names.length) S.who = 0;
+  renderWhoOnly(); renderStems();
+}
+function renderWhoOnly(){
+  const box = document.getElementById("who"); if (!box) return;
+  box.innerHTML = S.names.map((_,i)=>`<button type="button" data-i="${i}" aria-pressed="${S.who===i}">${esc(nm(i))}</button>`).join("");
+  box.querySelectorAll("button").forEach(b=>b.addEventListener("click", ()=>{ S.who=+b.dataset.i; save(); renderWhoOnly(); renderStems(); }));
+}
+function renderStems(){
+  const w = WEEKS[S.current-1], id = "w"+w.n, p = S.who;
+  document.getElementById("stems").innerHTML = w.stems.map((s,k)=>{ const key=`${id}s${k}p${p}`; return `<div class="stem"><label for="a-${key}">${s}</label><textarea id="a-${key}" placeholder="${esc(nm(p))}, in your own words.">${esc(S.a[key]||"")}</textarea><label class="share"><input type="checkbox" id="sh-${key}" ${S.share[key]?"checked":""}> Put this on our page</label></div>`; }).join("");
+  w.stems.forEach((_,k)=>{ const key=`${id}s${k}p${p}`;
+    document.getElementById("a-"+key).addEventListener("input", e=>{ S.a[key]=e.target.value; save(); renderPage(); });
+    document.getElementById("sh-"+key).addEventListener("change", e=>{ S.share[key]=e.target.checked; save(); renderPage(); });
+  });
+}
+
+/* Bring this page */
+function pageItems(){
+  const out = [];
+  WEEKS.forEach(w=>{ const id="w"+w.n, items=[];
+    w.stems.forEach((s,k)=>S.names.forEach((_,p)=>{ const key=`${id}s${k}p${p}`; const v=(S.a[key]||"").trim(); if (v && S.share[key]) items.push({who:nm(p), stem:s, text:v}); }));
+    const t=(S.together[id]||"").trim(); if (t) items.push({who:"Together", stem:w.together, text:t});
+    if (items.length) out.push({w, items});
+  });
+  return out;
+}
+function renderPage(){
+  const el = document.getElementById("pageOut"), list = pageItems();
+  const names = joinNames();
+  if (!list.length){ el.innerHTML = `<h3>${esc(names)}</h3><p class="empty">Nothing here yet. As you write, tick “put this on our page” under any answer you want to bring. Together answers appear on their own.</p>`; return; }
+  el.innerHTML = `<h3>${esc(names)}</h3>` + list.map(g=>`<div class="stack"><p class="wkline">Week ${g.w.n} · ${g.w.move}</p>${g.items.map(it=>`<div><p class="stemq">${esc(it.who)}: ${esc(it.stem)}</p><p class="ans">${esc(it.text)}</p></div>`).join("")}</div>`).join("");
+}
+function pageText(){
+  const names = joinNames();
+  let t = `The Lounge at Home: ${names}\n`;
+  pageItems().forEach(g=>{ t += `\nWeek ${g.w.n}: ${g.w.move}\n`; g.items.forEach(it=>{ t += `${it.who}: ${it.stem}\n${it.text}\n\n`; }); });
+  return t.trim()+"\n";
+}
+document.getElementById("copyPage").addEventListener("click", ()=>{
+  const txt = pageText(), st = document.getElementById("copyStatus"), fb = document.getElementById("copyFallback");
+  const fallback = ()=>{ fb.hidden=false; fb.value=txt; fb.focus(); fb.select(); st.textContent="Select all and copy the text below."; };
+  try { navigator.clipboard.writeText(txt).then(()=>{ fb.hidden=true; st.textContent="Copied. Paste it into an email to yourselves."; }, fallback); } catch(e){ fallback(); }
+});
+
+/* Clear */
+const ask=document.getElementById("clearAsk"), conf=document.getElementById("clearConfirm");
+ask.addEventListener("click", ()=>{ conf.hidden=false; document.getElementById("clearNo").focus(); });
+document.getElementById("clearNo").addEventListener("click", ()=>{ conf.hidden=true; ask.focus(); });
+document.getElementById("clearYes").addEventListener("click", ()=>{
+  try { localStorage.removeItem(KEY); } catch(e) {}
+  S = { names:["",""], current:1, a:{}, share:{}, tried:{}, together:{}, done:{}, who:0 };
+  conf.hidden=true; const fb=document.getElementById("copyFallback"); fb.value=""; fb.hidden=true; renderAll(); document.getElementById("copyStatus").textContent="Cleared from this device.";
+});
+
+function renderAll(){ renderNames(); renderRail(); renderWeek(); renderPage(); }
+function fromHash(){ const m = (location.hash||"").match(/^#week-([1-6])$/); if (m) S.current = +m[1]; }
+fromHash();
+window.addEventListener("hashchange", ()=>{ const before=S.current; fromHash(); if (S.current!==before){ save(); renderRail(); renderWeek(); } });
+if (!(S.current>=1 && S.current<=6)) S.current = 1;
+renderAll();
+</script>
+</body>
+</html>
