@@ -59,7 +59,7 @@ free 15-minute intro call $0, $50 deposit required, 48-hour cancellation.
 
 - Google Fonts
 - MailerLite (signup forms)
-- GA4 `G-N15ZB01HCY` and Meta pixel `1558984099030206` — **consent-gated**:
+- GA4 `G-N15ZB01HCY` — **consent-gated** (the Meta pixel was removed on 8 October 2026):
   nothing loads until the visitor accepts the cookie banner. Keep it that way.
 - Zanda client portal (booking links)
 
