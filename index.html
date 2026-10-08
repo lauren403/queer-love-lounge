@@ -184,6 +184,14 @@ section{padding-block:clamp(56px,8vw,104px)}
 .fineprint{margin-top:1.4rem;font-size:.9rem;color:var(--mute);max-width:60em}
 
 
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem;align-items:start}
+@media (max-width:860px){.quotes{grid-template-columns:1fr}}
+.quote{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;display:flex;flex-direction:column;gap:1rem;margin:0;min-width:0}
+.quote .mark{font-family:var(--ff-display);font-size:3rem;line-height:.6;color:var(--salmon)}
+.quote p{font-family:var(--ff-display);font-size:1.15rem;line-height:1.4}
+.quote cite{font-style:normal;color:var(--mute);font-size:.9rem;font-weight:600}
+
 /* faq */
 .faq{display:grid;gap:.6rem;margin-top:2rem;max-width:48em}
 details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 1.2rem}
@@ -386,6 +394,12 @@ footer{border-top:1px solid var(--line);padding-block:3rem 2rem;font-size:.92rem
     <p class="eyebrow">How I work</p>
     <h2>What you can count on from me.</h2>
     <p class="measure" style="margin-top:1rem;color:var(--ink-2)">I read your intake before we meet. I won't take sides. I'll go at a pace that's safe for everyone in the room. And if I'm not the right fit, I'll tell you, and help you find who is.</p>
+    <div class="quotes">
+      <figure class="quote"><span class="mark" aria-hidden="true">“</span><p>We arrived with a fight and left with a language.</p><cite>L &amp; M, together nine years</cite></figure>
+      <figure class="quote"><span class="mark" aria-hidden="true">“</span><p>“Connection over correction.” Those words completely shifted the way we approached our relationship… you will not regret working with Lauren.</p><cite>A &amp; D</cite></figure>
+      <figure class="quote"><span class="mark" aria-hidden="true">“</span><p>We love love, and Lauren has helped us understand how to nurture ours.</p><cite>L &amp; H</cite></figure>
+    </div>
+    <p class="fineprint">In their words, shared with permission and abridged, initials only. Everyone's therapy is different, and these are their experiences, not a promise of yours.</p>
   </div>
 </section>
 
