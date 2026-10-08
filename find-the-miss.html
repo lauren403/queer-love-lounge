@@ -225,7 +225,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:60;opa
 
         <div class="rctas">
           <a class="btn btn-primary js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a free 15 minute chat →</a>
-          <p class="bookhint">Opens our booking page. Choose Free 15 minute intro call.</p>
+          <a class="btn btn-ghost js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a first session</a>
+          <p class="bookhint">Opens our booking page. Choose Free 15 minute intro call, or Couples counselling, first session ($240, 90 minutes).</p>
           <button class="qretake" id="retakeBtn" type="button">retake the quiz</button>
         </div>
       </div>
@@ -454,7 +455,7 @@ const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.class
   }
   if(document.readyState!=="loading")showb();else document.addEventListener("DOMContentLoaded",showb);
 })();
-document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".js-book");if(!a)return;try{if(window.gtag)gtag("event","generate_lead",{method:"zanda",value:1});}catch(_){}});
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".js-book");if(!a)return;var door=/first session/i.test(a.textContent)?"first_session":(a.classList.contains("js-enquire")?"enquiry":"free_call");try{if(window.gtag)gtag("event","generate_lead",{method:"zanda",door:door,value:1});}catch(_){}});
 </script>
 
 </body>

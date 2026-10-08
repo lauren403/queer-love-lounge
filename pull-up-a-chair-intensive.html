@@ -166,6 +166,7 @@ footer.foot{background:#1b100b;color:var(--taupe);padding:70px 0 36px;font-size:
     <p class="lede">The Pull Up a Chair Intensive is deep couples work done in a single stretch — a day, or a weekend, one couple at a time — instead of an hour a week for half a year. For relationships ready to change something, not just talk about it again.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a free discovery call →</a>
+      <a class="btn btn-ghost js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a first session</a>
       <a class="herolink" href="#invest">or see what's included &amp; the investment</a>
     </div>
   </div>
@@ -288,9 +289,9 @@ footer.foot{background:#1b100b;color:var(--taupe);padding:70px 0 36px;font-size:
     <p>Start with a free 15-minute discovery call. No pressure, no explaining yourselves first — just an honest talk about whether an intensive is right for you.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a free discovery call →</a>
-      <a class="btn btn-ghost" href="#invest">See the investment</a>
+      <a class="btn btn-ghost js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a first session</a>
     </div>
-    <p style="margin-top:16px;font-size:13px;color:var(--taupe)">Booking opens in a secure new tab. Choose <strong>Free 15 minute intro call</strong>. It takes about two minutes.</p>
+    <p style="margin-top:16px;font-size:13px;color:var(--taupe)">Booking opens in a secure new tab. Choose <strong>Free 15 minute intro call</strong>, or <strong>Couples counselling, first session</strong> ($240, 90 minutes) if you would rather start with a regular session before deciding on an intensive. <a href="#invest" style="color:var(--cream)">See the investment</a>.</p>
   </div>
 </section>
 <footer class="foot">
@@ -360,7 +361,7 @@ const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.class
   }
   if(document.readyState!=="loading")show();else document.addEventListener("DOMContentLoaded",show);
 })();
-document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".js-book");if(!a)return;try{if(window.gtag)gtag("event","generate_lead",{method:"zanda",value:1});}catch(_){}});
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".js-book");if(!a)return;var door=/first session/i.test(a.textContent)?"first_session":(a.classList.contains("js-enquire")?"enquiry":"free_call");try{if(window.gtag)gtag("event","generate_lead",{method:"zanda",door:door,value:1});}catch(_){}});
 </script>
 
 </body>
