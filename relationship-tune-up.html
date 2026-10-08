@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Relationship Tune-Up | Queer Love Lounge</title>
 <meta name="description" content="A relationship tune-up for couples who want to stay good — a warm 75-minute reconnection, seasonally or once a year. Queer-led, online across Australia, with in-person sessions in Nedlands, WA from November 2026.">
-<link rel="canonical" href="https://queerlovelounge.com.au/relationship-tune-up.html">
+<link rel="canonical" href="https://queerlovelounge.com.au/relationship-tune-up">
 <meta property="og:title" content="The Relationship Tune-Up — Queer Love Lounge">
 <meta property="og:description" content="A warm reconnection for couples who want to stay good — seasonally or once a year. Come back before things get hard. Queer-led, online across Australia.">
 <meta property="og:type" content="website">
@@ -108,7 +108,7 @@ h2.big{font-size:clamp(28px,4vw,46px);margin-bottom:26px;max-width:20ch}
 footer.foot{background:#1b100b;color:var(--taupe);padding:70px 0 36px;font-size:14.5px}
 .foot-top{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid var(--line)}
 .foot .brand .name{color:var(--cream)}
-.foot h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);margin-bottom:14px;font-weight:700}
+.foot h4,.fh{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);margin-bottom:14px;font-weight:700}
 .foot a.f{display:block;padding:5px 0;color:var(--taupe)}
 .foot a.f:hover{color:var(--terra)}
 .foot .blurb{margin-top:18px;max-width:42ch;line-height:1.6}
@@ -283,7 +283,7 @@ footer.foot{background:#1b100b;color:var(--taupe);padding:70px 0 36px;font-size:
         <p class="blurb">Couples &amp; relationship therapy by and for LGBTQIA+ people, online across Australia. Part of Body Belonging Clinic, led by Lauren Lynch (AMHSW).</p>
       </div>
       <div>
-        <h4>Get in touch</h4>
+        <h2 class="fh">Get in touch</h2>
         <a class="f" href="mailto:lovelounge@queerlovelounge.com.au">lovelounge@queerlovelounge.com.au</a>
         <a class="f" href="tel:+61493117185">0493 117 185</a>
         <a class="f" href="https://instagram.com/queerlovelounge" target="_blank" rel="noopener">Instagram · @queerlovelounge</a>
@@ -299,7 +299,7 @@ footer.foot{background:#1b100b;color:var(--taupe);padding:70px 0 36px;font-size:
 <script>
 const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
 </script>
-<!-- QLL privacy-first consent + analytics (GA4 + Meta pixel; nothing loads until Accept) -->
+<!-- QLL privacy-first consent + analytics (GA4 only; nothing loads until Accept) -->
 <style>
 @media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:420px}}.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#2e1d14;color:#f6ede0;border:1px solid rgba(246,237,224,.16);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.45);font-family:'Host Grotesk',system-ui,sans-serif;max-width:720px;margin:0 auto}
 .qllc-inner{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:15px 20px;flex-wrap:wrap}
@@ -324,15 +324,13 @@ const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.class
 </div>
 <script>
 (function(){
-  var GA="G-N15ZB01HCY", PIXEL="1558984099030206", NAME="qll_consent";
+  var GA="G-N15ZB01HCY", NAME="qll_consent";
   function get(){var m=document.cookie.match(/(?:^|;\s*)qll_consent=([^;]+)/);return m?m[1]:"";}
   function set(v){var d=new Date();d.setFullYear(d.getFullYear()+1);document.cookie=NAME+"="+v+"; path=/; expires="+d.toUTCString()+"; SameSite=Lax";}
   function load(){
     var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+GA;document.head.appendChild(s);
     window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
     gtag("js",new Date());gtag("config",GA,{anonymize_ip:true});
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
-    fbq("init",PIXEL);fbq("track","PageView");
   }
   var v=get();
   if(v==="granted"){load();return;}
@@ -344,7 +342,7 @@ const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.class
   }
   if(document.readyState!=="loading")show();else document.addEventListener("DOMContentLoaded",show);
 })();
-document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".js-book");if(!a)return;try{if(window.fbq)fbq("track","Lead",{content_name:"QLL tune-up booking"});}catch(_){}try{if(window.gtag)gtag("event","generate_lead",{method:"zanda",value:1});}catch(_){}});
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".js-book");if(!a)return;try{if(window.gtag)gtag("event","generate_lead",{method:"zanda",value:1});}catch(_){}});
 </script>
 
 </body>
