@@ -157,9 +157,23 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;font-si
       <p>This programme is not therapy, and it does not replace it. It works well before sessions, between them, or while you decide whether you want them.</p>
     </div>
 
+    <div class="note" id="weekly">
+      <h3>One email a week, if you would like it</h3>
+      <p>A short note each week to carry you to the next move, with your link to come back here. Only your email address goes to our email service. Your answers never do.</p>
+      <div class="ml-subscribe-form ml-subscribe-form-200730163464373890">
+        <form class="ml-block-form row-form" action="https://assets.mailerlite.com/jsonp/2525880/forms/200730163464373890/subscribe" data-code="zPUO2I" method="post" style="display:flex;flex-wrap:wrap;gap:8px;align-items:end">
+          <div class="field"><label for="optin-email">Email</label><input id="optin-email" type="email" name="fields[email]" required autocomplete="email" placeholder="you@example.com" style="font:inherit;font-size:1rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%"></div>
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
+          <button class="btn small" type="submit">Send me the weekly email</button>
+        </form>
+        <p class="row-success" role="status" style="display:none">Done. Check your inbox and confirm once, and the first note is on its way.</p>
+      </div>
+    </div>
+
     <div class="note">
       <h3>Where your words go</h3>
-      <p>Nowhere. Everything you write stays in this browser, on this device. Nothing is sent to Lauren or anyone else. The page uses no cookies and no analytics; only its fonts load from Google. Anyone who uses this browser on this device can open it, so if you share a device, clear it when you are done.</p>
+      <p>Nowhere. Everything you write stays in this browser, on this device. Nothing you write is sent to Lauren or anyone else. The page uses no analytics; only its fonts load from Google, and the weekly email below, if you choose it. Anyone who uses this browser on this device can open it, so if you share a device, clear it when you are done.</p>
     </div>
   </header>
 
@@ -410,5 +424,7 @@ window.addEventListener("hashchange", ()=>{ const before=S.current; fromHash(); 
 if (!(S.current>=1 && S.current<=6)) S.current = 1;
 renderAll();
 </script>
+<script>function ml_webform_success_200730163464373890(){try{var s=document.querySelector('.ml-subscribe-form-200730163464373890 .row-success');var f=document.querySelector('.ml-subscribe-form-200730163464373890 .row-form');if(s)s.style.display='block';if(f)f.style.display='none';}catch(e){}}</script>
+<script>(function(){var done=false;function load(){if(done)return;done=true;var t=document.createElement("script");t.src="https://static.mailerlite.com/js/w/webforms.min.js";document.head.appendChild(t);}var f=document.querySelector(".ml-block-form");if(f){["focusin","pointerdown","touchstart"].forEach(function(e){f.addEventListener(e,load,{once:true,passive:true});});}})();</script>
 </body>
 </html>
