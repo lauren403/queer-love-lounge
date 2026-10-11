@@ -100,6 +100,7 @@ section.week{display:flex;flex-direction:column;gap:30px;padding-top:22px}
 .face .t{font-size:.98rem;color:var(--ink-2)}
 .face .t b{color:var(--ink);font-weight:600}
 .cardnote{font-size:.85rem;color:var(--mute)}
+.cardnote+.card-stage{margin-top:14px}
 
 .try{display:flex;flex-direction:column;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
 .checks{display:flex;flex-wrap:wrap;gap:8px 18px}
@@ -173,7 +174,7 @@ footer{margin-top:56px;border-top:1px solid var(--line);padding-top:20px;font-si
 
     <div class="note">
       <h3>Where your words go</h3>
-      <p>Nowhere. Everything you write stays in this browser, on this device. Nothing you write is sent to Lauren or anyone else. The page uses no analytics; only its fonts load from Google, and the weekly email below, if you choose it. Anyone who uses this browser on this device can open it, so if you share a device, clear it when you are done.</p>
+      <p>Your answers stay here. Everything you write is kept in this browser, on this device, and is never sent to Lauren or anyone else. If you ask for the weekly email, your email address is the only thing that leaves, and it goes to Lauren’s mailing list. You can unsubscribe at any time. The page uses no cookies and no analytics; only its fonts load from Google. Anyone who uses this browser on this device can open it, so if you share a device, clear it when you are done.</p>
     </div>
   </header>
 
@@ -224,6 +225,7 @@ const WEEKS = [
    reading:[
     "Every reaction starts a beat earlier than you think. A tightening in the chest. A drop in the stomach. A story that writes itself in half a second: they do not care, I am too much, here we go again.",
     "Noticing is not stopping it. It is catching the moment it arrives, so it is not running the room before either of you knows it is there.",
+    "If you have spent years reading rooms, checking whether it is safe to be yourself in them, that first second can carry more than this one argument. A body that learned to keep watch does not switch off at home. Noticing is how you start to tell then from now.",
     "PULL:Knowing what you feel is not the hard bit. Getting it across the room is.",
     "So this week is about slowing the first second down, and getting curious about what turns up in it."
    ],
@@ -236,10 +238,11 @@ const WEEKS = [
    reading:[
     "When the miss gets going, it can feel like someone else is talking. The one who needs to be right. The one who goes very quiet. The one who keeps score, or explains, or leaves the room before leaving the room.",
     "These are protective moves. They turned up for good reasons, often a long time ago, and they have worked hard for you.",
-    "PULL:Protective moves often conceal the very longing they are trying to secure.",
+    "PULL:The part that takes over is usually guarding the thing you most want.",
     "So naming what took over is not blame. It is how you get the wheel back."
    ],
    card:{ when:"You can feel yourself wanting to win this one.", q:"What would I have to let go of to be close right now, instead of right?", t:"I have been trying to win this, and I would rather be close. What is it like for you?", fresh:false },
+   card2:{ when:"You let go of my hand in a place where I would have held on.", q:"What story do I tell myself when you hold back, and could it be about safety?", t:"When you let go of my hand, I felt it. I wonder if it was about feeling safe. Can you tell me?", fresh:true },
    tryText:"Give your protective move a name with a little humour in it. When it turns up this week, say the name out loud, “the lawyer is here”, and ask for a minute.",
    stems:["When the miss starts, the part of me that takes over is…","What it is trying to protect is…"],
    together:"When one of us names what took over, what would help us hear it as an offer?" },
@@ -247,7 +250,7 @@ const WEEKS = [
  { n:4, move:"Pause without disappearing", title:"A pause is not a door closing.",
    reading:[
     "Some of the hardest moments in a relationship happen in the minute after it should have stopped. You are both flooded. Nothing useful can be said. And stopping can feel like being left to one person and like being rescued to another.",
-    "PULL:Space is not the opposite of connection. It is not a waiting room and it is not a verdict.",
+    "PULL:Stepping away is allowed. Disappearing is the part that hurts.",
     "So a good pause has three parts. I am stopping. This is why. This is when I will come back. The third part is what keeps a pause from becoming a disappearance.",
     "Give it at least half an hour. Do not force calm; let the wider world remind your body that this argument is not the whole world."
    ],
@@ -271,8 +274,9 @@ const WEEKS = [
    reading:[
     "Everything so far has been about the space between the miss and the moment you turn towards each other again. This week is that moment.",
     "A good reach is small and specific. It names what happened in a sentence, owns your part, and hands something over: an ask, an offer, a time, a truth. It does not need to be perfect. It needs to arrive.",
-    "PULL:The love may still be here. What has gone missing, for this moment, is access to each other.",
-    "So reach often, and reach for the good things as well as the hard ones. If you only ever reach after a fight, reaching starts to mean trouble."
+    "PULL:Most of the time the love has not gone anywhere. You have just lost the way in.",
+    "So reach often, and reach for the good things as well as the hard ones. If you only ever reach after a fight, reaching starts to mean trouble.",
+    "Some reaches are public. Being chosen out loud, in rooms that have not always made space for you, can land like nothing else. Only where it is safe for you both, and only if you both want it."
    ],
    card:{ when:"You said something sharp, and you know it landed.", q:"What was my part in that, and what would I like to do differently?", t:"That came out sharper than I meant, and it was not fair to you. I am sorry. Can I try that again?", fresh:false },
    tryText:"Make three reaches this week: one after a miss, and two for no reason at all. Keep each to a sentence or two, and end it by handing something over.",
@@ -307,6 +311,17 @@ function renderRail(){
 }
 function go(n){ S.current = n; save(); renderRail(); renderWeek(); try { history.replaceState(null, "", "#week-"+n); } catch(e) {} }
 
+function cardHTML(c, id){
+  return `<div class="card-stage">
+        <button class="lcard" id="${id}" type="button" aria-pressed="false">
+          <span class="inner">
+            <span class="face front"><span class="lbl">When</span><span class="big">${c.when}</span><span class="hand">tap to turn it over</span></span>
+            <span class="face back"><span class="lbl">Ask yourself</span><span class="q">${c.q}</span><span class="t"><b>Try:</b> “${c.t}”</span></span>
+          </span>
+        </button>
+      </div>
+      <p class="cardnote">${c.fresh ? "New card, drafted for this week." : "From the ten free cards."}</p>`;
+}
 /* Week */
 function renderWeek(){
   const w = WEEKS[S.current-1], id = "w"+w.n;
@@ -321,16 +336,9 @@ function renderWeek(){
     <div class="reading">${reading}</div>
 
     <div class="block">
-      <p class="eyebrow">This week’s card</p>
-      <div class="card-stage">
-        <button class="lcard" id="lcard" type="button" aria-pressed="false" >
-          <span class="inner">
-            <span class="face front"><span class="lbl">When</span><span class="big">${w.card.when}</span><span class="hand">tap to turn it over</span></span>
-            <span class="face back"><span class="lbl">Ask yourself</span><span class="q">${w.card.q}</span><span class="t"><b>Try:</b> “${w.card.t}”</span></span>
-          </span>
-        </button>
-      </div>
-      <p class="cardnote">${w.card.fresh ? "New card, drafted for this week." : "From the ten free cards."}</p>
+      <p class="eyebrow">${w.card2 ? "This week’s cards" : "This week’s card"}</p>
+      ${cardHTML(w.card, "lcard")}
+      ${w.card2 ? cardHTML(w.card2, "lcard2") : ""}
     </div>
 
     <div class="block">
@@ -356,8 +364,8 @@ function renderWeek(){
     </div>
   </section>`;
 
-  const card = document.getElementById("lcard");
-  card.addEventListener("click", ()=>{ const on = card.classList.toggle("flipped"); card.setAttribute("aria-pressed", on?"true":"false"); });
+  ["lcard","lcard2"].forEach(cid=>{ const card = document.getElementById(cid); if (!card) return;
+    card.addEventListener("click", ()=>{ const on = card.classList.toggle("flipped"); card.setAttribute("aria-pressed", on?"true":"false"); }); });
   S.names.forEach((_,i)=>document.getElementById(`try-${id}-${i}`).addEventListener("change", e=>{ S.tried[id+"p"+i]=e.target.checked; save(); }));
   document.getElementById("tog-"+id).addEventListener("input", e=>{ S.together[id]=e.target.value; save(); renderPage(); });
   document.getElementById("done-"+id).addEventListener("change", e=>{ S.done[id]=e.target.checked; save(); renderRail(); });
