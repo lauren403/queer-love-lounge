@@ -34,7 +34,7 @@
   --line:#e6d8c8;        /* rules */
   --salmon:#e79a7e;      /* brand salmon */
   --salmon-2:#f0a882;
-  --terra:#c24a24;       /* brand terracotta, the one bold thing */
+  --terra:#b24421;       /* brand terracotta, the one bold thing */
   --terra-2:#a63c1a;
   --olive:#7f8a6a;       /* the green in the brand */
   --plum:#5e2438;
@@ -56,7 +56,7 @@
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ff-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
-img,svg{max-width:100%}
+img,svg{max-width:100%;height:auto}
 a{color:inherit}
 h1,h2,h3{font-family:var(--ff-display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
 h1{font-size:clamp(2.4rem,6.2vw,4.6rem)}
@@ -335,7 +335,7 @@ footer{border-top:1px solid var(--line);padding-block:3rem 2rem;font-size:.92rem
     </div>
     <div>
       <div class="card-stage">
-        <button class="card" id="methodCard" aria-label="Flip the sample card" aria-pressed="false">
+        <button class="card" id="methodCard" aria-pressed="false">
           <div class="card-inner">
             <div class="face front"><span class="lbl">Notice what arrived · card 01 of 10</span><span class="big">A message from them lands wrong and you have read it three times.</span><span class="hand" style="color:#fff3ec">tap to turn it over</span></div>
             <div class="face back"><span class="lbl">Ask yourself</span><span class="q">What did I decide that message meant, before I asked?</span><span class="how"><b>What it could sound like:</b> "I read your text as you being annoyed with me. I might have that wrong. What did you mean?"<br><br>Pass is a whole answer.</span></div>
