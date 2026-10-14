@@ -24,7 +24,7 @@
 <style>
 :root{
   --espresso:#2a1c15; --cream:#f4ece2; --terracotta:#c26b4a; --terracotta-deep:#b55e3d; --oat:#d9c9b0;
-  --ink:#f4ece2; --mute:#bcab99; --faint:#93826f;
+  --ink:#f4ece2; --mute:#bcab99; --faint:#9a8975;
   --panel:#372620; --panel2:#412e26; --line:rgba(217,201,176,.20);
   --card:#f4ece2; --cardink:#2f231b; --cardmute:#786652; --cardrule:rgba(120,102,82,.24);
   --s1:#b8442c; --s2:#985b26; --s3:#82661a; --s4:#587149; --s5:#4d6c89; --s6:#7a4a68; --s7:#b03d68;
@@ -372,7 +372,6 @@ const TEN = [
     var slot=document.createElement("div"); slot.className="slot";
     var b=document.createElement("button"); b.className="flip"; b.type="button";
     b.setAttribute("aria-pressed","false");
-    b.setAttribute("aria-label","Card: "+card.q+". Turn over to read what an answer could sound like.");
     b.innerHTML=
       '<span class="face front">'+spine(card.n)
         +'<span class="suitlab" style="color:'+A[card.n][0]+'">'+name+'</span>'
