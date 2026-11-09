@@ -80,7 +80,7 @@ h2.big{font-size:clamp(28px,4vw,46px);margin-bottom:26px;max-width:20ch}
 .fee ul{list-style:none;margin:20px 0 0;font-size:14.5px}
 .fee li{padding:8px 0;border-top:1px solid rgba(43,28,19,.12);display:flex;gap:9px}
 .fee.first li{border-top-color:rgba(246,237,224,.18)}
-.fee li::before{content:"—";opacity:.5}
+.fee li::before{content:"•";opacity:.5}
 .fee-note{margin-top:24px;font-size:15px;opacity:.92}
 .faq{max-width:760px}
 .faq details{border-bottom:1px solid var(--line-dark);padding:4px 0}
@@ -283,7 +283,7 @@ const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.class
 </style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
-    <p class="qllc-text">We use a couple of privacy-friendly cookies to see what is helping people find us — and nothing loads until you say yes. <a href='/privacy'>Privacy</a>.</p>
+    <p class="qllc-text">We use a couple of privacy-friendly cookies to see what is helping people find us. Nothing loads until you say yes. <a href='/privacy'>Privacy</a>.</p>
     <div class="qllc-btns">
       <button class="qllc-btn qllc-decline" id="qllc-decline" type="button">Decline</button>
       <button class="qllc-btn qllc-accept" id="qllc-accept" type="button">Accept</button>
