@@ -188,6 +188,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/at-home.html"
+  to = "/at-home"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lesbian-gay-couples-counselling.html"
+  to = "/lesbian-gay-couples-counselling"
+  status = 301
+  force = true
+
 # ------------------------------------------------------------------
 # Internal notes live in the repo root, which is also the publish
 # root. Never serve them. (Added 8 October 2026.)
