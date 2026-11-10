@@ -269,6 +269,15 @@ footer .brand svg{color:var(--hotline)}
 </style>
 <style>
 /* Perth page: city-page parts built from the homepage system */
+.hero{padding-block:clamp(28px,4vw,56px) clamp(48px,6vw,80px)}
+.hero .heart{width:84px;margin-bottom:18px}
+.hero h1{font-size:clamp(34px,min(5.2vw,8.2vh),74px)}
+@media(max-width:520px){.hero .heart{width:56px;margin-bottom:12px}.hero .lede{font-size:18px}.hero .actions{gap:10px}.hero .actions .btn{min-height:48px;padding:12px 22px}}
+.hero .lede{margin-top:20px}
+.hero .actions{margin-top:26px}
+.local .creds{margin-top:28px}
+.expect-grid.flip{grid-template-columns:.62fr 1fr}
+@media(max-width:900px){.expect-grid.flip{grid-template-columns:1fr}}
 .hero .portrait .frame{background:var(--paper)}
 .local-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,88px);align-items:center}
 @media(max-width:900px){.local-grid{grid-template-columns:1fr}}
@@ -283,7 +292,7 @@ footer .brand svg{color:var(--hotline)}
 #expect .lede{margin-top:26px;max-width:40em}
 #expect .lede strong{color:var(--lime);font-weight:400;font-style:italic}
 .expect-grid{display:grid;grid-template-columns:1fr .62fr;gap:clamp(28px,5vw,64px);align-items:end;margin-top:8px}
-@media(max-width:900px){.expect-grid{grid-template-columns:1fr}.expect-grid .illo{order:-1}}
+@media(max-width:900px){.expect-grid{grid-template-columns:1fr}}
 .pillars{display:grid;grid-template-columns:1fr 1fr;margin-top:48px;border-top:2px solid var(--blush)}
 @media(max-width:700px){.pillars{grid-template-columns:1fr}}
 .pillar{padding:26px 26px 30px 0;border-bottom:2px solid var(--blush);min-width:0}
@@ -295,6 +304,9 @@ footer .brand svg{color:var(--hotline)}
 .online{background:var(--red);color:#fff}
 .online h2 .A{color:var(--blush)}
 .online .illo img{filter:drop-shadow(0 18px 30px rgba(20,26,51,.28))}
+.online .portrait .frame{border-color:#fff}
+.online .sticker{background:var(--ink);color:var(--lime);left:auto;right:-22px;bottom:40px;transform:rotate(8deg)}
+@media(max-width:520px){.online .sticker{right:-6px}}
 #fees .fees.two{grid-template-columns:repeat(2,1fr);max-width:860px}
 @media(max-width:900px){#fees .fees.two{grid-template-columns:1fr}}
 #fees .len{font-family:var(--m);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
@@ -318,7 +330,7 @@ footer .brand svg{color:var(--hotline)}
     <nav class="nav-links" aria-label="Sections">
       <a href="/">Home</a><a href="#expect">How it works</a><a href="#fees">Fees</a><a href="#faq">Questions</a>
     </nav>
-    <a class="btn btn-red book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking"><span class="long">Book a session</span><span class="short">Book</span></a>
+    <a class="btn btn-red book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking"><span class="long">Book a free 15-minute chat</span><span class="short">Free chat</span></a>
   </div>
 </header>
 
@@ -358,6 +370,7 @@ footer .brand svg{color:var(--hotline)}
       <p class="label">Queer couples therapy in Perth</p>
       <h2 class="Q" style="margin-top:18px">We are a Western Australian practice, <span class="A">based right here in Boorloo.</span></h2>
       <div class="measure"><p>Queer Love Lounge is led by Lauren Lynch, an Accredited Mental Health Social Worker based in Boorloo (Perth), so this is home turf, not a mainland service that treats WA as an afterthought.</p><p>Online across Perth and all of WA, from the coast to the regions. Perth&#x27;s queer scene is close-knit, and online gives you discretion and real choice, beyond the handful of names everyone already knows.</p></div>
+      <div class="creds"><span class="cred">AMHSW · AASW</span><span class="cred">Gottman Method · Level 2</span><span class="cred">Informed by Esther Perel's work</span><span class="cred">Queer &amp; Aboriginal led</span><a class="cred" href="https://www.bodybelongingclinic.com.au/" style="text-decoration:underline;min-height:44px;display:inline-flex;align-items:center">Part of Body Belonging Clinic</a></div>
     </div>
     <div class="illo"><img src="assets/deck-return.webp" alt="Illustration of two partners sitting close, one in a wheelchair, hands on each other's hearts" width="524" height="560" loading="lazy"></div>
   </div>
@@ -365,13 +378,13 @@ footer .brand svg{color:var(--hotline)}
 
 <section id="expect" class="on-ink">
   <div class="wrap">
-    <div class="expect-grid">
+    <div class="expect-grid flip">
+      <div class="illo"><img src="assets/deck-hero.webp" alt="Illustration of three people together, two embracing and one holding hands with them" width="535" height="560" loading="lazy"></div>
       <div>
         <p class="label">What you can expect</p>
         <h2 class="Q">Built for queer relationships, <span class="A">not adapted to them.</span></h2>
         <p class="lede">No one hands queer couples a map. You have had to invent more of your relationship than most. So we start there, not with you explaining it. We help you name <strong>the miss</strong>, the moment one of you reaches and does not quite land. Then we build the few moves that break the loop, so you are reaching for each other again. Not just fighting less; built for how you actually love.</p>
       </div>
-      <div class="illo"><img src="assets/deck-hero.webp" alt="Illustration of three people together, two embracing and one holding hands with them" width="535" height="560" loading="lazy"></div>
     </div>
     <div class="pillars"><div class="pillar"><span class="label">The difference</span><h3>Queer-led &amp; culturally safe</h3><p>You will not have to explain what it is like to be you, or bring your therapist up to speed first. Led from inside the community, and a safe space for every culture, body and relationship.</p></div><div class="pillar"><h3>Gottman-trained, Perel-informed</h3><p>The practical repair skills of the Gottman Method (Level 2), and Esther Perel's eye for desire and aliveness. Well-researched approaches, reshaped for how queer relationships really work.</p></div><div class="pillar"><h3>For the relationship</h3><p>No blame, no taking sides. My client is not either of you. It is the relationship itself, the living thing between you all. I listen for what it has been trying to say, and help you find your way back to each other.</p></div><div class="pillar"><h3>Online, Australia-wide</h3><p>Meet from your own couch. A capital city, a regional town, anywhere the map reaches. Secure video, no waiting room, no commute.</p></div></div>
   </div>
@@ -384,7 +397,7 @@ footer .brand svg{color:var(--hotline)}
       <h2 class="Q" style="margin-top:18px">Why online works, <span class="A">especially in WA.</span></h2>
       <div class="measure"><p>WA is vast, and affirming couples therapists are concentrated in a few Perth suburbs. Online means a couple in Bunbury, Geraldton or the Kimberley gets the same room as one in Fremantle.</p><p>And in a scene where everyone is a friend-of-a-friend, meeting from your own home is a quieter, safer way to do the work.</p></div>
     </div>
-    <div class="illo"><img src="assets/deck-name.webp" alt="Illustration of two partners sitting on the floor together, one reading and one writing" width="676" height="560" loading="lazy"></div>
+    <div class="portrait photo"><div class="frame"><img src="assets/1f859bab13e9a30c.webp" alt="Lauren Lynch smiling by the river in Boorloo (Perth) on a bright day, with city buildings across the water" width="960" height="1200" loading="lazy"></div><span class="sticker" aria-hidden="true">Boorloo based</span></div>
   </div>
 </section>
 
@@ -392,7 +405,7 @@ footer .brand svg{color:var(--hotline)}
   <div class="wrap">
     <p class="label">Sessions &amp; fees</p>
     <h2 class="Q" style="margin-top:18px">Simple, private, <span class="A" style="color:var(--lime)">no surprises.</span></h2>
-    <div class="fees two"><div class="fee hi"><span class="tag">First session</span><p class="price">$240</p><p class="len">90 minutes · online</p><ul><li>A longer first session, so there is no rush</li><li>Space to tell your story your way</li><li>Leave with a clear sense of what is next</li></ul><div class="btn-wrap"><a class="btn btn-red book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" style="width:100%">Book your first session</a></div></div><div class="fee"><span class="tag">Ongoing sessions</span><p class="price">$190</p><p class="len">75 minutes · online</p><ul><li>Booked at a pace that suits you</li><li>Steady work on the patterns underneath</li><li>Private fee · GST-free · not Medicare-covered</li></ul><div class="btn-wrap"><a class="btn btn-line book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" style="width:100%">Book a session</a></div></div></div>
+    <div class="fees"><div class="fee"><span class="tag">Not sure yet</span><p class="price">$0</p><p class="len">15 minutes · online</p><ul><li>Fit, questions, and a safety check</li><li>Book it online, choose your own time</li><li>No obligation to continue</li></ul><div class="btn-wrap"><a class="btn btn-line book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" style="width:100%">Book the free chat</a></div></div><div class="fee hi"><span class="tag">First session</span><p class="price">$240</p><p class="len">90 minutes · online</p><ul><li>A longer first session, so there is no rush</li><li>Space to tell your story your way</li><li>Leave with a clear sense of what is next</li></ul><div class="btn-wrap"><a class="btn btn-red book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" style="width:100%">Book your first session</a></div></div><div class="fee"><span class="tag">Ongoing sessions</span><p class="price">$190</p><p class="len">75 minutes · online</p><ul><li>Booked at a pace that suits you</li><li>Steady work on the patterns underneath</li><li>Private fee · GST-free · not Medicare-covered</li></ul><div class="btn-wrap"><a class="btn btn-line book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" style="width:100%">Book a session</a></div></div></div>
     <p class="fineprint">Not sure yet? Start with a <strong>free 15-minute chat</strong>. Once we have talked and found a time, a $50 deposit confirms it and comes straight off your session fee. Private fee, GST-free. <strong>Cancel or reschedule with 48 hours' notice and your deposit carries over</strong>. Inside 48 hours, it is forfeited.</p>
   </div>
 </section>
