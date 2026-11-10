@@ -200,6 +200,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/lauren-lynch.html"
+  to = "/lauren-lynch"
+  status = 301
+  force = true
+
 # ------------------------------------------------------------------
 # Internal notes live in the repo root, which is also the publish
 # root. Never serve them. (Added 8 October 2026.)
