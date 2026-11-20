@@ -101,6 +101,8 @@ main{flex:1}
 .rgrid .label{color:var(--lime)}
 @media(max-width:820px){.rgrid{grid-template-columns:1fr;gap:22px}}
 .split{margin-top:22px;font-size:16px;font-style:italic}
+.split a{color:inherit;text-underline-offset:3px}
+.bridge{margin-top:16px;max-width:34em;font-size:clamp(19px,1.8vw,22px);font-style:italic;font-weight:300}
 .try{margin-top:52px;background:var(--blush);color:var(--ink);border-radius:28px;padding:36px clamp(22px,5vw,56px)}
 .try .say{font-family:var(--a);font-style:italic;font-weight:300;font-size:clamp(26px,3.6vw,40px);line-height:1.22;margin-top:12px}
 .safe{margin-top:22px;font-size:16px}
@@ -130,6 +132,7 @@ main{flex:1}
 .ok[hidden]{display:none}
 .ok{display:block;margin-top:10px;font-size:15px;color:var(--lime)}
 
+.cards[hidden]{display:none}
 .cards{margin-top:56px;background:var(--ink-soft);border-radius:28px;padding:34px clamp(22px,4vw,40px)}
 .cards h2{font-family:var(--q);font-weight:800;text-transform:uppercase;font-size:clamp(26px,3.4vw,36px);line-height:.95}
 .cards p{margin-top:10px;max-width:34em;font-size:17px}
@@ -150,6 +153,17 @@ footer .cols{display:flex;flex-wrap:wrap;gap:12px 28px;font-family:var(--q);font
 footer .ack{margin-top:18px;max-width:52em}
 footer .help{margin-top:10px;max-width:52em}
 body.dark footer{border-top-color:rgba(248,213,207,.3)}
+
+.keep{background:var(--lime);color:var(--ink)}
+.keep .label{color:var(--ink)}
+.keep h2{margin-top:12px}
+.keep input[type=email]{border-color:var(--ink);color:var(--ink)}
+.keep input::placeholder{color:rgba(20,26,51,.7)}
+.keep .row-form .btn{background:var(--ink);color:#fff}
+.keep .consent{flex-basis:100%;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;cursor:pointer}
+.keep .consent input{width:20px;height:20px;flex:none;margin-top:2px;accent-color:var(--ink)}
+.keep .consent a{color:inherit}
+.keep .row-success{background:#fff;padding:14px 18px;border-radius:18px}
 </style>
 </head>
 <body>
@@ -213,10 +227,11 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
     </div>
     <p class="label">Your rhythm right now</p>
     <h2 class="rname" id="rname" tabindex="-1"></h2>
+    <p class="bridge">What is working and where the miss happens are usually the same strength, turned up a little too loud.</p>
     <div class="rgrid">
       <div><p class="label">What is working</p><p id="rbody"></p></div>
-      <div><p class="label">Where it can slip</p><p id="rslip"></p></div>
-      <div><p class="label">What might be underneath</p><p id="runder"></p></div>
+      <div><p class="label">Where the miss happens</p><p id="rslip"></p></div>
+      <div><p class="label">What it might be protecting</p><p id="runder"></p></div>
     </div>
     <p class="split" id="rsplit" hidden></p>
     <div class="compare" id="compare" hidden></div>
@@ -224,6 +239,27 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
     <div class="try">
       <p class="label">Try saying</p>
       <p class="say" id="rsay"></p>
+    </div>
+
+    <div class="cards keep" id="keep">
+      <p class="label">Keep your result, if you like</p>
+      <h2>Email me my result.</h2>
+      <p>Optional. You get this result in your inbox, then two short letters over the next week. Unsubscribe in one click, any time. Your answers stay on this page; only your result travels.</p>
+      <div id="mlb2-195508883380241435" class="ml-subscribe-form ml-subscribe-form-195508883380241435">
+        <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2525880/forms/195508883380241435/subscribe" data-code="cjdKli" method="post">
+          <div class="row-form">
+            <input type="email" name="fields[email]" placeholder="Your email" required aria-label="Your email address" autocomplete="email">
+            <input type="hidden" name="fields[loop]" id="keepLoop" value="">
+            <input type="hidden" name="fields[signup_source]" value="find-the-miss">
+            <input type="hidden" name="fields[consent_version]" value="qll-quiz-2026-11">
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+            <button type="submit" class="btn">Email me my result</button>
+            <label class="consent"><input type="checkbox" required><span>Yes, email me my result and the two letters. I can unsubscribe any time. <a href="https://queerlovelounge.com.au/privacy">Privacy</a></span></label>
+          </div>
+        </form>
+        <p class="row-success" role="status">Sent. Your result is on its way. If it is not there in a few minutes, check your promotions or spam folder.</p>
+      </div>
     </div>
     <p class="safe" id="rsafe" hidden>Heat is different from fear. If anyone feels afraid during arguments, that is not a rhythm a quiz can help with. 1800RESPECT can, on <a href="tel:1800737732">1800 737 732</a>.</p>
 
@@ -253,7 +289,7 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
       </div>
     </div>
 
-    <div class="cards">
+    <div class="cards" hidden>
       <h2>Ten free cards.</h2>
       <p>Ten Lounge Method cards for the things worth saying out loud, ready to print. No pressure, and you can unsubscribe any time.</p>
       <div id="mlb2t-194843107891611174" class="ml-subscribe-form ml-subscribe-form-194843107891611174">
@@ -296,6 +332,7 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
   </div>
 </footer>
 
+<script>function ml_webform_success_195508883380241435(){try{var s=document.querySelector('.ml-subscribe-form-195508883380241435 .row-success');var f=document.querySelector('.ml-subscribe-form-195508883380241435 .row-form');if(s)s.style.display='block';if(f)f.style.display='none';}catch(e){}}</script>
 <script>function ml_webform_success_194843107891611174(){try{var s=document.querySelector('.ml-subscribe-form-194843107891611174 .row-success');var f=document.querySelector('.ml-subscribe-form-194843107891611174 .row-form');if(s)s.style.display='block';if(f)f.style.display='none';}catch(e){}}</script>
 
 
@@ -304,28 +341,28 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
   var ARCH={
     reach:{name:"Reach and wait",
       body:"Somebody here keeps turning towards the relationship, and somebody here knows how to take a breath before they answer. Both are strengths.",
-      slip:"Timing. Someone reaches while someone else needs a minute, and a loving ask lands as pressure. The more one person reaches, the further away someone else can go.",
+      slip:"Someone reaches while someone else needs a minute, and a loving ask lands as pressure. The more one of you reaches, the further away the other can go.",
       under:"Often two questions at once. Do I still matter to you? And will closeness cost me my freedom?",
       say:"“I want to talk about this, and I can see you need a minute. Can we come back to it at eight?”"},
     score:{name:"Keeping it fair",
       body:"You pull your weight for each other, and fairness matters here. That kind of reliability is the floor a relationship stands on.",
-      slip:"Noticing. When the everyday things go unthanked for long enough, care starts to feel like a tally.",
+      slip:"Someone reaches by doing: the bins, the car, the forms. When that goes unthanked for long enough, care starts to feel like a tally.",
       under:"Am I carrying this relationship alone?",
       say:"“Thank you for sorting the car today. Is there anything you are carrying that I have not seen?”"},
     drift:{name:"Calm and steady",
       body:"You are kind, easy company and good at the everyday. Plenty of relationships would love what you have built.",
-      slip:"Autopilot. Comfortable can quietly turn flat, and the reaching gets left for later.",
+      slip:"Someone reaches with something small, a look, a joke, a hand on a shoulder, and it slides past in the busyness. Comfortable can quietly turn flat.",
       under:"Will there be room for me if I am fully myself, and not just the person who keeps things running?",
       say:"“I have missed you lately. Can we have an evening that is just ours, with nothing to sort out?”"},
     flare:{name:"Big feelings, fast",
       body:"Nobody here hides what matters to them. You care, and you say so.",
-      slip:"Heat. When feelings run high it is hard to hear each other, and the point gets lost on the way.",
-      under:"Can you see the impact, even when you did not mean it?",
+      slip:"Someone reaches with something that matters, and it arrives hot. The other hears the heat before the care, and the point gets lost on the way.",
+      under:"Will you stay close when I am loud? And can you see the impact, even when you did not mean it?",
       say:"“I care about this, and I cannot do it well right now. I need thirty minutes. I will come back at seven. If that time needs to change, I will tell you rather than disappear.”",
       safe:true},
     silence:{name:"Keeping the peace",
       body:"You look after each other’s feelings, and there is real tenderness in how carefully you treat each other.",
-      slip:"The true thing. Keeping the peace can mean the important things stay unsaid, and closeness gets smaller without anyone meaning it to.",
+      slip:"Someone almost reaches, then decides it is not worth the ripple. The true thing stays unsaid, and closeness gets smaller without anyone meaning it to.",
       under:"Will difference mean disconnection?",
       say:"“There is something small I have been meaning to say. I have been missing you. What is something you have been wanting to say to me?”"}
   };
@@ -335,7 +372,8 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
       ["Reach out straight away and want to talk it through.","reach"],
       ["Feel it fast and strong, and it can get heated.","flare"],
       ["Go quiet and give it some space.","silence"],
-      ["Get on with things and wait for it to pass.","drift"]]},
+      ["Get on with things and wait for it to pass.","drift"],
+      ["Do something practical for us, and hope it is noticed.","score"]]},
     {q:"What are we already good at together?",o:[
       ["Showing up for each other on hard days.","reach"],
       ["Sharing the load.","score"],
@@ -352,12 +390,14 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
       ["Someone reaching to repair quickly, while someone else needs time first.","reach"],
       ["Talking it through once things have cooled down.","flare"],
       ["A small kindness, like a cup of tea or a thank you.","score"],
-      ["Letting it settle by itself.","drift"]]},
+      ["Letting it settle by itself.","drift"],
+      ["Moving on gently, without quite talking about it.","silence"]]},
     {q:"When I want to say something tender, I tend to…",o:[
       ["Say it, and sometimes the timing is off.","reach"],
       ["Wait for the right moment, which does not always come.","silence"],
       ["Say it with a lot of feeling.","flare"],
-      ["Show it by doing things rather than saying it.","score"]]},
+      ["Show it by doing things rather than saying it.","score"],
+      ["Mean to, and then the moment passes in the busyness.","drift"]]},
     {q:"Lately, closeness and desire between us, whatever they look like for us, feel…",o:[
       ["There, though we are often on different clocks.","reach"],
       ["Comfortable and easy, maybe a little on autopilot.","drift"],
@@ -368,16 +408,19 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
       ["“We reach for each other, sometimes at the wrong moment.”","reach"],
       ["“We are good. We would like a bit more spark.”","drift"],
       ["“We look after each other, and keep some things to ourselves.”","silence"],
-      ["“We work hard for each other and want it to feel noticed.”","score"]]},
+      ["“We work hard for each other and want it to feel noticed.”","score"],
+      ["“We care a lot, and it can get loud.”","flare"]]},
     {q:"What would I love more of?",o:[
       ["Feeling appreciated for the everyday things.","score"],
       ["Play, fun and flirting.","drift"],
       ["Saying the real thing and staying close.","silence"],
-      ["Disagreeing without it getting big.","flare"]]}
+      ["Disagreeing without it getting big.","flare"],
+      ["Knowing my reach lands, even when the timing is off.","reach"]]}
   ];
-  var OPENS=new Date("2026-11-08T00:00:00+08:00");
 
-  var idx=0, answers=[], best=null;
+  var idx=0, answers=[], best=null, orders=[];
+  function shuffle(n){var a=[];for(var i=0;i<n;i++)a.push(i);for(var j=n-1;j>0;j--){var r=Math.floor(Math.random()*(j+1));var t=a[j];a[j]=a[r];a[r]=t;}return a;}
+  function newOrders(){orders=Q.map(function(q){return shuffle(q.o.length);});}
   var $=function(id){return document.getElementById(id);};
   var sIntro=$("s-intro"), sQ=$("s-q"), sR=$("s-r");
   function track(name,params){try{if(window.gtag)gtag("event",name,params||{});}catch(_){}}
@@ -406,7 +449,7 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
     $("count").textContent="Question "+(idx+1)+" of "+Q.length;
     $("qtext").textContent=item.q;
     var opts=$("opts"); opts.innerHTML="";
-    item.o.forEach(function(o,i){
+    orders[idx].forEach(function(i){var o=item.o[i];
       var b=document.createElement("button");
       b.type="button"; b.className="opt"+(answers[idx]===i?" sel":""); b.textContent=o[0];
       b.addEventListener("click",function(){answers[idx]=i; if(idx<Q.length-1){idx++;render();$("qtext").focus();}else{finish();}});
@@ -415,21 +458,29 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
     $("back").hidden=(idx===0);
     gap();
   }
-  function finish(){
-    var score={reach:0,score:0,drift:0,flare:0,silence:0};
-    answers.forEach(function(ai,qi){if(ai!=null)score[Q[qi].o[ai][1]]++;});
-    var top=-1; best=null;
-    ORDER.forEach(function(k){if(score[k]>top){top=score[k];best=k;}});
-    var a=ARCH[best];
+  function fill(key){
+    var a=ARCH[key];
     $("rname").textContent=a.name;
     $("rbody").textContent=a.body;
     $("rslip").textContent=a.slip;
     $("runder").textContent=a.under;
     $("rsay").textContent=a.say;
+    var k=$("keepLoop"); if(k)k.value=key;
+  }
+  function finish(){
+    var score={reach:0,score:0,drift:0,flare:0,silence:0};
+    answers.forEach(function(ai,qi){if(ai!=null)score[Q[qi].o[ai][1]]++;});
+    var top=-1; best=null;
+    ORDER.forEach(function(k){if(score[k]>top){top=score[k];}});
+    var tied=ORDER.filter(function(k){return score[k]===top;});
+    for(var qi=answers.length-1;qi>=0&&!best;qi--){var ai=answers[qi];if(ai!=null){var kk=Q[qi].o[ai][1];if(tied.indexOf(kk)>-1)best=kk;}}
+    if(!best)best=tied[0];
+    fill(best);
+    var a=ARCH[best];
     var second=null;
     ORDER.forEach(function(k){if(k!==best&&score[k]===top&&!second)second=k;});
     var sp=$("rsplit");
-    if(second){sp.textContent="Your answers were split evenly with “"+ARCH[second].name+"”. Take it again and go with your first instinct, or read both.";sp.hidden=false;}else{sp.hidden=true;}
+    if(second){sp.innerHTML="Your answers were split evenly with <b>"+ARCH[second].name+"</b>. <a href=\"https://queerlovelounge.com.au/find-the-miss?r="+second+"\" target=\"_blank\" rel=\"noopener\">Read that one too</a>, and keep whichever sounds more like you.";sp.hidden=false;}else{sp.hidden=true;}
     $("rsafe").hidden=!(a.safe||score.flare>=3);
     var c=$("compare");
     if(theirs){
@@ -438,18 +489,18 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
         : "They landed on <b>"+ARCH[theirs].name+"</b>. You landed on <b>"+a.name+"</b>. That gap is usually where the miss lives, and it is worth talking about together.";
       c.hidden=false;
     } else { c.hidden=true; }
-    if(new Date()>=OPENS){
-      $("homeP").textContent="The Lounge at Home is coming soon: six weeks of the Lounge Method at your own table, one move a week, self paced.";
-      $("homeBtn").textContent="See The Lounge at Home";
-    }
     show(sR);
     $("rname").focus();
-    track("quiz_complete",{result:best});
+    track("quiz_complete");
   }
 
-  $("start").addEventListener("click",function(){idx=0;answers=[];show(sQ);render();$("qtext").focus();track("quiz_start");});
+  // a result link from the email reopens that result
+  try{var rr=/[?&]r=([a-z]+)/.exec(location.search);
+    if(rr&&ARCH[rr[1]]){best=rr[1];fill(best);$("rsplit").hidden=true;$("compare").hidden=true;$("rsafe").hidden=!ARCH[best].safe;var kp=$("keep");if(kp)kp.hidden=true;show(sR);}
+  }catch(_){}
+  $("start").addEventListener("click",function(){idx=0;answers=[];newOrders();show(sQ);render();$("qtext").focus();track("quiz_start");});
   $("back").addEventListener("click",function(){if(idx>0){idx--;render();}});
-  $("again").addEventListener("click",function(){idx=0;answers=[];show(sIntro);$("start").focus();});
+  $("again").addEventListener("click",function(){idx=0;answers=[];newOrders();show(sIntro);$("start").focus();});
   $("bookBtn").addEventListener("click",function(){track("quiz_book_call");});
   $("homeBtn").addEventListener("click",function(){track("quiz_at_home");});
   $("shareBtn").addEventListener("click",function(){
@@ -467,16 +518,16 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
 
 <!-- QLL privacy-first consent + analytics (GA4 only; nothing loads until Accept) -->
 <style>
-@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:420px}}.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#2e1d14;color:#f6ede0;border:1px solid rgba(246,237,224,.16);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.45);font-family:'Host Grotesk',system-ui,sans-serif;max-width:720px;margin:0 auto}
-.qllc-inner{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:15px 20px;flex-wrap:wrap}
-.qllc-text{font-size:13.5px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#c7b4a1}
-.qllc-text a{color:#e79a7e;text-decoration:underline;text-underline-offset:2px}
+@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
+.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
+.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
+.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
+.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
 .qllc-btns{display:flex;gap:10px;flex:none}
-.qllc-btn{font-family:inherit;font-weight:600;font-size:14px;padding:10px 22px;border-radius:100px;cursor:pointer;border:1.5px solid transparent;transition:.2s}
-.qllc-accept{background:#c24a24;color:#fbf5ec}
-.qllc-accept:hover{background:#a63c1a}
-.qllc-decline{background:transparent;color:#f6ede0;border-color:rgba(246,237,224,.28)}
-.qllc-decline:hover{border-color:#f6ede0}
+.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
+.qllc-accept{background:#D22B26;color:#fff}
+.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
+.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
 @media(max-width:520px){.qllc-btns{width:100%}.qllc-btn{flex:1}}
 </style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>

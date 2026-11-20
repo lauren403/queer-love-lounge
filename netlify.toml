@@ -200,6 +200,25 @@
   status = 301
   force = true
 
+# The Lounge Library. One address per guide, and the hub ends in a slash.
+[[redirects]]
+  from = "/guides/index.html"
+  to = "/guides/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/partner-came-out-as-trans.html"
+  to = "/guides/partner-came-out-as-trans"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides"
+  to = "/guides/"
+  status = 301
+  force = true
+
 # ------------------------------------------------------------------
 # Internal notes live in the repo root, which is also the publish
 # root. Never serve them. (Added 8 October 2026.)
