@@ -246,10 +246,11 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
       <h2>Email me my result.</h2>
       <p>Optional. You get this result in your inbox, then two short letters over the next week. Unsubscribe in one click, any time. Your answers stay on this page; only your result travels.</p>
       <div id="mlb2-195508883380241435" class="ml-subscribe-form ml-subscribe-form-195508883380241435">
-        <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2525880/forms/195508883380241435/subscribe" data-code="cjdKli" method="post">
+        <form class="ml-block-form" data-request-data-type="json" action="https://assets.mailerlite.com/jsonp/2525880/forms/195508883380241435/subscribe" data-code="cjdKli" method="post">
           <div class="row-form">
             <input type="email" name="fields[email]" placeholder="Your email" required aria-label="Your email address" autocomplete="email">
             <input type="hidden" name="fields[loop]" id="keepLoop" value="">
+            <input type="hidden" name="fields[miss_result]" id="keepName" value="">
             <input type="hidden" name="fields[signup_source]" value="find-the-miss">
             <input type="hidden" name="fields[consent_version]" value="qll-quiz-2026-11">
             <input type="hidden" name="ml-submit" value="1">
@@ -293,7 +294,7 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
       <h2>Ten free cards.</h2>
       <p>Ten Lounge Method cards for the things worth saying out loud, ready to print. No pressure, and you can unsubscribe any time.</p>
       <div id="mlb2t-194843107891611174" class="ml-subscribe-form ml-subscribe-form-194843107891611174">
-        <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2525880/forms/194843107891611174/subscribe" data-code="sL4Cuh" method="post">
+        <form class="ml-block-form" data-request-data-type="json" action="https://assets.mailerlite.com/jsonp/2525880/forms/194843107891611174/subscribe" data-code="sL4Cuh" method="post">
           <div class="row-form">
             <input type="email" name="fields[email]" placeholder="Your email" required aria-label="Your email address" autocomplete="email">
             <input type="hidden" name="ml-submit" value="1">
@@ -466,6 +467,7 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
     $("runder").textContent=a.under;
     $("rsay").textContent=a.say;
     var k=$("keepLoop"); if(k)k.value=key;
+    var kn=$("keepName"); if(kn)kn.value=a.name;
   }
   function finish(){
     var score={reach:0,score:0,drift:0,flare:0,silence:0};
