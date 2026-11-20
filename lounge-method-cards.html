@@ -20,7 +20,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://queerlovelounge.com.au/lounge-method-cards#webpage", "url": "https://queerlovelounge.com.au/lounge-method-cards", "name": "The Lounge Method Cards", "description": "Ten free cards for the things worth saying out loud. Each one names a moment you will recognise, asks you one question, and gives you the words.", "inLanguage": "en-AU", "isPartOf": {"@type": "WebSite", "name": "Queer Love Lounge", "url": "https://queerlovelounge.com.au/"}, "about": {"@id": "https://queerlovelounge.com.au/#practice"}, "mainEntity": {"@type": "CreativeWork", "name": "The Lounge Method Cards", "description": "Ten conversation cards for couples. Every card names the moment, asks one question, and then gives you the words.", "isAccessibleForFree": true, "inLanguage": "en-AU", "audience": {"@type": "Audience", "audienceType": "Couples and relationships of every structure"}, "author": {"@type": "Person", "name": "Lauren Lynch"}, "publisher": {"@id": "https://queerlovelounge.com.au/#practice"}}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Queer Love Lounge", "item": "https://queerlovelounge.com.au/"}, {"@type": "ListItem", "position": 2, "name": "The Lounge Method Cards", "item": "https://queerlovelounge.com.au/lounge-method-cards"}]}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --espresso:#2a1c15; --cream:#f4ece2; --terracotta:#c26b4a; --terracotta-deep:#b55e3d; --oat:#d9c9b0;
@@ -192,9 +192,92 @@ footer p{max-width:82ch}
 .cardcap .micro{font-size:12.5px;color:var(--faint);margin-top:10px}
 </style>
 
+<style>/* qll:chrome · shared header, menu and footer. Built by apply.py */
+.nav,.site-foot,.menu-panel{--ink:#141A33;--ink-soft:#2A3150;--blush:#F8D5CF;--paper:#FFF4F1;--hotline:#E5322D;--red:#D22B26;--lime:#D7F25A;--q:'Bricolage Grotesque',system-ui,sans-serif;--a:'Fraunces',Georgia,serif;--m:'Martian Mono',ui-monospace,monospace;--max:1120px}
+.skip{position:absolute;left:-999px;top:8px;background:#141A33;color:#D7F25A;padding:10px 16px;border-radius:99px;z-index:50;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:500;text-decoration:none}
+.skip:focus{left:16px}
+.nav{position:sticky;top:0;z-index:20;background:var(--blush);border-bottom:2px solid var(--ink);color:var(--ink);font-family:var(--a)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;max-width:var(--max);margin:0 auto;padding-inline:24px}
+.nav .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--q);font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.01em;min-height:44px}
+.nav .brand svg{width:30px;height:27px;color:var(--hotline);display:block}
+.nav .nav-links{display:flex;gap:2px;font-family:var(--q);font-weight:500;font-size:15px}
+.nav .nav-links a{text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;min-height:44px;padding:0 10px;border-radius:99px}
+.nav .nav-links a[aria-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+@media(hover:hover){.nav .nav-links a:hover{background:var(--ink);color:var(--blush)}}
+.nav .nav-end{display:flex;align-items:center;gap:8px}
+.nav .btn{font-family:var(--q);font-weight:800;font-size:15px;padding:10px 18px;min-height:44px;border-radius:99px;background:var(--red);color:#fff;text-decoration:none;display:inline-flex;align-items:center;border:0}
+.nav .btn .short{display:none}
+.nav .menu{display:none;position:relative}
+.nav .menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 12px;border:2px solid var(--ink);border-radius:99px;font-family:var(--q);font-weight:500;font-size:15px;justify-content:center}
+.nav .menu summary::-webkit-details-marker{display:none}
+.nav .menu summary::after{display:none}
+.nav .bars{width:16px;height:10px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);display:block}
+.nav .menu[open] .bars{border-bottom-color:transparent;transform:translateY(4px)}
+.nav .menu-panel{position:absolute;right:0;top:calc(100% + 10px);background:var(--paper);border:2px solid var(--ink);border-radius:22px;padding:10px;display:grid;gap:2px;min-width:240px;box-shadow:0 18px 40px rgba(20,26,51,.18)}
+.nav .menu-panel a{display:flex;align-items:center;min-height:48px;padding:0 14px;border-radius:14px;text-decoration:none;color:var(--ink);font-family:var(--q);font-weight:500;font-size:18px}
+.nav .menu-panel a[aria-current]{background:var(--blush)}
+.nav .menu-panel .btn{margin-top:8px;justify-content:center;font-size:16px;min-height:52px;color:#fff;background:var(--red)}
+@media(max-width:1020px){.nav .nav-links{display:none}.nav .menu{display:block}}
+@media(max-width:560px){.nav .btn .long{display:none}.nav .btn .short{display:inline}.nav .brand{font-size:14px}.nav .menu-word{display:none}.nav .wrap{padding-inline:18px}}
+@media(max-width:360px){.nav .brand span{display:none}}
+
+.site-foot{background:var(--ink);color:var(--blush);padding-block:56px 36px;font-size:16px;font-family:var(--a);line-height:1.6}
+.site-foot .wrap{max-width:var(--max);margin:0 auto;padding-inline:24px}
+.site-foot .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+@media(max-width:900px){.site-foot .foot{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.site-foot .foot{grid-template-columns:1fr}}
+.site-foot .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--q);font-weight:800;font-size:16px;text-transform:uppercase;min-height:44px;color:var(--blush)}
+.site-foot .brand svg{width:30px;height:27px;color:var(--hotline)}
+.site-foot h2{margin:0 0 8px;font-family:var(--m);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--lime)!important;font-weight:500;line-height:1.4}
+.site-foot ul{list-style:none;margin:0;padding:0;display:grid}
+.site-foot a{color:var(--blush);text-decoration:none;display:inline-block;padding:.55rem 0;min-height:44px;font-family:var(--q);font-weight:500;font-size:16px;text-transform:none;letter-spacing:normal;line-height:1.5}
+.site-foot li{margin:0;padding:0;font-size:16px}
+.site-foot p,.site-foot .crisis{display:block;font-size:15px;color:var(--blush);max-width:none;text-transform:none;letter-spacing:normal}
+.site-foot .crisis b{display:inline}
+@media(hover:hover){.site-foot a:hover{text-decoration:underline;text-underline-offset:4px}}
+.site-foot p{margin:10px 0 0}
+.site-foot .ack p{margin:0}
+.site-foot p a{display:inline;padding:0;min-height:0;font-family:inherit;text-decoration:underline}
+.site-foot .ack{margin-top:40px;padding-top:24px;border-top:1px solid rgba(248,213,207,.3);display:grid;gap:12px;max-width:62em;font-size:15px}
+.site-foot .ack b{font-family:var(--q);font-weight:800}
+.site-foot .crisis b{color:var(--lime);font-weight:500}
+.site-foot .legal{color:var(--blush)!important;margin-top:22px;font-family:var(--m);font-size:11px;letter-spacing:.05em;text-transform:uppercase;display:flex;flex-wrap:wrap;gap:6px 22px;opacity:.85}
+</style>
+<style>/* qll:world · cobalt */
+:root{--espresso:#141A33;--cream:#FFF4F1;--terracotta:#D7F25A;--terracotta-deep:#C6E640;--oat:#F8D5CF;--ink:#FFF4F1;--mute:#D5D8E8;--faint:#B9BDD6;--panel:#1F2647;--panel2:#2A3150;--line:rgba(248,213,207,.26);--card:#FFF4F1;--cardink:#141A33;--cardmute:#4A5070;--serif:'Fraunces',Georgia,serif;--sans:'Fraunces',Georgia,serif}
+body{font-weight:400}
+body::before{background:#141A33!important}
+header.hero{background:#2F4BFF;color:#fff;padding-bottom:56px}
+header.hero .kicker,header.hero .deckname,header.hero .motto{color:#fff}
+header.hero .lede,header.hero .heroturn{color:#fff}
+h1,h2{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:.94}
+h1 em,h2 em{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;text-transform:none;color:#D7F25A}
+.eyebrow,.kicker,.deckname,.motto{font-family:'Martian Mono',ui-monospace,monospace!important;font-weight:500!important;letter-spacing:.08em!important}
+.flagrule{display:none}
+.scope{padding:64px 0;border-top:2px solid rgba(248,213,207,.26);color:#D5D8E8;font-size:16px}
+.scope .wrap{max-width:46em}
+.scope p{margin:0 0 14px}
+.scope .safe{color:#D7F25A}
+</style>
 </head>
 <body>
-<header class="hero">
+<!-- qll:header -->
+<a class="skip" href="#top">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Queer Love Lounge, home"><svg viewBox="0 0 100 90" aria-hidden="true"><path fill="currentColor" d="M47 84 L10 47 C-1 35 1 14 17 8 C31 3 41 10 47 21 Z"/><path fill="currentColor" d="M53 84 L90 47 C101 35 99 14 83 8 C69 3 59 10 53 21 Z"/></svg><span>Queer Love Lounge</span></a>
+    <nav class="nav-links" aria-label="Site"><a href="/guides/">Library</a><a href="/find-the-miss">Free quiz</a><a href="/lounge-method-cards" aria-current="page">Cards</a><a href="/pull-up-a-chair-intensive">Intensives</a><a href="/#fees">Fees</a><a href="/#lauren">About Lauren</a></nav>
+    <div class="nav-end">
+      <a class="btn btn-red book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking"><span class="long">Book a free 15 minute chat</span><span class="short">Free chat</span></a>
+      <details class="menu">
+        <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span><span class="menu-word">Menu</span></summary>
+        <nav class="menu-panel" aria-label="Site, small screens"><a href="/guides/">Library</a><a href="/find-the-miss">Free quiz</a><a href="/lounge-method-cards" aria-current="page">Cards</a><a href="/pull-up-a-chair-intensive">Intensives</a><a href="/#fees">Fees</a><a href="/#lauren">About Lauren</a><a class="btn btn-red js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">Book a free 15 minute chat</a></nav>
+      </details>
+    </div>
+  </div>
+</header>
+<!-- /qll:header -->
+<header class="hero" id="top">
   <div class="wrap">
     <a class="kicker" href="/">Queer Love Lounge</a>
     <p class="deckname">The Lounge Method · ten free cards</p>
@@ -277,20 +360,38 @@ footer p{max-width:82ch}
       <div class="ask">
         <p class="body">If a card keeps coming back, that is worth an hour. The free intro chat is 15 minutes, it is for all of you, and there is no obligation to go further. It is also where we check that this is the right room for what is happening, which matters more than any card.</p>
         <div class="ask-ctas"><a class="btn line js-book" id="bookCta" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a free 15 minute chat</a><a class="btn line js-book" id="bookCta2" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" target="_blank" rel="noopener">Book a first session</a></div>
-        <p class="bookhint">The booking page opens in a new tab. Choose <strong>Free 15 minute chat</strong>, or <strong>Couples counselling, first session</strong> ($240, 90 minutes).</p>
+        <p class="bookhint">Booking opens our secure client portal, part of Body Belonging Clinic, where your care is held. Choose <strong>Free 15 minute chat</strong>, or <strong>Couples counselling, first session</strong> ($240, 90 minutes).</p>
       </div>
     </div>
   </section>
 
-  <footer>
-    <div class="wrap">
+  <section class="scope" aria-label="About these cards"><div class="wrap">
       <p>These cards were built in my practice, for the people I actually sit with. Most of what gets written about love assumes two people, a closed door, and a script everybody was handed. None of that held up in the room. So these were written the other way round: for relationships with more than two people in them, for people who are out in some rooms and not others, for bodies that do not all work the same way, and for couples who do not live in the same house.</p>
       <p>A pause has a return plan. Silence used to punish, frighten or control is not a pause. Country is relationship, not a wellness prop. If this is not your cultural practice, stay with your own everyday relationship with place without borrowing ceremony or language that is not yours.</p>
       <p><a href="/at-home" style="color:inherit;text-decoration:underline">Six weeks with these moves, at your own table: The Lounge at Home is coming soon.</a></p>
       <p class="safe">1800RESPECT 1800 737 732 · QLife 1800 184 527 · emergency 000</p>
       <p>Lauren Lynch (she/her), AMHSW · completed Level 2 Training in Gottman Method Couples Therapy · informed by Esther Perel's work · a queer led practice. Telehealth across Australia.</p>
+    </div></section>
+<!-- qll:footer -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="/"><svg viewBox="0 0 100 90" aria-hidden="true"><path fill="currentColor" d="M47 84 L10 47 C-1 35 1 14 17 8 C31 3 41 10 47 21 Z"/><path fill="currentColor" d="M53 84 L90 47 C101 35 99 14 83 8 C69 3 59 10 53 21 Z"/></svg><span>Queer Love Lounge</span></a>
+        <p>Couples and relationship therapy by and for LGBTQIA+ people, online across Australia. Part of <a href="https://www.bodybelongingclinic.com.au/">Body Belonging Clinic</a>, led by Lauren Lynch, AMHSW.</p>
+      </div>
+      <div><h2>Get in touch</h2><ul><li><a class="js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">Book a free 15 minute chat</a></li><li><a href="mailto:lovelounge@queerlovelounge.com.au">lovelounge@queerlovelounge.com.au</a></li><li><a href="tel:+61493117185">0493 117 185</a></li><li><a href="https://instagram.com/queerlovelounge">@queerlovelounge</a></li></ul></div>
+      <div><h2>Explore</h2><ul><li><a href="/guides/">The Lounge Library</a></li><li><a href="/find-the-miss">Find the miss, free quiz</a></li><li><a href="/lounge-method-cards">The ten free cards</a></li><li><a href="/relationship-tune-up">The Tune Up</a></li><li><a href="/pull-up-a-chair-intensive">Couples intensives</a></li><li><a href="/at-home">The Lounge at Home</a></li><li><a href="/couples-therapy-questioning-sexuality">When one of you is questioning</a></li><li><a href="/lesbian-gay-couples-counselling">Two women, two men</a></li><li><a href="/privacy">Privacy</a></li></ul></div>
+      <div><h2>Queer couples therapy, Australia wide</h2><ul><li><a href="/queer-couples-therapy-perth">Perth</a></li><li><a href="/queer-couples-therapy-melbourne">Naarm (Melbourne)</a></li><li><a href="/queer-couples-therapy-sydney">Sydney</a></li><li><a href="/queer-couples-therapy-brisbane">Brisbane</a></li><li><a href="/queer-couples-therapy-adelaide">Adelaide</a></li><li><a href="/queer-couples-therapy-canberra">Canberra</a></li></ul></div>
     </div>
-  </footer>
+    <div class="ack">
+      <p><b>Acknowledgement of Country.</b> Queer Love Lounge is based in Boorloo (Perth) on Whadjuk Noongar Country, and works with people across many Countries by telehealth. We pay respect to Elders past and present. Sovereignty was never ceded. Always was, always will be Aboriginal land.</p>
+      <p class="crisis">If you need support right now, you are not alone. <b>1800RESPECT</b> 1800 737 732 · <b>QLife</b> 1800 184 527 · <b>13YARN</b> 13 92 76 · <b>Lifeline</b> 13 11 14 · In an emergency, call <b>000</b>.</p>
+    </div>
+    <div class="legal"><span>© 2026 Queer Love Lounge · Body Belonging Clinic · ABN 76 208 028 254</span><span>Lauren Lynch (she/her) · Accredited Mental Health Social Worker · Design by Club Coco</span></div>
+  </div>
+</footer>
+<!-- /qll:footer -->
 </main>
 
 <script>
@@ -398,18 +499,17 @@ const TEN = [
 <script src="https://static.mailerlite.com/js/w/webforms.min.js" type="text/javascript"></script>
 <!-- QLL privacy-first consent + analytics (GA4 only; nothing loads until Accept) -->
 <style>
-@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:420px}}.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#2e1d14;color:#f6ede0;border:1px solid rgba(246,237,224,.16);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.45);font-family:'Host Grotesk',system-ui,sans-serif;max-width:720px;margin:0 auto}
-.qllc-inner{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:15px 20px;flex-wrap:wrap}
-.qllc-text{font-size:13.5px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#c7b4a1}
-.qllc-text a{color:#e79a7e;text-decoration:underline;text-underline-offset:2px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
+@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
+.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
+.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
+.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
+.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
 .qllc-btns{display:flex;gap:10px;flex:none}
-.qllc-btn{font-family:inherit;font-weight:600;font-size:14px;padding:12px 22px;min-height:44px;border-radius:100px;cursor:pointer;border:1.5px solid transparent;transition:.2s}
-.qllc-accept{background:#c24a24;color:#fbf5ec}
-.qllc-accept:hover{background:#a63c1a}
-.qllc-decline{background:transparent;color:#f6ede0;border-color:rgba(246,237,224,.28)}
-.qllc-decline:hover{border-color:#f6ede0}
+.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
+.qllc-accept{background:#D22B26;color:#fff}
+.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
+.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
 @media(max-width:520px){.qllc-btns{width:100%}.qllc-btn{flex:1}}
-
 </style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
