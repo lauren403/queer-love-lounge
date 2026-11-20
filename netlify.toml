@@ -200,7 +200,8 @@
   status = 301
   force = true
 
-# The Lounge Library. One address per guide, and the hub ends in a slash.
+# The Lounge Library. One address per guide. Netlify already sends /guides to /guides/;
+# a rule for that here matches its own target and loops (found live 20 Nov 2026).
 [[redirects]]
   from = "/guides/index.html"
   to = "/guides/"
@@ -210,12 +211,6 @@
 [[redirects]]
   from = "/guides/partner-came-out-as-trans.html"
   to = "/guides/partner-came-out-as-trans"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/guides"
-  to = "/guides/"
   status = 301
   force = true
 
