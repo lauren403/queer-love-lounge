@@ -214,6 +214,18 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/guides/stop-having-the-same-fight.html"
+  to = "/guides/stop-having-the-same-fight"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides/one-of-us-wants-sex-more.html"
+  to = "/guides/one-of-us-wants-sex-more"
+  status = 301
+  force = true
+
 # ------------------------------------------------------------------
 # Internal notes live in the repo root, which is also the publish
 # root. Never serve them. (Added 8 October 2026.)
