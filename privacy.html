@@ -12,6 +12,9 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://queerlovelounge.com.au/privacy">
 <meta property="og:image" content="https://queerlovelounge.com.au/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://queerlovelounge.com.au/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://queerlovelounge.com.au/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,7 +73,7 @@ h1,h2,h3{margin:0;font-weight:400}
 .nav .nav-links a[aria-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
 @media(hover:hover){.nav .nav-links a:hover{background:var(--ink);color:var(--blush)}}
 .nav .nav-end{display:flex;align-items:center;gap:8px}
-.nav .btn{font-family:var(--q);font-weight:800;font-size:15px;padding:10px 18px;min-height:44px;border-radius:99px;background:var(--red);color:#fff;text-decoration:none;display:inline-flex;align-items:center;border:0}
+.nav .btn{white-space:nowrap;font-family:var(--q);font-weight:800;font-size:15px;padding:10px 18px;min-height:44px;border-radius:99px;background:var(--red);color:#fff;text-decoration:none;display:inline-flex;align-items:center;border:0}
 .nav .btn .short{display:none}
 .nav .menu{display:none;position:relative}
 .nav .menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 12px;border:2px solid var(--ink);border-radius:99px;font-family:var(--q);font-weight:500;font-size:15px;justify-content:center}
@@ -318,7 +321,7 @@ a[href^="mailto:"]{overflow-wrap:anywhere}
   </ul>
   <p>We store your choice in a cookie named <strong>qll_consent</strong> so we do not have to ask again for about a year. You can change your mind at any time by clearing your browser cookies for this site (the banner will reappear), or by using your browser's privacy settings to block cookies. You can also install Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Browser add on to opt out of analytics</a>.</p>
   <div class="callout">We do <strong>not</strong> use website analytics or advertising cookies to identify you personally, and we never combine website analytics with your clinical records.</div>
-  <p><strong>Free resources and email.</strong> If you ask for our free cards, guide or quiz result, we collect your email address so we can send it to you. We use <strong>MailerLite</strong> to send these emails. Every email has a single click unsubscribe. We never use this list for clinical communication, and we never combine it with your clinical records.</p>
+  <p><strong>Free resources and email.</strong> If you ask for our free cards, guide or quiz result, we collect your email address so we can send it to you. We use <strong>MailerLite</strong> to send these emails. We also note the page you signed up on and, if you arrived from a tagged link such as one on our Instagram, where that link came from, so we know which free resources are helping. Every email has a single click unsubscribe. We never use this list for clinical communication, and we never combine it with your clinical records.</p>
 
   <h2 class="sec" id="telehealth">5. Telehealth &amp; how sessions are delivered</h2>
   <p>Sessions are delivered <strong>online by secure video</strong>, across Australia. Video calls run through <strong>Zoom</strong>, integrated with our practice management system (Zanda). A private, unique link is generated for each appointment.</p>
@@ -411,7 +414,7 @@ a[href^="mailto:"]{overflow-wrap:anywhere}
 .qllc-accept{background:#D22B26;color:#fff}
 .qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
 .qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
-@media(max-width:520px){.qllc-btns{width:100%}.qllc-btn{flex:1}}
+@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
 </style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
@@ -447,5 +450,9 @@ a[href^="mailto:"]{overflow-wrap:anywhere}
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".js-book");if(!a)return;try{if(window.gtag)gtag("event","generate_lead",{method:"zanda",value:1});}catch(_){}});
 </script>
 
+<script>
+/* Signup attribution: remembers where this visit came from (utm_source / utm_medium, this tab only) and adds it, with the page, to the MailerLite signup_source field. Nothing is stored unless a link carried UTM tags; nothing is sent unless the person subscribes. */
+(function(){try{var q=new URLSearchParams(location.search),s=q.get("utm_source");if(s){sessionStorage.setItem("qll_src",s+(q.get("utm_medium")?"/"+q.get("utm_medium"):""));}var src=sessionStorage.getItem("qll_src")||"";document.querySelectorAll("input.js-src").forEach(function(i){i.value=i.getAttribute("data-page")+(src?" via "+src:"");});}catch(_){}})();
+</script>
 </body>
 </html>

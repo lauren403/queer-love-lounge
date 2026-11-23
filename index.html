@@ -11,6 +11,9 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://queerlovelounge.com.au/">
 <meta property="og:image" content="https://queerlovelounge.com.au/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://queerlovelounge.com.au/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F8D5CF">
 <meta name="color-scheme" content="light">
@@ -35,7 +38,7 @@
 .nav .nav-links a[aria-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
 @media(hover:hover){.nav .nav-links a:hover{background:var(--ink);color:var(--blush)}}
 .nav .nav-end{display:flex;align-items:center;gap:8px}
-.nav .btn{font-family:var(--q);font-weight:800;font-size:15px;padding:10px 18px;min-height:44px;border-radius:99px;background:var(--red);color:#fff;text-decoration:none;display:inline-flex;align-items:center;border:0}
+.nav .btn{white-space:nowrap;font-family:var(--q);font-weight:800;font-size:15px;padding:10px 18px;min-height:44px;border-radius:99px;background:var(--red);color:#fff;text-decoration:none;display:inline-flex;align-items:center;border:0}
 .nav .btn .short{display:none}
 .nav .menu{display:none;position:relative}
 .nav .menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 12px;border:2px solid var(--ink);border-radius:99px;font-family:var(--q);font-weight:500;font-size:15px;justify-content:center}
@@ -80,6 +83,12 @@
 .libband h2 .A{display:block;text-transform:none;font-size:.82em;margin-top:.1em}
 .libband p{font-size:18px;max-width:30em}
 .libband .actions{margin-top:20px}
+.libl{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.libl li{border-bottom:2px solid var(--ink)}
+.libl a{position:relative;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding:14px 34px 14px 0;min-height:44px;color:var(--ink);text-decoration:none;font-family:var(--q);font-weight:800;font-size:clamp(19px,2vw,23px);line-height:1.15}
+.libl a:after{content:"\2192";position:absolute;right:0;bottom:15px;font-weight:500}
+.libl .libn{font-family:var(--m);font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;flex-basis:100%}
+@media(hover:hover){.libl a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}}
 .btn .wide-only{margin-left:-.5rem}
 </style>
 </head>
@@ -150,7 +159,7 @@ h2 .A{display:block;text-transform:none;letter-spacing:-.01em;margin-top:.12em;f
 .nav-links a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px;padding:0 10px;border-radius:99px}
 @media(hover:hover){.nav-links a:hover{background:var(--ink);color:var(--blush)}}
 @media(max-width:940px){.nav-links{display:none}}
-.nav .btn{font-size:15px;padding:10px 18px;min-height:44px}
+.nav .btn{white-space:nowrap;font-size:15px;padding:10px 18px;min-height:44px}
 .nav .btn .short{display:none}
 @media(max-width:560px){.nav .btn .long{display:none}.nav .btn .short{display:inline}.brand{font-size:14px}}
 
@@ -379,7 +388,7 @@ footer .brand svg{color:var(--hotline)}
     <span><b>Free</b> 15 minute chat</span>
     <span>First session <b>$240</b> · 90 min</span>
     <span>Ongoing <b>$190</b> · 75 min</span>
-    <span><b>AMHSW</b> · Completed Level 2 Training in Gottman Method Couples Therapy · Informed by Esther Perel's work</span>
+    <span><b>AMHSW</b> · Completed Level 2 Training in Gottman Method Couples Therapy · Trained with Esther Perel</span>
     <span><b>Queer and Aboriginal led</b></span>
   </div>
 </div>
@@ -389,11 +398,15 @@ footer .brand svg{color:var(--hotline)}
   <div class="wrap lib-row">
     <div>
       <p class="label">New in the Lounge Library</p>
-      <h2 class="Q" id="libband-h">My partner came out as trans. <span class="A">Where do we start?</span></h2>
+      <h2 class="Q" id="libband-h">Free guides for the things nobody taught us. <span class="A">Read one tonight.</span></h2>
     </div>
     <div>
-      <p>A free guide for the partner who has just heard and the partner who has just said it. Pace, feelings, names, sex, privacy, and what to do when the same conversation keeps going wrong.</p>
-      <div class="actions"><a class="btn btn-ink" href="/guides/partner-came-out-as-trans">Read guide 01</a><a class="textlink" href="/guides/">The whole Library</a></div>
+      <ul class="libl">
+        <li><a href="/guides/one-of-us-wants-sex-more"><span class="libn">Guide 03</span>When one of you wants sex more often</a></li>
+        <li><a href="/guides/stop-having-the-same-fight"><span class="libn">Guide 02</span>We keep having the same fight</a></li>
+        <li><a href="/guides/partner-came-out-as-trans"><span class="libn">Guide 01</span>My partner came out as trans</a></li>
+      </ul>
+      <div class="actions"><a class="textlink" href="/guides/">The whole Library</a></div>
     </div>
   </div>
 </section>
@@ -478,7 +491,7 @@ footer .brand svg{color:var(--hotline)}
     <h2 class="Q">Hi, I am Lauren. <span class="A">I am a couples therapist, and I am queer.</span></h2>
     <p class="lede">I know what it is like to walk into a room and spend the first while explaining your own life before anyone can help you with it. So I built one where you do not have to.</p>
     <p class="measure">I am a Yorta Yorta and Boonwurrung woman, an Accredited Mental Health Social Worker with more than fifteen years in the room. Everything I trained in, I have reshaped for how queer relationships really work. I work online across Australia.</p>
-    <div class="creds"><span class="cred">AMHSW · AASW</span><span class="cred">Completed Level 2 Training in Gottman Method Couples Therapy</span><span class="cred">Informed by Esther Perel's work</span><span class="cred">Queer &amp; Aboriginal led</span><a class="cred" href="https://www.bodybelongingclinic.com.au/" style="text-decoration:underline;min-height:44px;display:inline-flex;align-items:center">Part of Body Belonging Clinic</a></div>
+    <div class="creds"><span class="cred">AMHSW · AASW</span><span class="cred">Completed Level 2 Training in Gottman Method Couples Therapy</span><span class="cred">Trained with Esther Perel</span><span class="cred">Queer &amp; Aboriginal led</span><a class="cred" href="https://www.bodybelongingclinic.com.au/" style="text-decoration:underline;min-height:44px;display:inline-flex;align-items:center">Part of Body Belonging Clinic</a></div>
     <p class="sig"><svg viewBox="0 0 100 90" aria-hidden="true"><path fill="currentColor" d="M47 84 L10 47 C-1 35 1 14 17 8 C31 3 41 10 47 21 Z"/><path fill="currentColor" d="M53 84 L90 47 C101 35 99 14 83 8 C69 3 59 10 53 21 Z"/></svg>Lauren</p>
   </div>
 </section>
@@ -548,7 +561,8 @@ footer .brand svg{color:var(--hotline)}
           <div class="row-form" style="display:grid;gap:10px">
             <label for="pemail">Email</label>
             <input id="pemail" type="email" name="fields[email]" required placeholder="you@example.com" autocomplete="email" aria-label="Your email address">
-            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="fields[signup_source]" class="js-src" data-page="home" value="home">
+<input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
             <button class="btn" type="submit">Send me the ten cards</button>
             <small>The cards arrive straight away. No sharing your details, ever, and you can unsubscribe in one click.</small>
@@ -625,7 +639,7 @@ card.addEventListener("click", function(){ var on = card.classList.toggle("is-fl
 .qllc-accept{background:#D22B26;color:#fff}
 .qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
 .qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
-@media(max-width:520px){.qllc-btns{width:100%}.qllc-btn{flex:1}}
+@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
 </style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
@@ -662,5 +676,9 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
 document.addEventListener("submit",function(e){if(e.target&&e.target.classList&&e.target.classList.contains("ml-block-form")){try{if(window.gtag)gtag("event","sign_up",{method:"mailerlite",content_name:"ten cards"});}catch(_){}}},true);
 </script>
 
+<script>
+/* Signup attribution: remembers where this visit came from (utm_source / utm_medium, this tab only) and adds it, with the page, to the MailerLite signup_source field. Nothing is stored unless a link carried UTM tags; nothing is sent unless the person subscribes. */
+(function(){try{var q=new URLSearchParams(location.search),s=q.get("utm_source");if(s){sessionStorage.setItem("qll_src",s+(q.get("utm_medium")?"/"+q.get("utm_medium"):""));}var src=sessionStorage.getItem("qll_src")||"";document.querySelectorAll("input.js-src").forEach(function(i){i.value=i.getAttribute("data-page")+(src?" via "+src:"");});}catch(_){}})();
+</script>
 </body>
 </html>

@@ -10,7 +10,10 @@
 <meta property="og:description" content="Your partner has told you they are trans. A guide for what helps first: pace, feelings, names, sex, privacy, and the conversations that keep going wrong.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://queerlovelounge.com.au/guides/partner-came-out-as-trans">
-<meta property="og:image" content="https://queerlovelounge.com.au/og-image.jpg">
+<meta property="og:image" content="https://queerlovelounge.com.au/assets/og-guide-came-out-trans.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://queerlovelounge.com.au/assets/og-guide-came-out-trans.jpg">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#F8D5CF">
@@ -72,7 +75,7 @@ h1,h2,h3{margin:0;font-weight:400}
 .nav .nav-links a[aria-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
 @media(hover:hover){.nav .nav-links a:hover{background:var(--ink);color:var(--blush)}}
 .nav .nav-end{display:flex;align-items:center;gap:8px}
-.nav .btn{font-family:var(--q);font-weight:800;font-size:15px;padding:10px 18px;min-height:44px;border-radius:99px;background:var(--red);color:#fff;text-decoration:none;display:inline-flex;align-items:center;border:0}
+.nav .btn{white-space:nowrap;font-family:var(--q);font-weight:800;font-size:15px;padding:10px 18px;min-height:44px;border-radius:99px;background:var(--red);color:#fff;text-decoration:none;display:inline-flex;align-items:center;border:0}
 .nav .btn .short{display:none}
 .nav .menu{display:none;position:relative}
 .nav .menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 12px;border:2px solid var(--ink);border-radius:99px;font-family:var(--q);font-weight:500;font-size:15px;justify-content:center}
@@ -198,6 +201,11 @@ main{display:block}
 .prose .onething h2{margin-top:0;font-size:clamp(24px,2.8vw,32px)}
 .prose .onething blockquote{margin:18px 0}
 .prose .onething p:last-child{margin-bottom:0}
+.keep{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:22px 0;margin:8px 0 48px}
+.keep p{margin:0 0 14px}
+.keep .keep-label{font-family:var(--m);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.keep-actions{display:flex;flex-wrap:wrap;gap:12px}
+.keep-actions .btn{font-size:16px;min-height:48px;padding:12px 22px}
 .prose .maxims{font-family:var(--a);font-style:italic;font-weight:300;font-size:clamp(22px,2.4vw,28px);line-height:1.35;margin:48px 0 0;color:var(--red-text)}
 </style>
 </head>
@@ -238,6 +246,12 @@ main{display:block}
     <p>That gap explains a lot of what happens next. They might feel ready to talk about names and next steps while you are still taking in the first sentence. You might want every answer tonight while they want one quiet evening of simply being known.</p>
     <p>Neither pace is wrong. Saying the gap out loud often takes the heat out of it:</p>
     <blockquote><p>“You have had a long time with this and I have had a day. Can we take the big conversations a bit at a time, and can you tell me what you need from me in the meantime?”</p></blockquote>
+
+    <aside class="keep" aria-label="Keep this guide">
+      <p class="keep-label">Before you read on</p>
+      <p>This one lands better when you both read it. Send it to your partner, or partners, and read it on your own first if that feels easier.</p>
+      <div class="keep-actions"><button type="button" class="btn btn-ink js-share">Send this guide</button><a class="btn btn-line" href="#cards-h">Get the ten free cards</a></div>
+    </aside>
 
     <h2>Whatever arrives can sit in the same chair</h2>
     <p>You might feel relief, pride, fear, tenderness and loss, sometimes in the same breath. None of that makes you a bad partner. If some of it is loss, it is usually for a picture you had of the future, the wedding photos you imagined or the way you described your relationship to the world, more than for the person in front of you.</p>
@@ -301,7 +315,7 @@ main{display:block}
       <li><b>QLife</b> offers free, anonymous LGBTIQ+ peer support on 1800 184 527, 3pm to 9pm every day. Either of you can call.</li>
       <li><b>Lifeline</b> is there any time on 13 11 14, and <b>13YARN</b> offers 24 hour support for Aboriginal and Torres Strait Islander people on 13 92 76.</li>
       <li><b>TransHub</b> has a section for partners of trans people, with places to connect online.</li>
-      <li><b>Queer Love Lounge</b> is my practice. I offer online couples therapy across Australia, and I work with trans and gender diverse people and the people who love them. Start with a <a class="js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">free 15 minute call</a>, or join the list for <a href="/at-home">The Lounge at Home</a>, a six week program you work through together, coming soon.</li>
+      <li><b>Queer Love Lounge</b> is my practice. I offer online couples therapy across Australia, and I work with trans and gender diverse people and the people who love them. Start with a <a class="js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">free 15 minute chat</a>, or join the list for <a href="/at-home">The Lounge at Home</a>, a six week program you work through together, coming soon.</li>
     </ul>
 
     <p class="byline"><span>Lauren Lynch (she/her) · Accredited Mental Health Social Worker · Queer Love Lounge</span><span>Published 20 November 2026</span></p>
@@ -330,7 +344,8 @@ main{display:block}
           <div class="row-form" style="display:grid;gap:10px">
             <label for="gemail">Email</label>
             <input id="gemail" type="email" name="fields[email]" required placeholder="you@example.com" autocomplete="email">
-            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="fields[signup_source]" class="js-src" data-page="guides/partner-came-out-as-trans" value="guides/partner-came-out-as-trans">
+<input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
             <button class="btn" type="submit">Send me the ten cards</button>
             <small>The cards arrive straight away, then a short letter when a new guide is out. No sharing your details, ever, and you can unsubscribe in one click. <a href="/privacy" style="color:inherit">Privacy</a>.</small>
@@ -376,7 +391,7 @@ main{display:block}
 .qllc-accept{background:#D22B26;color:#fff}
 .qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
 .qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
-@media(max-width:520px){.qllc-btns{width:100%}.qllc-btn{flex:1}}
+@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
 </style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
@@ -411,6 +426,13 @@ main{display:block}
 // Booking-click conversion tracking (fires only when consent granted + analytics loaded)
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".js-book");if(!a)return;var door=/first session/i.test(a.textContent)?"first_session":"free_call";try{if(window.gtag)gtag("event","generate_lead",{method:"zanda",door:door,value:1});}catch(_){}});
 document.addEventListener("submit",function(e){if(e.target&&e.target.classList&&e.target.classList.contains("ml-block-form")){try{if(window.gtag)gtag("event","sign_up",{method:"mailerlite",content_name:"ten cards"});}catch(_){}}},true);
+</script>
+<script>
+document.querySelectorAll(".js-share").forEach(function(b){b.addEventListener("click",function(){var url=location.origin+location.pathname+"?utm_source=share&utm_medium=guide";var d={title:document.title.split(" | ")[0],url:url};var done=function(m){try{if(window.gtag)gtag("event","share",{method:m,content_type:"guide",item_id:location.pathname});}catch(_){}};if(navigator.share){navigator.share(d).then(function(){done("web_share")}).catch(function(){});}else if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){b.textContent="Link copied. Paste it to them.";done("copy_link")});}});});
+</script>
+<script>
+/* Signup attribution: remembers where this visit came from (utm_source / utm_medium, this tab only) and adds it, with the page, to the MailerLite signup_source field. Nothing is stored unless a link carried UTM tags; nothing is sent unless the person subscribes. */
+(function(){try{var q=new URLSearchParams(location.search),s=q.get("utm_source");if(s){sessionStorage.setItem("qll_src",s+(q.get("utm_medium")?"/"+q.get("utm_medium"):""));}var src=sessionStorage.getItem("qll_src")||"";document.querySelectorAll("input.js-src").forEach(function(i){i.value=i.getAttribute("data-page")+(src?" via "+src:"");});}catch(_){}})();
 </script>
 </body>
 </html>

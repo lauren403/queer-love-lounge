@@ -11,6 +11,9 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://queerlovelounge.com.au/find-the-miss">
 <meta property="og:image" content="https://queerlovelounge.com.au/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://queerlovelounge.com.au/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://queerlovelounge.com.au/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -251,7 +254,7 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
             <input type="email" name="fields[email]" placeholder="Your email" required aria-label="Your email address" autocomplete="email">
             <input type="hidden" name="fields[loop]" id="keepLoop" value="">
             <input type="hidden" name="fields[miss_result]" id="keepName" value="">
-            <input type="hidden" name="fields[signup_source]" value="find-the-miss">
+            <input type="hidden" name="fields[signup_source]" class="js-src" data-page="find-the-miss" value="find-the-miss">
             <input type="hidden" name="fields[consent_version]" value="qll-quiz-2026-11">
             <input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
@@ -297,7 +300,8 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
         <form class="ml-block-form" data-request-data-type="json" action="https://assets.mailerlite.com/jsonp/2525880/forms/194843107891611174/subscribe" data-code="sL4Cuh" method="post">
           <div class="row-form">
             <input type="email" name="fields[email]" placeholder="Your email" required aria-label="Your email address" autocomplete="email">
-            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="fields[signup_source]" class="js-src" data-page="find-the-miss" value="find-the-miss">
+<input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
             <button type="submit" class="btn">Send me the cards</button>
           </div>
@@ -309,7 +313,7 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
 
     <div class="made">
       <p>This is not a diagnosis. It is a small mirror. The fuller picture is something we would find together, at a pace that feels right. Everyone is welcome here, however you love.</p>
-      <p>Made by Lauren Lynch (she/her) · AMHSW · completed Level 2 Training in Gottman Method Couples Therapy · informed by Esther Perel’s work · a queer led practice.</p>
+      <p>Made by Lauren Lynch (she/her) · AMHSW · completed Level 2 Training in Gottman Method Couples Therapy · trained with Esther Perel · a queer led practice.</p>
       <button class="again" id="again" type="button">Take it again</button>
     </div>
   </div>
@@ -531,7 +535,7 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
 .qllc-accept{background:#D22B26;color:#fff}
 .qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
 .qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
-@media(max-width:520px){.qllc-btns{width:100%}.qllc-btn{flex:1}}
+@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
 </style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
@@ -565,5 +569,9 @@ body.dark footer{border-top-color:rgba(248,213,207,.3)}
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".js-book");if(!a)return;var door=/first session/i.test(a.textContent)?"first_session":(a.classList.contains("js-enquire")?"enquiry":"free_call");try{if(window.gtag)gtag("event","generate_lead",{method:"zanda",door:door,value:1});}catch(_){}});
 </script>
 
+<script>
+/* Signup attribution: remembers where this visit came from (utm_source / utm_medium, this tab only) and adds it, with the page, to the MailerLite signup_source field. Nothing is stored unless a link carried UTM tags; nothing is sent unless the person subscribes. */
+(function(){try{var q=new URLSearchParams(location.search),s=q.get("utm_source");if(s){sessionStorage.setItem("qll_src",s+(q.get("utm_medium")?"/"+q.get("utm_medium"):""));}var src=sessionStorage.getItem("qll_src")||"";document.querySelectorAll("input.js-src").forEach(function(i){i.value=i.getAttribute("data-page")+(src?" via "+src:"");});}catch(_){}})();
+</script>
 </body>
 </html>

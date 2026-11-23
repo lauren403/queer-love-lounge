@@ -11,6 +11,9 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://queerlovelounge.com.au/queer-couples-therapy-brisbane">
 <meta property="og:image" content="https://queerlovelounge.com.au/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://queerlovelounge.com.au/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://queerlovelounge.com.au/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,7 +75,7 @@ h1,h2,h3{margin:0;font-weight:400}
 .nav .nav-links a[aria-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
 @media(hover:hover){.nav .nav-links a:hover{background:var(--ink);color:var(--blush)}}
 .nav .nav-end{display:flex;align-items:center;gap:8px}
-.nav .btn{font-family:var(--q);font-weight:800;font-size:15px;padding:10px 18px;min-height:44px;border-radius:99px;background:var(--red);color:#fff;text-decoration:none;display:inline-flex;align-items:center;border:0}
+.nav .btn{white-space:nowrap;font-family:var(--q);font-weight:800;font-size:15px;padding:10px 18px;min-height:44px;border-radius:99px;background:var(--red);color:#fff;text-decoration:none;display:inline-flex;align-items:center;border:0}
 .nav .btn .short{display:none}
 .nav .menu{display:none;position:relative}
 .nav .menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 12px;border:2px solid var(--ink);border-radius:99px;font-family:var(--q);font-weight:500;font-size:15px;justify-content:center}
@@ -289,7 +292,7 @@ a[href^="mailto:"]{overflow-wrap:anywhere}
     <p style="font-size:18px;color:var(--taupe);max-width:64ch;margin:-6px 0 34px">No one hands queer couples a map. You have had to invent more of your relationship than most. So we start there, not with you explaining it. Two of you or more than two, monogamous, open or poly: you start where you are. We help you name <strong style="color:var(--lime)">the miss</strong>: the moment one of you reaches and it does not quite land. Then we build the few moves that break the loop, so you are reaching for each other again. Not just fighting less; built for how you actually love.</p>
     <div class="pillars">
 <div class="pillar feature"><span class="tag">The difference</span><h3>Queer led &amp; culturally safe</h3><p>You will not have to explain what it is like to be you, or bring your therapist up to speed first. Led from inside the community, and a safe space for every culture, body and relationship.</p></div>
-<div class="pillar"><h3>The Lounge Method</h3><p>Repair you can use while the hard moment is still happening, and room for desire to stay alive once it passes. Everything I trained in, reshaped for how queer relationships really work.</p><p style="margin-top:14px;font-size:12px;letter-spacing:.04em;color:var(--lime)">AMHSW · Completed Level 2 Training in Gottman Method Couples Therapy · Informed by Esther Perel's work</p></div>
+<div class="pillar"><h3>The Lounge Method</h3><p>Repair you can use while the hard moment is still happening, and room for desire to stay alive once it passes. Everything I trained in, reshaped for how queer relationships really work.</p><p style="margin-top:14px;font-size:12px;letter-spacing:.04em;color:var(--lime)">AMHSW · Completed Level 2 Training in Gottman Method Couples Therapy · Trained with Esther Perel</p></div>
 <div class="pillar"><h3>For the relationship</h3><p>No blame, no taking sides. My client is not either of you. It is the relationship itself, the living thing between you all. I listen for what it has been trying to say, and help you find your way back to each other.</p></div>
 <div class="pillar"><h3>Online across Australia</h3><p>Meet from your own couch: a capital city, a regional town, anywhere the map reaches. Secure video, no waiting room, no commute.</p></div>
 </div>
@@ -378,7 +381,7 @@ a[href^="mailto:"]{overflow-wrap:anywhere}
 .qllc-accept{background:#D22B26;color:#fff}
 .qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
 .qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
-@media(max-width:520px){.qllc-btns{width:100%}.qllc-btn{flex:1}}
+@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
 </style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
@@ -414,5 +417,9 @@ a[href^="mailto:"]{overflow-wrap:anywhere}
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".js-book");if(!a)return;try{if(window.gtag)gtag("event","generate_lead",{method:"zanda",value:1});}catch(_){}});
 </script>
 
+<script>
+/* Signup attribution: remembers where this visit came from (utm_source / utm_medium, this tab only) and adds it, with the page, to the MailerLite signup_source field. Nothing is stored unless a link carried UTM tags; nothing is sent unless the person subscribes. */
+(function(){try{var q=new URLSearchParams(location.search),s=q.get("utm_source");if(s){sessionStorage.setItem("qll_src",s+(q.get("utm_medium")?"/"+q.get("utm_medium"):""));}var src=sessionStorage.getItem("qll_src")||"";document.querySelectorAll("input.js-src").forEach(function(i){i.value=i.getAttribute("data-page")+(src?" via "+src:"");});}catch(_){}})();
+</script>
 </body>
 </html>
