@@ -50,11 +50,24 @@ h1 .A{display:block;font-family:var(--a);font-style:italic;font-weight:300;text-
 .foot p{margin:0 0 8px}
 .foot .m{font-family:var(--m);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 </style>
+<style>
+@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
+.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
+.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
+.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
+.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
+.qllc-btns{display:flex;gap:10px;flex:none}
+.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
+.qllc-accept{background:#D22B26;color:#fff}
+.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
+.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
+@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
+</style>
 </head>
 <body>
 <main class="wrap">
   <a class="top" href="/" aria-label="Queer Love Lounge, home"><svg viewBox="0 0 100 90" aria-hidden="true"><path fill="currentColor" d="M47 84 L10 47 C-1 35 1 14 17 8 C31 3 41 10 47 21 Z"/><path fill="currentColor" d="M53 84 L90 47 C101 35 99 14 83 8 C69 3 59 10 53 21 Z"/></svg><span>Queer Love Lounge</span></a>
-  <p class="label">Queer couples therapy · Online across Australia</p>
+  <p class="label">Queer couples therapy · Mosman Park and online across Australia</p>
   <h1>Who taught you how to do this? <span class="A">Nobody did. Start here.</span></h1>
   <p class="lede">Free guides for the fights nobody taught us, a three minute quiz, and a free 15 minute chat with me when you are ready. Lauren</p>
   <ul class="doors">
@@ -79,19 +92,6 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
 document.querySelectorAll(".js-book").forEach(function(a){a.target="_blank";a.rel="noopener";});
 </script>
 <!-- QLL privacy-first consent + analytics (GA4 only; nothing loads until Accept) -->
-<style>
-@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
-.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
-.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
-.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
-.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
-.qllc-btns{display:flex;gap:10px;flex:none}
-.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
-.qllc-accept{background:#D22B26;color:#fff}
-.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
-.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
-@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
-</style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
     <p class="qllc-text">This site uses a couple of cookies that respect your privacy, to see what is helping people find Queer Love Lounge. Nothing loads until you say yes. <a href='/privacy'>Privacy</a>.</p>

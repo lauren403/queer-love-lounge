@@ -78,8 +78,19 @@
 
 .photo .frame:has(img[src*="pair-armchairs"])::after{opacity:.05}
 </style>
-</head>
-<body>
+<style>
+@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
+.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
+.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
+.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
+.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
+.qllc-btns{display:flex;gap:10px;flex:none}
+.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
+.qllc-accept{background:#D22B26;color:#fff}
+.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
+.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
+@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
+</style>
 <style>
 /* The Miss, intensive world: hotline red and ink. The question asks in bold caps, the answer replies in soft italic. */
 :root{
@@ -315,6 +326,8 @@ footer{background:var(--ink);color:var(--blush);padding-block:56px 36px;font-siz
 .crisis b{color:var(--lime);font-weight:500}
 .legal{margin-top:22px;font-family:var(--m);font-size:11px;letter-spacing:.05em;text-transform:uppercase;display:flex;flex-wrap:wrap;gap:6px 22px;opacity:.85}
 </style>
+</head>
+<body>
 
 <!-- qll:header -->
 <a class="skip" href="#top">Skip to content</a>
@@ -356,12 +369,12 @@ footer{background:var(--ink);color:var(--blush);padding-block:56px 36px;font-siz
   </div>
 </section>
 
-<div class="strip" aria-label="At a glance">
+<div role="group" class="strip" aria-label="At a glance">
   <div class="wrap">
     <span>Half day <b>$750</b></span>
     <span>One day <b>$1,500</b></span>
     <span>Weekend <b>$3,200</b></span>
-    <span>Private call each <b>included</b></span>
+    <span>Private chat each <b>included</b></span>
     <span>Dates <b>set with you</b></span>
   </div>
 </div>
@@ -374,7 +387,7 @@ footer{background:var(--ink);color:var(--blush);padding-block:56px 36px;font-siz
       <p class="lede">Then it is a week of ordinary life before you pick it up again, half cooled. For some couples that slow rhythm is right. For others, it is why nothing quite shifts.</p>
       <p class="measure">An intensive is the opposite. Long enough to reach the miss, stay with it, and build the moves that break it while it is still warm.</p>
     </div>
-    <div class="time" role="img" aria-label="Weekly sessions stop each time something surfaces. An intensive keeps going.">
+    <div class="time" role="group" aria-label="Weekly sessions stop each time something surfaces. An intensive keeps going.">
       <div>
         <h3>An hour a week</h3>
         <div class="weeks" aria-hidden="true"><span class="wk"></span><span class="wk"></span><span class="wk"></span><span class="wk"></span><span class="wk"></span><span class="wk"></span></div>
@@ -394,7 +407,7 @@ footer{background:var(--ink);color:var(--blush);padding-block:56px 36px;font-siz
     <p class="label">No translating</p>
     <h2 class="Q">A whole day that starts where you are. <span class="A">Not where a straight template assumes you are.</span></h2>
     <p class="lede">You will not spend the first hours explaining your family, your history, or the shape of your relationship. We start with what is actually happening between you, and use the time on that.</p>
-    <div class="chips" aria-label="Who this is for">
+    <div role="group" class="chips" aria-label="Who this is for">
       <span class="chip">Two of you</span><span class="chip">More than two</span><span class="chip">Monogamous</span><span class="chip">Open</span><span class="chip">Poly</span><span class="chip">Trans &amp; nonbinary partners</span><span class="chip">Neurodivergent</span><span class="chip">One of you is changing</span><span class="chip">Good, and wanting more</span>
     </div>
     <p class="measure">No one hands queer couples a map. An intensive is a stretch of time to draw a few of the ones you were never given. Your names, your pronouns and your words for your relationship, from the first minute.</p>
@@ -535,8 +548,7 @@ footer{background:var(--ink);color:var(--blush);padding-block:56px 36px;font-siz
     <h2 class="Q" style="margin-top:16px">Pull up a chair.</h2>
     <p class="lede">Start with a free 15 minute chat. No pressure, no explaining yourselves first. Just an honest talk about whether a day like this fits you.</p>
     <div class="actions"><a class="btn btn-ink book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">Book a free 15 minute chat</a><a class="btn btn-line" href="mailto:lovelounge@queerlovelounge.com.au?subject=Intensive%20enquiry">Email me first</a></div>
-    <p class="reply-note" style="font-size:16px;margin:14px auto 0;max-width:36em">I reply to emails and messages personally, usually within a day. Online booking shows my next free times straight away.</p>
-    <p class="hero-note">Booking opens the secure client portal, part of Body Belonging Clinic. Choose the free 15 minute chat, or a first couples session if you would rather start with a regular session before deciding.</p>
+    <p class="hero-note">Booking opens the secure client portal, part of Body Belonging Clinic. Choose the free 15 minute chat, or a first couples session if you would rather start with a regular session before deciding. Emails come straight to me, and I reply personally, usually within a day.</p>
   </div>
 </section>
 
@@ -574,19 +586,6 @@ document.querySelectorAll("a.book").forEach(function(a){ a.href = BOOKING_URL; a
 </script>
 
 <!-- QLL privacy-first consent + analytics (GA4 only; nothing loads until Accept) -->
-<style>
-@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
-.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
-.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
-.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
-.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
-.qllc-btns{display:flex;gap:10px;flex:none}
-.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
-.qllc-accept{background:#D22B26;color:#fff}
-.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
-.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
-@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
-</style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
     <p class="qllc-text">This site uses a couple of cookies that respect your privacy, to see what is helping people find Queer Love Lounge. Nothing loads until you say yes. <a href='/privacy'>Privacy</a>.</p>

@@ -208,6 +208,19 @@ main{display:block}
 .keep-actions .btn{font-size:16px;min-height:48px;padding:12px 22px}
 .prose .maxims{font-family:var(--a);font-style:italic;font-weight:300;font-size:clamp(22px,2.4vw,28px);line-height:1.35;margin:48px 0 0;color:var(--red-text)}
 </style>
+<style>
+@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
+.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
+.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
+.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
+.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
+.qllc-btns{display:flex;gap:10px;flex:none}
+.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
+.qllc-accept{background:#D22B26;color:#fff}
+.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
+.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
+@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
+</style>
 </head>
 <body>
 <!-- qll:header -->
@@ -315,7 +328,7 @@ main{display:block}
       <li><b>QLife</b> offers free, anonymous LGBTIQ+ peer support on 1800 184 527, 3pm to 9pm every day. Either of you can call.</li>
       <li><b>Lifeline</b> is there any time on 13 11 14, and <b>13YARN</b> offers 24 hour support for Aboriginal and Torres Strait Islander people on 13 92 76.</li>
       <li><b>TransHub</b> has a section for partners of trans people, with places to connect online.</li>
-      <li><b>Queer Love Lounge</b> is my practice. I offer online couples therapy across Australia, and I work with trans and gender diverse people and the people who love them. Start with a <a class="js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">free 15 minute chat</a>, or join the list for <a href="/at-home">The Lounge at Home</a>, a six week program you work through together, coming soon.</li>
+      <li><b>Queer Love Lounge</b> is my practice. I offer couples therapy in person in Mosman Park (Perth) and online across Australia, and I work with trans and gender diverse people and the people who love them. Start with a <a class="js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">free 15 minute chat</a>, or join the list for <a href="/at-home">The Lounge at Home</a>, a six week program you work through together, coming soon.</li>
     </ul>
 
     <p class="byline"><span>Lauren Lynch (she/her) · Accredited Mental Health Social Worker · Queer Love Lounge</span><span>Published 20 November 2026</span></p>
@@ -327,7 +340,7 @@ main{display:block}
     <h2 class="Q" id="cta-h">Talk it through <span class="A">with someone who will not need it explained.</span></h2>
     <p class="lede">A free 15 minute chat, for one of you or both. We talk about what is happening and whether couples work is the right next step. No Queer 101.</p>
     <div class="actions"><a class="btn btn-ink js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" style="color:#fff">Book a free 15 minute chat</a><a class="btn btn-line js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">Book a first session</a></div>
-    <p class="note">Booking opens the secure client portal, part of Body Belonging Clinic, where your care is held. You make a quick login once. Prefer to write first? <a href="mailto:lovelounge@queerlovelounge.com.au" style="color:inherit">lovelounge@queerlovelounge.com.au</a></p>
+    <p class="note">Booking opens the secure client portal, part of Body Belonging Clinic, where your care is held. You make a quick login once. Prefer to write first? Email <a href="mailto:lovelounge@queerlovelounge.com.au" style="color:inherit">lovelounge@queerlovelounge.com.au</a> and I will reply personally, usually within a day.</p>
   </div>
 </section>
 
@@ -380,19 +393,6 @@ main{display:block}
 <script>function ml_webform_success_194843107891611174(){try{var s=document.querySelector('.ml-subscribe-form-194843107891611174 .row-success');var f=document.querySelector('.ml-subscribe-form-194843107891611174 .row-form');if(s)s.style.display='block';if(f)f.style.display='none';}catch(e){}}</script>
 <script>(function(){var done=false;function load(){if(done)return;done=true;var t=document.createElement("script");t.src="https://static.mailerlite.com/js/w/webforms.min.js";document.head.appendChild(t);}var f=document.querySelector(".ml-block-form");if(f){["focusin","pointerdown","touchstart"].forEach(function(e){f.addEventListener(e,load,{once:true,passive:true});});var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){load();io.disconnect();}});});io.observe(f);}})();</script>
 <!-- QLL privacy-first consent + analytics (GA4 only; nothing loads until Accept) -->
-<style>
-@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
-.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
-.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
-.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
-.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
-.qllc-btns{display:flex;gap:10px;flex:none}
-.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
-.qllc-accept{background:#D22B26;color:#fff}
-.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
-.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
-@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
-</style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
     <p class="qllc-text">This site uses a couple of cookies that respect your privacy, to see what is helping people find Queer Love Lounge. Nothing loads until you say yes. <a href='/privacy'>Privacy</a>.</p>

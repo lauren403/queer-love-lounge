@@ -441,6 +441,19 @@ footer .brand svg{color:var(--hotline)}
 .tu-rhythms h3{font-family:var(--q);font-weight:800;text-transform:uppercase;font-size:22px;line-height:1.05;margin:6px 0 6px}
 .tu-rhythms p{font-size:17px;max-width:36em}
 </style>
+<style>
+@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
+.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
+.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
+.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
+.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
+.qllc-btns{display:flex;gap:10px;flex:none}
+.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
+.qllc-accept{background:#D22B26;color:#fff}
+.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
+.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
+@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
+</style>
 </head>
 <body>
 <!-- qll:header -->
@@ -477,7 +490,7 @@ footer .brand svg{color:var(--hotline)}
   </div>
 </section>
 
-<div class="strip" aria-label="At a glance">
+<div role="group" class="strip" aria-label="At a glance">
   <div class="wrap"><span>A 75 minute reconnection</span><span>For past clients &amp; couples in a good place</span><span>Seasonal or once a year</span><span>Online across Australia</span></div>
 </div>
 
@@ -524,7 +537,7 @@ footer .brand svg{color:var(--hotline)}
       <div class="tu-one">
         <span class="tag">Every Tune Up</span>
         <p class="price">$190</p>
-        <p class="len">75 minutes · online · book anytime, no history needed</p>
+        <p class="len">75 minutes · online · any time, no history needed</p>
         <p class="tu-for">For past clients, or any couple in a good place who wants to stay there.</p>
         <div class="btn-wrap"><a class="btn btn-blush js-enquire" href="mailto:lovelounge@queerlovelounge.com.au?subject=Queer%20Love%20Lounge%3A%20Tune%20Up%20enquiry">Enquire about a Tune Up</a></div>
       </div>
@@ -552,7 +565,6 @@ footer .brand svg{color:var(--hotline)}
     <h2 class="Q" style="margin-top:16px">Pull up a chair. Again.</h2>
     <p class="lede">No crisis required. Just 75 minutes to turn towards each other on purpose, with someone who already knows how you love.</p>
     <div class="actions"><a class="btn btn-ink js-book js-enquire" href="mailto:lovelounge@queerlovelounge.com.au?subject=Queer%20Love%20Lounge%3A%20Tune%20Up%20enquiry">Enquire about a Tune Up</a><a class="textlink js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" rel="noopener" target="_blank">or book a free 15 minute chat</a></div>
-    <p class="reply-note" style="font-size:16px;margin:14px auto 0;max-width:36em">Online booking shows my next free times straight away.</p>
     <p class="portal">Booking opens the secure client portal, part of Body Belonging Clinic, where your care is held. You make a quick login once, about two minutes.</p><p class="portal">Enquiries come straight to me, and I reply personally, usually within a day. Not sure a Tune Up is right? Start with a <a class="js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking" rel="noopener" target="_blank">free 15 minute chat</a>.</p>
   </div>
 </section>
@@ -579,19 +591,6 @@ footer .brand svg{color:var(--hotline)}
 </footer>
 <!-- /qll:footer -->
 <!-- QLL privacy-first consent + analytics (GA4 only; nothing loads until Accept) -->
-<style>
-@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
-.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
-.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
-.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
-.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
-.qllc-btns{display:flex;gap:10px;flex:none}
-.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
-.qllc-accept{background:#D22B26;color:#fff}
-.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
-.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
-@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
-</style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
     <p class="qllc-text">This site uses a couple of cookies that respect your privacy, to see what is helping people find Queer Love Lounge. Nothing loads until you say yes. <a href='/privacy'>Privacy</a>.</p>

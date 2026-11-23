@@ -430,6 +430,19 @@ footer .brand svg{color:var(--hotline)}
 .privacy-hero .updated{font-family:var(--m);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-top:18px}
 
 </style>
+<style>
+@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
+.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
+.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
+.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
+.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
+.qllc-btns{display:flex;gap:10px;flex:none}
+.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
+.qllc-accept{background:#D22B26;color:#fff}
+.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
+.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
+@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
+</style>
 </head>
 <body>
 <!-- qll:header -->
@@ -448,7 +461,7 @@ footer .brand svg{color:var(--hotline)}
   </div>
 </header>
 <!-- /qll:header -->
-<main>
+<main id="top">
 
 <section class="hero privacy-hero">
   <div class="wrap">
@@ -487,7 +500,7 @@ footer .brand svg{color:var(--hotline)}
   <p class="lead">Queer Love Lounge respects your privacy. This policy explains what personal information we collect, how we use and protect it, and the choices you have. We handle personal and health information in line with the <strong>Privacy Act 1988 (Cth)</strong> and the <strong>Australian Privacy Principles (APPs)</strong>. Because we provide a health service and hold health information, the Privacy Act applies to us <strong>regardless of our size</strong>, so the small business exemption does not apply.</p>
 
   <h2 class="sec" id="who">1. Who we are</h2>
-  <p>Queer Love Lounge provides online couples and relationship therapy for LGBTQIA+ people across Australia. It is part of <strong>Body Belonging Clinic</strong> and led by <strong>Lauren Lynch</strong>, an Accredited Mental Health Social Worker (AMHSW, AASW). Care is provided by an AASW accredited social worker and is bound by the <strong>AASW Code of Ethics</strong> and practice standards. In this policy, "we", "us" and "our" refer to Queer Love Lounge / Body Belonging Clinic.</p>
+  <p>Queer Love Lounge provides couples and relationship therapy for LGBTQIA+ people, in person in Mosman Park (Perth) and online across Australia. It is part of <strong>Body Belonging Clinic</strong> and led by <strong>Lauren Lynch</strong>, an Accredited Mental Health Social Worker (AMHSW, AASW). Care is provided by an AASW accredited social worker and is bound by the <strong>AASW Code of Ethics</strong> and practice standards. In this policy, "we", "us" and "our" refer to Queer Love Lounge / Body Belonging Clinic.</p>
   <p>For anything to do with your privacy, contact us at <a href="mailto:lovelounge@queerlovelounge.com.au">lovelounge@queerlovelounge.com.au</a> or 0493 117 185.</p>
 
   <h2 class="sec" id="collect">2. Information we collect</h2>
@@ -516,7 +529,7 @@ footer .brand svg{color:var(--hotline)}
   <p><strong>Free resources and email.</strong> If you ask for our free cards, guide or quiz result, we collect your email address so we can send it to you. We use <strong>MailerLite</strong> to send these emails. We also note the page you signed up on and, if you arrived from a tagged link such as one on our Instagram, where that link came from, so we know which free resources are helping. Every email has a single click unsubscribe. We never use this list for clinical communication, and we never combine it with your clinical records.</p>
 
   <h2 class="sec" id="telehealth">5. Telehealth &amp; how sessions are delivered</h2>
-  <p>Sessions are delivered <strong>online by secure video</strong>, across Australia. Video calls run through <strong>Zoom</strong>, integrated with our practice management system (Zanda). A private, unique link is generated for each appointment.</p>
+  <p>Sessions are delivered in person in Mosman Park (Perth), or <strong>online by secure video</strong> across Australia. Video sessions run through <strong>Zoom</strong>, integrated with our practice management system (Zanda). A private, unique link is generated for each appointment.</p>
   <ul>
     <li>We recommend joining from a private space where you will not be overheard, on a device and connection you trust.</li>
     <li>We do <strong>not</strong> record sessions. If there were ever a clinical reason to record something, we would ask for your explicit, written consent first.</li>
@@ -567,7 +580,7 @@ footer .brand svg{color:var(--hotline)}
   <p><strong>Queer Love Lounge</strong> (Body Belonging Clinic)<br>
   Email: <a href="mailto:lovelounge@queerlovelounge.com.au">lovelounge@queerlovelounge.com.au</a><br>
   Phone: <a href="tel:+61493117185">0493 117 185</a></p>
-  <p class="updated">Effective date: 8 October 2026.</p>
+  <p class="updated">Effective date: 23 November 2026.</p>
 
  </div>
 </section>
@@ -595,19 +608,6 @@ footer .brand svg{color:var(--hotline)}
 </footer>
 <!-- /qll:footer -->
 <!-- QLL privacy-first consent + analytics (GA4 only; nothing loads until Accept) -->
-<style>
-@media(min-width:720px){.qllc-banner.qllc-banner{left:auto;right:16px;max-width:430px}}
-.qllc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;background:#141A33;color:#F8D5CF;border:2px solid #F8D5CF;border-radius:22px;box-shadow:0 20px 60px rgba(20,26,51,.4);font-family:'Fraunces',Georgia,serif;max-width:720px;margin:0 auto}
-.qllc-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 20px;flex-wrap:wrap}
-.qllc-text{font-size:15px;line-height:1.5;margin:0;flex:1;min-width:230px;color:#F8D5CF}
-.qllc-text a{color:#D7F25A;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:.8rem .2rem;margin:-.8rem -.2rem}
-.qllc-btns{display:flex;gap:10px;flex:none}
-.qllc-btn{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:15px;padding:12px 22px;min-height:44px;border-radius:99px;cursor:pointer;border:2px solid transparent}
-.qllc-accept{background:#D22B26;color:#fff}
-.qllc-decline{background:transparent;color:#F8D5CF;border-color:#F8D5CF}
-.qllc-btn:focus-visible{outline:3px solid #D7F25A;outline-offset:3px}
-@media(max-width:520px){.qllc-banner{left:10px;right:10px;bottom:10px;border-radius:18px}.qllc-inner{padding:12px 14px;gap:10px}.qllc-text{font-size:13.5px;line-height:1.4;min-width:0}.qllc-btns{width:100%}.qllc-btn{flex:1;padding:10px 16px;font-size:14px}}
-</style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
     <p class="qllc-text">This site uses a couple of cookies that respect your privacy, to see what is helping people find Queer Love Lounge. Nothing loads until you say yes. <a href='/privacy'>Privacy</a>.</p>
