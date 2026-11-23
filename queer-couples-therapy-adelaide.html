@@ -413,6 +413,10 @@ footer .brand svg{color:var(--hotline)}
 
 /* engagement pass, 23 Nov */
 @media(max-width:700px){.illo{display:none}.hero .portrait{max-width:300px}.expect-grid{display:block}}
+
+/* no illustrations, 23 Nov */
+.local-grid:not(:has(.illo)):not(:has(.portrait)),.expect-grid.flip:not(:has(.illo)){grid-template-columns:1fr}
+.local-grid:not(:has(.portrait)) > div{max-width:52em}
 </style>
 </head>
 <body>
@@ -443,7 +447,7 @@ footer .brand svg{color:var(--hotline)}
       <p class="lede">Online couples therapy for LGBTQIA+ relationships across Adelaide and South Australia. Warm, practical, discreet, and built for the way you actually love.</p>
       <div class="actions">
         <a class="btn btn-red book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">Book a free 15 minute chat</a>
-        <a class="btn btn-line book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">Book a first session</a>
+        <a class="textlink book js-book" href="https://clientportal.zandahealth.com/clientportal/bodybelongingclinic/appointment-booking">or book a first session</a>
       </div>
       <p class="route">Here for yourself rather than the relationship? I see individuals too, through <a href="https://www.bodybelongingclinic.com.au/">Body Belonging Clinic</a>: LGBTQIA+ affirming, online across Australia, with a Medicare rebate on a GP mental health care plan.</p>
     </div>
@@ -472,7 +476,6 @@ footer .brand svg{color:var(--hotline)}
       <div class="measure"><p>Adelaide is a small city, and the queer scene is smaller still, which can make finding couples therapy feel exposing before you have even begun. The right therapist should not be someone you will run into at the next community event.</p><p>Queer Love Lounge is online across Adelaide and all of SA, so you can choose a therapist who is not a friend of a friend, and do the work with real discretion, from your own home.</p></div>
       <div class="creds"><span class="cred">AMHSW · AASW</span><span class="cred">Completed Level 2 Training in Gottman Method Couples Therapy</span><span class="cred">Trained with Esther Perel</span><span class="cred">Queer &amp; Aboriginal led</span><a class="cred" href="/lauren-lynch" style="text-decoration:underline;min-height:44px;display:inline-flex;align-items:center">Meet Lauren</a></div>
     </div>
-    <div class="illo"><img src="assets/deck-notice.webp" alt="Illustration of two partners in a slow embrace" width="318" height="560" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -480,7 +483,6 @@ footer .brand svg{color:var(--hotline)}
 <section id="expect" class="on-ink">
   <div class="wrap">
     <div class="expect-grid flip">
-      <div class="illo"><img src="assets/deck-hero.webp" alt="Illustration of three people together, two embracing and one holding hands with them" width="535" height="560" loading="lazy"></div>
       <div>
         <p class="label">What you can expect</p>
         <h2 class="Q">Built for queer relationships, <span class="A">not adapted to them.</span></h2>
@@ -573,7 +575,7 @@ footer .brand svg{color:var(--hotline)}
 </style>
 <div id="qllc-banner" class="qllc-banner" role="dialog" aria-label="Cookie consent" hidden>
   <div class="qllc-inner">
-    <p class="qllc-text">We use a couple of cookies that respect your privacy, to see what is helping people find us. Nothing loads until you say yes. <a href='/privacy'>Privacy</a>.</p>
+    <p class="qllc-text">This site uses a couple of cookies that respect your privacy, to see what is helping people find Queer Love Lounge. Nothing loads until you say yes. <a href='/privacy'>Privacy</a>.</p>
     <div class="qllc-btns">
       <button class="qllc-btn qllc-decline" id="qllc-decline" type="button">Decline</button>
       <button class="qllc-btn qllc-accept" id="qllc-accept" type="button">Accept</button>
