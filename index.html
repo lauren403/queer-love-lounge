@@ -561,7 +561,8 @@ footer .brand svg{color:var(--hotline)}
           <div class="row-form" style="display:grid;gap:10px">
             <label for="pemail">Email</label>
             <input id="pemail" type="email" name="fields[email]" required placeholder="you@example.com" autocomplete="email" aria-label="Your email address">
-            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="fields[signup_source]" class="js-src" data-page="home" value="home">
+<input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
             <button class="btn" type="submit">Send me the ten cards</button>
             <small>The cards arrive straight away. No sharing your details, ever, and you can unsubscribe in one click.</small>
@@ -675,5 +676,9 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
 document.addEventListener("submit",function(e){if(e.target&&e.target.classList&&e.target.classList.contains("ml-block-form")){try{if(window.gtag)gtag("event","sign_up",{method:"mailerlite",content_name:"ten cards"});}catch(_){}}},true);
 </script>
 
+<script>
+/* Signup attribution: remembers where this visit came from (utm_source / utm_medium, this tab only) and adds it, with the page, to the MailerLite signup_source field. Nothing is stored unless a link carried UTM tags; nothing is sent unless the person subscribes. */
+(function(){try{var q=new URLSearchParams(location.search),s=q.get("utm_source");if(s){sessionStorage.setItem("qll_src",s+(q.get("utm_medium")?"/"+q.get("utm_medium"):""));}var src=sessionStorage.getItem("qll_src")||"";document.querySelectorAll("input.js-src").forEach(function(i){i.value=i.getAttribute("data-page")+(src?" via "+src:"");});}catch(_){}})();
+</script>
 </body>
 </html>

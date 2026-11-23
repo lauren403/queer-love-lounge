@@ -127,5 +127,9 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
 document.addEventListener("submit",function(e){if(e.target&&e.target.classList&&e.target.classList.contains("ml-block-form")){try{if(window.gtag)gtag("event","sign_up",{method:"mailerlite",content_name:"ten cards"});}catch(_){}}},true);
 </script>
 
+<script>
+/* Signup attribution: remembers where this visit came from (utm_source / utm_medium, this tab only) and adds it, with the page, to the MailerLite signup_source field. Nothing is stored unless a link carried UTM tags; nothing is sent unless the person subscribes. */
+(function(){try{var q=new URLSearchParams(location.search),s=q.get("utm_source");if(s){sessionStorage.setItem("qll_src",s+(q.get("utm_medium")?"/"+q.get("utm_medium"):""));}var src=sessionStorage.getItem("qll_src")||"";document.querySelectorAll("input.js-src").forEach(function(i){i.value=i.getAttribute("data-page")+(src?" via "+src:"");});}catch(_){}})();
+</script>
 </body>
 </html>

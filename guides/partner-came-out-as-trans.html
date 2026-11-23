@@ -344,7 +344,8 @@ main{display:block}
           <div class="row-form" style="display:grid;gap:10px">
             <label for="gemail">Email</label>
             <input id="gemail" type="email" name="fields[email]" required placeholder="you@example.com" autocomplete="email">
-            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="fields[signup_source]" class="js-src" data-page="guides/partner-came-out-as-trans" value="guides/partner-came-out-as-trans">
+<input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
             <button class="btn" type="submit">Send me the ten cards</button>
             <small>The cards arrive straight away, then a short letter when a new guide is out. No sharing your details, ever, and you can unsubscribe in one click. <a href="/privacy" style="color:inherit">Privacy</a>.</small>
@@ -428,6 +429,10 @@ document.addEventListener("submit",function(e){if(e.target&&e.target.classList&&
 </script>
 <script>
 document.querySelectorAll(".js-share").forEach(function(b){b.addEventListener("click",function(){var url=location.origin+location.pathname+"?utm_source=share&utm_medium=guide";var d={title:document.title.split(" | ")[0],url:url};var done=function(m){try{if(window.gtag)gtag("event","share",{method:m,content_type:"guide",item_id:location.pathname});}catch(_){}};if(navigator.share){navigator.share(d).then(function(){done("web_share")}).catch(function(){});}else if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){b.textContent="Link copied. Paste it to them.";done("copy_link")});}});});
+</script>
+<script>
+/* Signup attribution: remembers where this visit came from (utm_source / utm_medium, this tab only) and adds it, with the page, to the MailerLite signup_source field. Nothing is stored unless a link carried UTM tags; nothing is sent unless the person subscribes. */
+(function(){try{var q=new URLSearchParams(location.search),s=q.get("utm_source");if(s){sessionStorage.setItem("qll_src",s+(q.get("utm_medium")?"/"+q.get("utm_medium"):""));}var src=sessionStorage.getItem("qll_src")||"";document.querySelectorAll("input.js-src").forEach(function(i){i.value=i.getAttribute("data-page")+(src?" via "+src:"");});}catch(_){}})();
 </script>
 </body>
 </html>
