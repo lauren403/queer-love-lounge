@@ -424,6 +424,22 @@ footer .brand svg{color:var(--hotline)}
 .also a{color:inherit;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:700px){.pillars{grid-template-columns:1fr}.pillar:nth-child(even){padding-left:0;border-left:0}}
 
+
+/* tune up price, 23 Nov */
+.tu-price{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:16px;margin-top:48px}
+@media(max-width:900px){.tu-price{grid-template-columns:1fr}}
+.tu-one{background:var(--blush);color:var(--ink);border-radius:26px;padding:30px;display:flex;flex-direction:column;gap:10px}
+.tu-one .tag,.tu-rhythms .tag{font-family:var(--m);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.tu-one .price{font-family:var(--q);font-weight:800;font-size:clamp(72px,9vw,104px);line-height:.9;letter-spacing:-.02em;margin-top:6px}
+.tu-one .len{font-family:var(--m);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.tu-one .tu-for{font-size:17px;margin-top:6px}
+.tu-one .btn-wrap{margin-top:auto;padding-top:16px}
+.btn-blush{background:var(--ink);color:#fff}
+.tu-rhythms{list-style:none;margin:0;padding:0;border-top:2px solid var(--blush)}
+.tu-rhythms li{border-bottom:2px solid var(--blush);padding:20px 0}
+.tu-rhythms .tag{color:var(--lime)}
+.tu-rhythms h3{font-family:var(--q);font-weight:800;text-transform:uppercase;font-size:22px;line-height:1.05;margin:6px 0 6px}
+.tu-rhythms p{font-size:17px;max-width:36em}
 </style>
 </head>
 <body>
@@ -504,22 +520,20 @@ footer .brand svg{color:var(--hotline)}
   <div class="wrap">
     <p class="label">The investment</p>
     <h2 class="Q" style="margin-top:18px">Pick a rhythm that fits your life.</h2>
-    <div class="fees"><div class="fee"><span class="tag">The Tune Up · single</span><p class="price">$190</p><p class="len">75 minutes · one session</p><ul>
-<li>A single, unhurried reconnection</li>
-<li>Revisit your miss, refresh your moves</li>
-<li>Book anytime, no history needed</li>
-<li>For past clients or a couple in a good place</li>
-</ul></div><div class="fee hi"><span class="tag">Seasonal Tune Ups</span><p class="price">$190</p><p class="len">Each · roughly one a season</p><ul>
-<li>Four across the year, the steady rhythm</li>
-<li>Booked one at a time, nothing prepaid</li>
-<li>A gentle reminder when each is due</li>
-<li>Keeps you ahead of the small stuff</li>
-</ul></div><div class="fee"><span class="tag">The Annual Check Up</span><p class="price">$190</p><p class="len">Once a year · 75 minutes</p><ul>
-<li>Your yearly relationship check up</li>
-<li>Book it and forget the date. I remind you</li>
-<li>A simple ritual that keeps you close</li>
-<li>Same warm session, once a year</li>
-</ul></div></div><p class="fineprint">Private fee, GST free. Relationship therapy is not rebatable under Medicare. If your extras cover Accredited Mental Health Social Workers, your fund may pay a benefit for a couples session, so check with them first. Past clients are welcome back at the same rate. Prefer a different cadence? Just ask, and I will shape it around your life.</p>
+    <div class="tu-price">
+      <div class="tu-one">
+        <span class="tag">Every Tune Up</span>
+        <p class="price">$190</p>
+        <p class="len">75 minutes · online · book anytime, no history needed</p>
+        <p class="tu-for">For past clients, or any couple in a good place who wants to stay there.</p>
+        <div class="btn-wrap"><a class="btn btn-blush js-enquire" href="mailto:lovelounge@queerlovelounge.com.au?subject=Queer%20Love%20Lounge%3A%20Tune%20Up%20enquiry">Enquire about a Tune Up</a></div>
+      </div>
+      <ol class="tu-rhythms">
+        <li><span class="tag">Once</span><h3>A single Tune Up</h3><p>One unhurried reconnection. Revisit your miss and refresh your moves.</p></li>
+        <li><span class="tag">Most chosen</span><h3>Seasonal Tune Ups</h3><p>Roughly one a season, four across the year. Booked one at a time, nothing prepaid, and I send a gentle reminder when each is due.</p></li>
+        <li><span class="tag">Once a year</span><h3>The Annual Check Up</h3><p>Your yearly relationship check up. Book it and forget the date. I remind you.</p></li>
+      </ol>
+    </div><p class="fineprint">Private fee, GST free. Relationship therapy is not rebatable under Medicare. If your extras cover Accredited Mental Health Social Workers, your fund may pay a benefit for a couples session, so check with them first. Past clients are welcome back at the same rate. Prefer a different cadence? Just ask, and I will shape it around your life.</p>
   </div>
 </section>
 
